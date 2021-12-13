@@ -2,19 +2,13 @@
 
 ## 프로젝트 개요
 
----
-
 엔터테인먼트 플랫폼 사이트
 
 ## 프로젝트 설명
 
----
-
 - 커뮤니티 사이트
 
 ## 서비스 주소
-
----
 
 ###  Backend Link
 
@@ -22,29 +16,23 @@ https://dalgonabackend.shop/
 
 ## Project Duration
 
----
-
 2021-08-21 ~
 
 ## 기술 스택 (Backend Stack)
 
----
-
-###- Language
+###Language
 
 ![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54)
 
-###- Frameworks
+###Frameworks
 
 ![Django](https://img.shields.io/badge/django-%23092E20.svg?style=for-the-badge&logo=django&logoColor=white) ![DjangoREST](https://img.shields.io/badge/DJANGO-REST-ff1709?style=for-the-badge&logo=django&logoColor=white&color=ff1709&labelColor=gray)
 
-###- Database
+###Database
 
 ![MySQL](https://img.shields.io/badge/mysql-%2300f.svg?style=for-the-badge&logo=mysql&logoColor=white)
 
 ## 배포 툴
-
----
 
 #### Backend
 
@@ -52,8 +40,6 @@ https://dalgonabackend.shop/
 
 
 ## 팀 정보 및 역할
-
----
 
 ### [Backend Developer]
 
@@ -82,8 +68,6 @@ https://dalgonabackend.shop/
 - Github : https://github.com/yejin013
 
 ## 프로젝트 구조
-
----
 
 ```
 Project Root
@@ -132,8 +116,6 @@ Project Root
 └── 📋 README.md                                      # README
 ```
 
----
-
 ## 추가 정보
 
 ### [프론트엔드 설명 주소]
@@ -142,19 +124,19 @@ https://github.com/su100/dalgona-community
 
 ### [API Request Postman]
 
-account_api : 
+account_api : https://github.com/cwadven/Dalgona-Backend/blob/master/assets/account_api.json
 
-battle_api :
+battle_api : https://github.com/cwadven/Dalgona-Backend/blob/master/assets/battle_api.json
 
-board_api :
+board_api : https://github.com/cwadven/Dalgona-Backend/blob/master/assets/board_api.json
 
-board_list_api :
+board_list_api : https://github.com/cwadven/Dalgona-Backend/blob/master/assets/board_list_api.json
 
-common_api :
+common_api : https://github.com/cwadven/Dalgona-Backend/blob/master/assets/common_api.json
 
-image_upload_api :
+image_upload_api : https://github.com/cwadven/Dalgona-Backend/blob/master/assets/image_upload_api.json
 
-news_api :
+news_api : https://github.com/cwadven/Dalgona-Backend/blob/master/assets/news_api.json
 
 
 ### [Database Structure]
