@@ -1,0 +1,2456 @@
+{
+	"info": {
+		"_postman_id": "29a02dcc-b0bd-48ad-a013-f39fab06e1bc",
+		"name": "Dalgona Basic",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "로그인 (01_로그인)",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "username",
+							"value": "root",
+							"description": "로그인 아이디 (필수)",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "1q2w3e4r!",
+							"description": "로그인 비밀번호 (필수)",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/rest-auth/login",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"rest-auth",
+						"login"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "로그인 (실패)",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "username",
+									"value": "roots",
+									"description": "로그인 아이디 (필수)",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "root",
+									"description": "로그인 비밀번호 (필수)",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/rest-auth/login",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"rest-auth",
+								"login"
+							]
+						}
+					},
+					"status": "Bad Request",
+					"code": 400,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Mon, 01 Feb 2021 03:19:08 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.7.6"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept, Origin"
+						},
+						{
+							"key": "Allow",
+							"value": "POST, OPTIONS"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "68"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"non_field_errors\": [\n        \"Unable to log in with provided credentials.\"\n    ]\n}"
+				},
+				{
+					"name": "로그인 (성공)",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "username",
+									"value": "root",
+									"description": "로그인 아이디 (필수)",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "root",
+									"description": "로그인 비밀번호 (필수)",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/rest-auth/login",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"rest-auth",
+								"login"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Fri, 05 Feb 2021 02:04:22 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.7.6"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept, Origin, Cookie"
+						},
+						{
+							"key": "Allow",
+							"value": "POST, OPTIONS"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "1143"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						},
+						{
+							"key": "Set-Cookie",
+							"value": "csrftoken=hTk63a4MeLZShPwOAW7AaS4RJQ6HYxQEU2u77EoR5L2p1DcK17hAkRjLDPG6euhU; expires=Fri, 04 Feb 2022 02:04:22 GMT; Max-Age=31449600; Path=/; SameSite=Lax"
+						},
+						{
+							"key": "Set-Cookie",
+							"value": "sessionid=j0r66ovw36rbsmlus1775bwpj0u8dunp; expires=Fri, 19 Feb 2021 02:04:22 GMT; HttpOnly; Max-Age=1209600; Path=/; SameSite=Lax"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"token\": \"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxOCwidXNlcm5hbWUiOiJyb290IiwiZXhwIjoxNjEzMDk1NDYyLCJlbWFpbCI6ImN3YWR2ZW5AZ21haWwuY29tIiwib3JpZ19pYXQiOjE2MTI0OTA2NjJ9.M4x3eAp2Q06kmlDZ1LpShUCxk9Od0c9tiAxSjs5-Yzk\",\n    \"user\": {\n        \"username\": \"root\",\n        \"email\": \"cwadven@gmail.com\",\n        \"nickname\": \"테스트\",\n        \"introduction\": \"\",\n        \"profile_image\": null,\n        \"bookmark\": [\n            {\n                \"board_url\": \"skinny-brown\",\n                \"board_name\": \"스키니브라운\",\n                \"introduction\": \"스키니브라운\",\n                \"created_at\": \"2021-02-04T10:45:10.072823\",\n                \"updated_at\": \"2021-02-04T10:45:10.072823\",\n                \"category\": [],\n                \"division\": 2,\n                \"is_new\": false,\n                \"write_priority\": -1,\n                \"read_priority\": -1\n            },\n            {\n                \"board_url\": \"iu\",\n                \"board_name\": \"아이유\",\n                \"introduction\": \"아이유 게시판\",\n                \"created_at\": \"2021-02-04T10:44:43.918874\",\n                \"updated_at\": \"2021-02-04T10:44:43.918874\",\n                \"category\": [],\n                \"division\": 2,\n                \"is_new\": false,\n                \"write_priority\": -1,\n                \"read_priority\": -1\n            },\n            {\n                \"board_url\": \"hobby\",\n                \"board_name\": \"취미게시판\",\n                \"introduction\": \"취미 게시판\",\n                \"created_at\": \"2021-02-04T10:45:29.900402\",\n                \"updated_at\": \"2021-02-04T10:45:29.900402\",\n                \"category\": [],\n                \"division\": 1,\n                \"is_new\": false,\n                \"write_priority\": -1,\n                \"read_priority\": -1\n            }\n        ],\n        \"points\": \"10\",\n        \"level\": \"0\"\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "이메일 인증",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/account-confirm/MQ:1l6mT4:fWeMYcld1TUvy9rDBZUhXKlxOYAWO6qm0aBfRmmRLOg",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"account-confirm",
+						"MQ:1l6mT4:fWeMYcld1TUvy9rDBZUhXKlxOYAWO6qm0aBfRmmRLOg"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "이메일 인증 (성공)",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/account-confirm/MQ:1l6mT4:fWeMYcld1TUvy9rDBZUhXKlxOYAWO6qm0aBfRmmRLOg",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"account-confirm",
+								"MQ:1l6mT4:fWeMYcld1TUvy9rDBZUhXKlxOYAWO6qm0aBfRmmRLOg"
+							]
+						}
+					},
+					"status": "Accepted",
+					"code": 202,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Tue, 02 Feb 2021 03:36:28 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.7.6"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept, Origin"
+						},
+						{
+							"key": "Allow",
+							"value": "GET, HEAD, OPTIONS"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "51"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"detail\": \"Email verified\",\n    \"nickname\": \"테스트2\"\n}"
+				},
+				{
+					"name": "이메일 인증 (실패 : 인증코드가 잘못 됐을 경우)",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/account-confirm/MQ:1l6mT4:fWeMYcld1TUvy9rDBZUhXKlxOYAWO6qm0aBfRmmRLOz",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"account-confirm",
+								"MQ:1l6mT4:fWeMYcld1TUvy9rDBZUhXKlxOYAWO6qm0aBfRmmRLOz"
+							]
+						}
+					},
+					"status": "Bad Request",
+					"code": 400,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Tue, 02 Feb 2021 03:36:43 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.7.6"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept, Origin"
+						},
+						{
+							"key": "Allow",
+							"value": "GET, HEAD, OPTIONS"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "32"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"detail\": \"something get wrong\"\n}"
+				}
+			]
+		},
+		{
+			"name": "이메일 재인증",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "username",
+							"value": "roots",
+							"description": "회원가입할 때 사용한 아이디 (필수, 5글자 이상 20글자 미만)",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "cwadven@naver.com",
+							"description": "회원가입할 때 사용한 이메일 (필수, 이메일 형식 맞게)",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/accounts/confirm",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"accounts",
+						"confirm"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "이메일 재인증 (실패 : 이미 회원 인증한 이메일인 경우)",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "username",
+									"value": "testtest23",
+									"description": "회원가입할 때 사용한 아이디 (필수)",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "cwadven@naver.com",
+									"description": "회원가입할 때 사용한 이메일 (필수)",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/accounts/confirm",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"accounts",
+								"confirm"
+							]
+						}
+					},
+					"status": "Not Acceptable",
+					"code": 406,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Tue, 02 Feb 2021 03:31:12 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.7.6"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept, Origin"
+						},
+						{
+							"key": "Allow",
+							"value": "POST, OPTIONS"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "31"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"detail\": \"Email already used\"\n}"
+				},
+				{
+					"name": "이메일 재인증 (성공)",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "username",
+									"value": "roots",
+									"description": "회원가입할 때 사용한 아이디 (필수)",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "cwadven@naver.com",
+									"description": "회원가입할 때 사용한 이메일 (필수)",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/accounts/confirm",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"accounts",
+								"confirm"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Tue, 02 Feb 2021 03:35:11 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.7.6"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept, Origin"
+						},
+						{
+							"key": "Allow",
+							"value": "POST, OPTIONS"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "64"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						},
+						{
+							"key": "Set-Cookie",
+							"value": "messages=\"[[\\\"__json_message\\\"\\0540\\05420\\054\\\"Confirmation e-mail sent to cwadven@naver.com.\\\"]]:1l6mT9:UVlb_HVOgP1LB_OBVBRPUfKILRI_JYb11sEyZO3PQWc\"; HttpOnly; Path=/; SameSite=Lax"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"detail\": \"Email confirmation sent\",\n    \"email\": \"cwadven@naver.com\"\n}"
+				},
+				{
+					"name": "이메일 재인증 (실패 : 회원 인증이 되어서 재인증 필요 없음)",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "username",
+									"value": "testtest",
+									"description": "회원가입할 때 사용한 아이디 (필수)",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "cwadven@naver.com",
+									"description": "회원가입할 때 사용한 이메일 (필수)",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/accounts/confirm",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"accounts",
+								"confirm"
+							]
+						}
+					},
+					"status": "Not Acceptable",
+					"code": 406,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Tue, 02 Feb 2021 03:30:29 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.7.6"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept, Origin"
+						},
+						{
+							"key": "Allow",
+							"value": "POST, OPTIONS"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "35"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"detail\": \"Email already verified\"\n}"
+				},
+				{
+					"name": "이메일 재인증 (실패 : 해당 아이디를 이용하여 회원가입을 한 적이 없을 경우)",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "username",
+									"value": "testtest23",
+									"description": "회원가입할 때 사용한 아이디 (필수)",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "cwadven4@gmail.com",
+									"description": "회원가입할 때 사용한 이메일 (필수)",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/accounts/confirm",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"accounts",
+								"confirm"
+							]
+						}
+					},
+					"status": "Bad Request",
+					"code": 400,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Tue, 02 Feb 2021 03:31:46 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.7.6"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept, Origin"
+						},
+						{
+							"key": "Allow",
+							"value": "POST, OPTIONS"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "28"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"detail\": \"User not exists\"\n}"
+				},
+				{
+					"name": "이메일 재인증 (실패 : 아이디 및 이메일이 빈칸으로 설정한 경우)",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "username",
+									"value": "",
+									"description": "회원가입할 때 사용한 아이디 (필수)",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "",
+									"description": "회원가입할 때 사용한 이메일 (필수)",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/accounts/confirm",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"accounts",
+								"confirm"
+							]
+						}
+					},
+					"status": "Bad Request",
+					"code": 400,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Tue, 02 Feb 2021 03:27:45 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.7.6"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept, Origin"
+						},
+						{
+							"key": "Allow",
+							"value": "POST, OPTIONS"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "86"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"username\": [\n        \"This field may not be blank.\"\n    ],\n    \"email\": [\n        \"This field may not be blank.\"\n    ]\n}"
+				},
+				{
+					"name": "이메일 재인증 (실패 : username 과 email을 body에 작성하지 않은 경우)",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/accounts/confirm",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"accounts",
+								"confirm"
+							]
+						}
+					},
+					"status": "Bad Request",
+					"code": 400,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Tue, 02 Feb 2021 03:29:15 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.7.6"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept, Origin"
+						},
+						{
+							"key": "Allow",
+							"value": "POST, OPTIONS"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "76"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"username\": [\n        \"This field is required.\"\n    ],\n    \"email\": [\n        \"This field is required.\"\n    ]\n}"
+				},
+				{
+					"name": "이메일 재인증 (실패 : 아이디가 5글자 미만인 경우)",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "username",
+									"value": "root",
+									"description": "회원가입할 때 사용한 아이디 (필수)",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "cwadven@naver.com",
+									"description": "회원가입할 때 사용한 이메일 (필수)",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/accounts/confirm",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"accounts",
+								"confirm"
+							]
+						}
+					},
+					"status": "Bad Request",
+					"code": 400,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Tue, 02 Feb 2021 03:30:00 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.7.6"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept, Origin"
+						},
+						{
+							"key": "Allow",
+							"value": "POST, OPTIONS"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "61"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"username\": [\n        \"Ensure this field has at least 5 characters.\"\n    ]\n}"
+				}
+			]
+		},
+		{
+			"name": "로그아웃 (0801_로그아웃)",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/rest-auth/logout",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"rest-auth",
+						"logout"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "로그아웃 (성공)",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/rest-auth/logout",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"rest-auth",
+								"logout"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Tue, 02 Feb 2021 05:33:10 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.7.6"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept, Origin, Cookie"
+						},
+						{
+							"key": "Allow",
+							"value": "GET, POST, HEAD, OPTIONS"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "37"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						},
+						{
+							"key": "Set-Cookie",
+							"value": "sessionid=\"\"; expires=Thu, 01 Jan 1970 00:00:00 GMT; Max-Age=0; Path=/; SameSite=Lax"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"detail\": \"Successfully logged out.\"\n}"
+				}
+			]
+		},
+		{
+			"name": "비밀번호 수정",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "jwt eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJ1c2VybmFtZSI6InJvb3RzIiwiZXhwIjoxNjEyODQ4ODk4LCJlbWFpbCI6ImN3YWR2ZW5AbmF2ZXIuY29tIiwib3JpZ19pYXQiOjE2MTIyNDQwOTh9.GDNwzCvlEFO05jNKD_lYG1uEYED8Sf2nflOT4JoHbds",
+						"description": "로그인한 사람인지를 판 위한 Hearder (필수)",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "new_password1",
+							"value": "root",
+							"description": "수정할 비밀번호 (필수 8글자 이상)",
+							"type": "text"
+						},
+						{
+							"key": "new_password2",
+							"value": "root",
+							"description": "수정할 비밀번호 확인 (필수 8글자 이상)",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/rest-auth/password/change",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"rest-auth",
+						"password",
+						"change"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "비밀번호 수정 (실패 : 로그인 한 사람이 아닌 경우)",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/rest-auth/password/change",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"rest-auth",
+								"password",
+								"change"
+							]
+						}
+					},
+					"status": "Unauthorized",
+					"code": 401,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Tue, 02 Feb 2021 05:34:08 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.7.6"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "WWW-Authenticate",
+							"value": "JWT realm=\"api\""
+						},
+						{
+							"key": "Vary",
+							"value": "Accept, Origin"
+						},
+						{
+							"key": "Allow",
+							"value": "POST, OPTIONS"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "58"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"detail\": \"Authentication credentials were not provided.\"\n}"
+				},
+				{
+					"name": "비밀번호 수정 (실패 : body에 new_password1 과 new_password2가 없을 경우)",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "jwt eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJ1c2VybmFtZSI6InJvb3RzIiwiZXhwIjoxNjEyODQ4ODk4LCJlbWFpbCI6ImN3YWR2ZW5AbmF2ZXIuY29tIiwib3JpZ19pYXQiOjE2MTIyNDQwOTh9.GDNwzCvlEFO05jNKD_lYG1uEYED8Sf2nflOT4JoHbds",
+								"description": "로그인한 사람인지를 판 위한 Hearder (필수)",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://127.0.0.1:8000/rest-auth/password/change",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"rest-auth",
+								"password",
+								"change"
+							]
+						}
+					},
+					"status": "Bad Request",
+					"code": 400,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Tue, 02 Feb 2021 05:39:24 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.7.6"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept, Origin"
+						},
+						{
+							"key": "Allow",
+							"value": "POST, OPTIONS"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "89"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"new_password1\": [\n        \"This field is required.\"\n    ],\n    \"new_password2\": [\n        \"This field is required.\"\n    ]\n}"
+				},
+				{
+					"name": "비밀번호 수정 (실패 : new_password1 과 new_password2가 빈칸일 경우)",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "jwt eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJ1c2VybmFtZSI6InJvb3RzIiwiZXhwIjoxNjEyODQ4ODk4LCJlbWFpbCI6ImN3YWR2ZW5AbmF2ZXIuY29tIiwib3JpZ19pYXQiOjE2MTIyNDQwOTh9.GDNwzCvlEFO05jNKD_lYG1uEYED8Sf2nflOT4JoHbds",
+								"description": "로그인한 사람인지를 판 위한 Hearder (필수)",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "new_password1",
+									"value": "",
+									"description": "수정할 비밀번호 (필수)",
+									"type": "text"
+								},
+								{
+									"key": "new_password2",
+									"value": "",
+									"description": "수정할 비밀번호 확인 (필수)",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/rest-auth/password/change",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"rest-auth",
+								"password",
+								"change"
+							]
+						}
+					},
+					"status": "Bad Request",
+					"code": 400,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Tue, 02 Feb 2021 05:40:32 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.7.6"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept, Origin"
+						},
+						{
+							"key": "Allow",
+							"value": "POST, OPTIONS"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "99"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"new_password1\": [\n        \"This field may not be blank.\"\n    ],\n    \"new_password2\": [\n        \"This field may not be blank.\"\n    ]\n}"
+				},
+				{
+					"name": "비밀번호 수정 (실패 : 비밀번호가 너무 짧다 8글자 이상, 비밀번호가 너무 일반적일 경우)",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "jwt eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJ1c2VybmFtZSI6InJvb3RzIiwiZXhwIjoxNjEyODQ4ODk4LCJlbWFpbCI6ImN3YWR2ZW5AbmF2ZXIuY29tIiwib3JpZ19pYXQiOjE2MTIyNDQwOTh9.GDNwzCvlEFO05jNKD_lYG1uEYED8Sf2nflOT4JoHbds",
+								"description": "로그인한 사람인지를 판 위한 Hearder (필수)",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "new_password1",
+									"value": "aa",
+									"description": "수정할 비밀번호 (필수)",
+									"type": "text"
+								},
+								{
+									"key": "new_password2",
+									"value": "aa",
+									"description": "수정할 비밀번호 확인 (필수)",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/rest-auth/password/change",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"rest-auth",
+								"password",
+								"change"
+							]
+						}
+					},
+					"status": "Bad Request",
+					"code": 400,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Tue, 02 Feb 2021 05:56:57 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.7.6"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept, Origin"
+						},
+						{
+							"key": "Allow",
+							"value": "POST, OPTIONS"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "119"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"new_password2\": [\n        \"This password is too short. It must contain at least 8 characters.\",\n        \"This password is too common.\"\n    ]\n}"
+				},
+				{
+					"name": "비밀번호 수정 (실패 : 비밀번호가 너무 짧다 8글자 이상, 비밀번호가 너무 일반적일 경우, 비밀번호가 아이디랑 비슷할 경우)",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "jwt eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJ1c2VybmFtZSI6InJvb3RzIiwiZXhwIjoxNjEyODQ4ODk4LCJlbWFpbCI6ImN3YWR2ZW5AbmF2ZXIuY29tIiwib3JpZ19pYXQiOjE2MTIyNDQwOTh9.GDNwzCvlEFO05jNKD_lYG1uEYED8Sf2nflOT4JoHbds",
+								"description": "로그인한 사람인지를 판 위한 Hearder (필수)",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "new_password1",
+									"value": "root",
+									"description": "수정할 비밀번호 (필수 8글자 이상)",
+									"type": "text"
+								},
+								{
+									"key": "new_password2",
+									"value": "root",
+									"description": "수정할 비밀번호 확인 (필수 8글자 이상)",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/rest-auth/password/change",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"rest-auth",
+								"password",
+								"change"
+							]
+						}
+					},
+					"status": "Bad Request",
+					"code": 400,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Tue, 02 Feb 2021 05:59:30 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.7.6"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept, Origin"
+						},
+						{
+							"key": "Allow",
+							"value": "POST, OPTIONS"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "166"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"new_password2\": [\n        \"The password is too similar to the username.\",\n        \"This password is too short. It must contain at least 8 characters.\",\n        \"This password is too common.\"\n    ]\n}"
+				},
+				{
+					"name": "비밀번호 수정 (성공)",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "jwt eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJ1c2VybmFtZSI6InJvb3RzIiwiZXhwIjoxNjEyODQ4ODk4LCJlbWFpbCI6ImN3YWR2ZW5AbmF2ZXIuY29tIiwib3JpZ19pYXQiOjE2MTIyNDQwOTh9.GDNwzCvlEFO05jNKD_lYG1uEYED8Sf2nflOT4JoHbds",
+								"description": "로그인한 사람인지를 판 위한 Hearder (필수)",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "new_password1",
+									"value": "lcw1401314!",
+									"description": "수정할 비밀번호 (필수 8글자 이상)",
+									"type": "text"
+								},
+								{
+									"key": "new_password2",
+									"value": "lcw1401314!",
+									"description": "수정할 비밀번호 확인 (필수 8글자 이상)",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/rest-auth/password/change",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"rest-auth",
+								"password",
+								"change"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Tue, 02 Feb 2021 06:00:19 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.7.6"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept, Origin, Cookie"
+						},
+						{
+							"key": "Allow",
+							"value": "POST, OPTIONS"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "41"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						},
+						{
+							"key": "Set-Cookie",
+							"value": "sessionid=e6rfpufc6btr9adx36w9nkwihjbto7le; expires=Tue, 16 Feb 2021 06:00:19 GMT; HttpOnly; Max-Age=1209600; Path=/; SameSite=Lax"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"detail\": \"New password has been saved.\"\n}"
+				}
+			]
+		},
+		{
+			"name": "회원가입 (0203_회원정보 입력)",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "username",
+							"value": "rootssas",
+							"description": "사용자 아이디 (필수, 5글자 이상)",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "basdfasdfa@naver.com",
+							"description": "사용자 이메일 인증용 이메일 (필수, 이메일 형태 @와 @aa.com 형태여야함)",
+							"type": "text"
+						},
+						{
+							"key": "password1",
+							"value": "lcw1401314!",
+							"description": "비밀번호 (필수, 8글자 이상, 너무 일반적인 것 안됨, password1과 동일해야함)",
+							"type": "text"
+						},
+						{
+							"key": "password2",
+							"value": "lcw1401314!",
+							"description": "비밀번호 확인 (필수, 8글자 이상, 너무 일반적인 것 안됨, password1과 동일해야함)",
+							"type": "text"
+						},
+						{
+							"key": "nickname",
+							"value": "aaa",
+							"description": "사용자 닉네임 설정 (필수, 1글자 이상 / 20글자 이하)",
+							"type": "text"
+						},
+						{
+							"key": "introduction",
+							"value": "aaaaaa",
+							"description": "사용자 자기소개 정보 (선택) ",
+							"type": "text"
+						},
+						{
+							"key": "profile_image",
+							"value": "",
+							"description": "프로필 사진 (선택)",
+							"type": "text"
+						},
+						{
+							"key": "unique_key",
+							"value": "C9gEtsispbQflXA6VacTNZx9rcWRwBfbTivlkSS4dTQdmZjf63zINhxEeBDoav1fzaOAfaf70VX99GKeQ7xGWw==",
+							"type": "text"
+						},
+						{
+							"key": "imp_uid",
+							"value": "imp_627541644068",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/rest-auth/registration",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"rest-auth",
+						"registration"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "회원가입 (body 해당 값들이 없을 경우)",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/rest-auth/registration",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"rest-auth",
+								"registration"
+							]
+						}
+					},
+					"status": "Bad Request",
+					"code": 400,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Tue, 02 Feb 2021 06:02:54 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.7.6"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept, Origin"
+						},
+						{
+							"key": "Allow",
+							"value": "POST, OPTIONS"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "195"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"username\": [\n        \"This field is required.\"\n    ],\n    \"email\": [\n        \"This field is required.\"\n    ],\n    \"password1\": [\n        \"This field is required.\"\n    ],\n    \"password2\": [\n        \"This field is required.\"\n    ],\n    \"nickname\": [\n        \"This field is required.\"\n    ]\n}"
+				},
+				{
+					"name": "회원가입 (실패 : 아이디에 특수문자가 들어갔을 경우)",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "username",
+									"value": "testtest@",
+									"description": "사용자 아이디 (필수)",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "basdfa@naver.com",
+									"description": "사용자 이메일 인증용 이메일 (필수, 이메일 형태 @와 @aa.com 형태여야함)",
+									"type": "text"
+								},
+								{
+									"key": "password1",
+									"value": "lcw1401314!",
+									"description": "비밀번호 (필수, 8글자 이상, 너무 일반적인 것 안됨, password1과 동일해야함)",
+									"type": "text"
+								},
+								{
+									"key": "password2",
+									"value": "lcw1401314!",
+									"description": "비밀번호 확인 (필수, 8글자 이상, 너무 일반적인 것 안됨, password1과 동일해야함)",
+									"type": "text"
+								},
+								{
+									"key": "nickname",
+									"value": "b1",
+									"description": "사용자 닉네임 설정 (필수, 1글자 이상 / 20글자 이하)",
+									"type": "text"
+								},
+								{
+									"key": "introduction",
+									"value": "bsdfsdf",
+									"description": "사용자 자기소개 정보 (선택) ",
+									"type": "text"
+								},
+								{
+									"key": "profile_image",
+									"value": "b",
+									"description": "프로필 사진 (선택)",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/rest-auth/registration",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"rest-auth",
+								"registration"
+							]
+						}
+					},
+					"status": "Bad Request",
+					"code": 400,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Tue, 02 Feb 2021 08:10:02 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.7.6"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept, Origin"
+						},
+						{
+							"key": "Allow",
+							"value": "POST, OPTIONS"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "94"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"username\": [\n        \"Enter a valid username. This value may contain only English letters, numbers,\"\n    ]\n}"
+				},
+				{
+					"name": "회원가입 (실패 : 닉네임이 있는 닉네임이거나 5글자 미만인 글자)",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "username",
+									"value": "root",
+									"description": "사용자 아이디 (필수, 5글자 이상)",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "basdfa@naver.com",
+									"description": "사용자 이메일 인증용 이메일 (필수, 이메일 형태 @와 @aa.com 형태여야함)",
+									"type": "text"
+								},
+								{
+									"key": "password1",
+									"value": "lcw1401314!",
+									"description": "비밀번호 (필수, 8글자 이상, 너무 일반적인 것 안됨, password1과 동일해야함)",
+									"type": "text"
+								},
+								{
+									"key": "password2",
+									"value": "lcw1401314!",
+									"description": "비밀번호 확인 (필수, 8글자 이상, 너무 일반적인 것 안됨, password1과 동일해야함)",
+									"type": "text"
+								},
+								{
+									"key": "nickname",
+									"value": "b1",
+									"description": "사용자 닉네임 설정 (필수, 1글자 이상 / 20글자 이하)",
+									"type": "text"
+								},
+								{
+									"key": "introduction",
+									"value": "bsdfsdf",
+									"description": "사용자 자기소개 정보 (선택) ",
+									"type": "text"
+								},
+								{
+									"key": "profile_image",
+									"value": "b",
+									"description": "프로필 사진 (선택)",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/rest-auth/registration",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"rest-auth",
+								"registration"
+							]
+						}
+					},
+					"status": "Bad Request",
+					"code": 400,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Tue, 02 Feb 2021 08:10:47 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.7.6"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept, Origin"
+						},
+						{
+							"key": "Allow",
+							"value": "POST, OPTIONS"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "90"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"username\": [\n        \"This field must be unique.\",\n        \"Ensure this field has at least 5 characters.\"\n    ]\n}"
+				},
+				{
+					"name": "회원가입 (실패 : 비밀번호와 비밀번호 확인이 다를 경우)",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "username",
+									"value": "roots",
+									"description": "사용자 아이디 (필수, 5글자 이상)",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "basdfa@naver.com",
+									"description": "사용자 이메일 인증용 이메일 (필수, 이메일 형태 @와 @aa.com 형태여야함)",
+									"type": "text"
+								},
+								{
+									"key": "password1",
+									"value": "lcw1401314!",
+									"description": "비밀번호 (필수, 8글자 이상, 너무 일반적인 것 안됨, password1과 동일해야함)",
+									"type": "text"
+								},
+								{
+									"key": "password2",
+									"value": "lcw1401314",
+									"description": "비밀번호 확인 (필수, 8글자 이상, 너무 일반적인 것 안됨, password1과 동일해야함)",
+									"type": "text"
+								},
+								{
+									"key": "nickname",
+									"value": "b1",
+									"description": "사용자 닉네임 설정 (필수, 1글자 이상 / 20글자 이하)",
+									"type": "text"
+								},
+								{
+									"key": "introduction",
+									"value": "bsdfsdf",
+									"description": "사용자 자기소개 정보 (선택) ",
+									"type": "text"
+								},
+								{
+									"key": "profile_image",
+									"value": "b",
+									"description": "프로필 사진 (선택)",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/rest-auth/registration",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"rest-auth",
+								"registration"
+							]
+						}
+					},
+					"status": "Bad Request",
+					"code": 400,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Tue, 02 Feb 2021 08:11:34 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.7.6"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept, Origin"
+						},
+						{
+							"key": "Allow",
+							"value": "POST, OPTIONS"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "62"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"non_field_errors\": [\n        \"The two password fields didn't match.\"\n    ]\n}"
+				},
+				{
+					"name": "회원가입 (성공)",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "username",
+									"value": "roots",
+									"description": "사용자 아이디 (필수, 5글자 이상)",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "basdfa@naver.com",
+									"description": "사용자 이메일 인증용 이메일 (필수, 이메일 형태 @와 @aa.com 형태여야함)",
+									"type": "text"
+								},
+								{
+									"key": "password1",
+									"value": "lcw1401314!",
+									"description": "비밀번호 (필수, 8글자 이상, 너무 일반적인 것 안됨, password1과 동일해야함)",
+									"type": "text"
+								},
+								{
+									"key": "password2",
+									"value": "lcw1401314!",
+									"description": "비밀번호 확인 (필수, 8글자 이상, 너무 일반적인 것 안됨, password1과 동일해야함)",
+									"type": "text"
+								},
+								{
+									"key": "nickname",
+									"value": "b1",
+									"description": "사용자 닉네임 설정 (필수, 1글자 이상 / 20글자 이하)",
+									"type": "text"
+								},
+								{
+									"key": "introduction",
+									"value": "asdfasdf",
+									"description": "사용자 자기소개 정보 (선택) ",
+									"type": "text"
+								},
+								{
+									"key": "profile_image",
+									"value": "b",
+									"description": "프로필 사진 (선택)",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/rest-auth/registration",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"rest-auth",
+								"registration"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Tue, 02 Feb 2021 08:12:11 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.7.6"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept, Origin, Cookie"
+						},
+						{
+							"key": "Allow",
+							"value": "POST, OPTIONS"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "65"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						},
+						{
+							"key": "Set-Cookie",
+							"value": "messages=\"[[\\\"__json_message\\\"\\0540\\05420\\054\\\"Confirmation e-mail sent to cwadven@naver.com.\\\"]\\054[\\\"__json_message\\\"\\0540\\05420\\054\\\"Confirmation e-mail sent to b@naver.com.\\\"]\\054[\\\"__json_message\\\"\\0540\\05420\\054\\\"Confirmation e-mail sent to b@nav1er.com.\\\"]\\054[\\\"__json_message\\\"\\0540\\05420\\054\\\"Confirmation e-mail sent to b@nav1er.com.\\\"]\\054[\\\"__json_message\\\"\\0540\\05420\\054\\\"Confirmation e-mail sent to b@nav1er.com.\\\"]\\054[\\\"__json_message\\\"\\0540\\05425\\054\\\"Successfully signed in as basdfasdfasdf.\\\"]\\054[\\\"__json_message\\\"\\0540\\05425\\054\\\"Successfully signed in as basdfasdfasdf.\\\"]\\054[\\\"__json_message\\\"\\0540\\05425\\054\\\"Successfully signed in as basdfasdfasdf.\\\"]\\054[\\\"__json_message\\\"\\0540\\05420\\054\\\"Confirmation e-mail sent to basdfasdfasdf@nav1er.com.\\\"]\\054[\\\"__json_message\\\"\\0540\\05420\\054\\\"Confirmation e-mail sent to basdfasdfasdf@nav1er.com.\\\"]\\054[\\\"__json_message\\\"\\0540\\05420\\054\\\"Confirmation e-mail sent to basdfasdfasdf@nav1er.com.\\\"]\\054[\\\"__json_message\\\"\\0540\\05420\\054\\\"Confirmation e-mail sent to basdfasdfasdf@nav1er.com.\\\"]\\054[\\\"__json_message\\\"\\0540\\05420\\054\\\"Confirmation e-mail sent to basdfasdfasdf@nav1er.com.\\\"]\\054[\\\"__json_message\\\"\\0540\\05420\\054\\\"Confirmation e-mail sent to basdfasdfasdf@nav1er.com.\\\"]\\054[\\\"__json_message\\\"\\0540\\05420\\054\\\"Confirmation e-mail sent to basdfasdfasdf@nav1er.com.\\\"]\\054[\\\"__json_message\\\"\\0540\\05420\\054\\\"Confirmation e-mail sent to basdfasdfasdf@nav1er.com.\\\"]\\054[\\\"__json_message\\\"\\0540\\05420\\054\\\"Confirmation e-mail sent to basdfasdfasdf@nav1er.com.\\\"]\\054[\\\"__json_message\\\"\\0540\\05420\\054\\\"Confirmation e-mail sent to basdfasdfasdf@nav1er.com.\\\"]\\054[\\\"__json_message\\\"\\0540\\05420\\054\\\"Confirmation e-mail sent to basdfa@naver.com.\\\"]]:1l6qnD:kc02fcwHs6Xx3qGcxfh9dYe4XwPCAlWhPso-QF6wWGU\"; HttpOnly; Path=/; SameSite=Lax"
+						},
+						{
+							"key": "Set-Cookie",
+							"value": "sessionid=xaij5qeqxdkihrumj3xuz6xajckwtk9c; expires=Tue, 16 Feb 2021 08:12:11 GMT; HttpOnly; Max-Age=1209600; Path=/; SameSite=Lax"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"detail\": \"Verification e-mail sent.\",\n    \"email\": \"basdfa@naver.com\"\n}"
+				},
+				{
+					"name": "회원가입 (실패 : 이미 있는 이메일 인 경우 와 닉네임 또한 있는 경우)",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "username",
+									"value": "rootss",
+									"description": "사용자 아이디 (필수, 5글자 이상)",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "basdfa@naver.com",
+									"description": "사용자 이메일 인증용 이메일 (필수, 이메일 형태 @와 @aa.com 형태여야함)",
+									"type": "text"
+								},
+								{
+									"key": "password1",
+									"value": "lcw1401314!",
+									"description": "비밀번호 (필수, 8글자 이상, 너무 일반적인 것 안됨, password1과 동일해야함)",
+									"type": "text"
+								},
+								{
+									"key": "password2",
+									"value": "lcw1401314!",
+									"description": "비밀번호 확인 (필수, 8글자 이상, 너무 일반적인 것 안됨, password1과 동일해야함)",
+									"type": "text"
+								},
+								{
+									"key": "nickname",
+									"value": "asdfasdf",
+									"description": "사용자 닉네임 설정 (필수, 1글자 이상 / 20글자 이하)",
+									"type": "text"
+								},
+								{
+									"key": "introduction",
+									"value": "asdfasdf",
+									"description": "사용자 자기소개 정보 (선택) ",
+									"type": "text"
+								},
+								{
+									"key": "profile_image",
+									"value": "b",
+									"description": "프로필 사진 (선택)",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/rest-auth/registration",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"rest-auth",
+								"registration"
+							]
+						}
+					},
+					"status": "Bad Request",
+					"code": 400,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Tue, 02 Feb 2021 08:12:52 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.7.6"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept, Origin"
+						},
+						{
+							"key": "Allow",
+							"value": "POST, OPTIONS"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "110"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"email\": [\n        \"A user is already registered with this e-mail address.\"\n    ],\n    \"nickname\": [\n        \"This field must be unique.\"\n    ]\n}"
+				},
+				{
+					"name": "회원가입 (실패 : 사용자 아이디가 없을 경우)",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "email",
+									"value": "basdfasdfa@naver.com",
+									"description": "사용자 이메일 인증용 이메일 (필수, 이메일 형태 @와 @aa.com 형태여야함)",
+									"type": "text"
+								},
+								{
+									"key": "password1",
+									"value": "lcw1401314!",
+									"description": "비밀번호 (필수, 8글자 이상, 너무 일반적인 것 안됨, password1과 동일해야함)",
+									"type": "text"
+								},
+								{
+									"key": "password2",
+									"value": "lcw1401314!",
+									"description": "비밀번호 확인 (필수, 8글자 이상, 너무 일반적인 것 안됨, password1과 동일해야함)",
+									"type": "text"
+								},
+								{
+									"key": "nickname",
+									"value": "aaa",
+									"description": "사용자 닉네임 설정 (필수, 1글자 이상 / 20글자 이하)",
+									"type": "text"
+								},
+								{
+									"key": "introduction",
+									"value": "aaaaaa",
+									"description": "사용자 자기소개 정보 (선택) ",
+									"type": "text"
+								},
+								{
+									"key": "profile_image",
+									"value": "b",
+									"description": "프로필 사진 (선택)",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/rest-auth/registration",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"rest-auth",
+								"registration"
+							]
+						}
+					},
+					"status": "Bad Request",
+					"code": 400,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Tue, 02 Feb 2021 08:14:50 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.7.6"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept, Origin"
+						},
+						{
+							"key": "Allow",
+							"value": "POST, OPTIONS"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "40"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"username\": [\n        \"This field is required.\"\n    ]\n}"
+				}
+			]
+		}
+	]
+}

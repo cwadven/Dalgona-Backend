@@ -1,0 +1,306 @@
+{
+	"info": {
+		"_postman_id": "42145471-afa3-446f-8d0c-6ce139f0a5bf",
+		"name": "Dalgona News",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "기사 리스트(0401 기사)",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/news/list?searchType=title&searchWord=코로나&page=1",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"news",
+						"list"
+					],
+					"query": [
+						{
+							"key": "searchType",
+							"value": "title",
+							"description": "(선택) 제목 "
+						},
+						{
+							"key": "searchWord",
+							"value": "코로나",
+							"description": "(선택) 제목명 "
+						},
+						{
+							"key": "page",
+							"value": "1",
+							"description": "페이지"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "기사 검색 (성공)",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/news/list?searchType=title&searchWord=코로나&page=1",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"news",
+								"list"
+							],
+							"query": [
+								{
+									"key": "searchType",
+									"value": "title"
+								},
+								{
+									"key": "searchWord",
+									"value": "코로나"
+								},
+								{
+									"key": "page",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Mon, 01 Mar 2021 10:03:51 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.8.2"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept, Origin, Cookie"
+						},
+						{
+							"key": "Allow",
+							"value": "GET, HEAD, OPTIONS"
+						},
+						{
+							"key": "Server-Timing",
+							"value": "TimerPanel_utime;dur=44.94999999999916;desc=\"User CPU time\", TimerPanel_stime;dur=15.483999999999831;desc=\"System CPU time\", TimerPanel_total;dur=60.43399999999899;desc=\"Total CPU time\", TimerPanel_total_time;dur=61.215877532958984;desc=\"Elapsed time\", SQLPanel_sql_time;dur=1.4002323150634766;desc=\"SQL 2 queries\", CachePanel_total_time;dur=0;desc=\"Cache 0 Calls\""
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "220"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"count\": 1,\n    \"next\": null,\n    \"previous\": null,\n    \"results\": [\n        {\n            \"title\": \"[속보] 코로나19\",\n            \"link\": \"http://www.naver.com\",\n            \"image\": \"http://127.0.0.1:8000/media/news_image/B9C44B5D-4D28-47E9-8AA2-080E6666BE31.jpeg\",\n            \"date\": \"03/02\"\n        }\n    ]\n}"
+				},
+				{
+					"name": "기사 리스트(성공)",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/news/list?page=1",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"news",
+								"list"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Mon, 15 Feb 2021 02:21:55 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.7.6"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept, Origin"
+						},
+						{
+							"key": "Allow",
+							"value": "GET, HEAD, OPTIONS"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "2625"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"count\": 65,\n    \"next\": \"http://127.0.0.1:8000/news/list?page=2\",\n    \"previous\": null,\n    \"results\": [\n        {\n            \"title\": \"‘딸바보’ 박남정, 딸 박시은 아이돌 데뷔 반대했었다\",\n            \"link\": \"https://www.donga.com/news/Culture/article/all/20210203/105268143/1\",\n            \"image\": \"http://127.0.0.1:8000/media/news_image/donga2021-02-03-20-441.jpg\",\n            \"date\": \"02/03\"\n        },\n        {\n            \"title\": \"존박, 코로나19 완치 퇴원…“의료진 수고 덕분”\",\n            \"link\": \"https://www.donga.com/news/Entertainment/article/all/20210203/105265070/1\",\n            \"image\": \"http://127.0.0.1:8000/media/news_image/donga2021-02-03-20-442.jpg\",\n            \"date\": \"02/03\"\n        },\n        {\n            \"title\": \"엘키, CLC 탈퇴…소속사와도 전속계약 해지\",\n            \"link\": \"https://www.yna.co.kr/view/AKR20210203149400005?section=entertainment/pop-song\",\n            \"image\": \"http://127.0.0.1:8000/media/news_image/yna2021-02-03-20-441.jpg\",\n            \"date\": \"02/03\"\n        },\n        {\n            \"title\": \"밴드 새소년, 신곡 '자유'…유아인 티저영상 특별 출연\",\n            \"link\": \"https://www.yna.co.kr/view/AKR20210203145400005?section=entertainment/pop-song\",\n            \"image\": \"http://127.0.0.1:8000/media/news_image/yna2021-02-03-20-442.jpg\",\n            \"date\": \"02/03\"\n        },\n        {\n            \"title\": \"채널A, 세계 부호 1위 일론 머스크 집중 조명 다큐 방영\",\n            \"link\": \"https://www.donga.com/news/Inter/article/all/20210203/105264158/2\",\n            \"image\": \"http://127.0.0.1:8000/media/news_image/donga2021-02-03-20-443.jpg\",\n            \"date\": \"02/03\"\n        },\n        {\n            \"title\": \"래퍼 칠린호미, 공황장애 치료 위해 입원\",\n            \"link\": \"https://www.yna.co.kr/view/AKR20210203138900005?section=entertainment/pop-song\",\n            \"image\": \"http://127.0.0.1:8000/media/news_image/yna2021-02-03-20-443.jpg\",\n            \"date\": \"02/03\"\n        },\n        {\n            \"title\": \"래퍼 칠린호미, 공황·불안장애 치료 위해 입원\",\n            \"link\": \"https://www.donga.com/news/Culture/article/all/20210203/105262469/1\",\n            \"image\": \"http://127.0.0.1:8000/media/news_image/donga2021-02-03-20-444.jpg\",\n            \"date\": \"02/03\"\n        },\n        {\n            \"title\": \"김수민 아나운서, ‘TV 동물농장’ MC 합류\",\n            \"link\": \"https://www.donga.com/news/Culture/article/all/20210203/105260070/1\",\n            \"image\": \"http://127.0.0.1:8000/media/news_image/donga2021-02-03-20-445.jpg\",\n            \"date\": \"02/03\"\n        },\n        {\n            \"title\": \"'와치 미' 부른 미국 래퍼 사일렌토, 사촌 살해 혐의로 체포\",\n            \"link\": \"https://www.yna.co.kr/view/AKR20210203101400005?section=entertainment/pop-song\",\n            \"image\": \"http://127.0.0.1:8000/media/news_image/yna2021-02-03-20-444.jpg\",\n            \"date\": \"02/03\"\n        },\n        {\n            \"title\": \"[영상] '미스트롯2' 불공정 의혹 부인…\\\"근거없는 사실과 억측 유감\\\"\",\n            \"link\": \"https://www.yna.co.kr/view/AKR20210203084900704?section=entertainment/pop-song\",\n            \"image\": \"http://127.0.0.1:8000/media/news_image/yna2021-02-03-20-445.jpg\",\n            \"date\": \"02/03\"\n        }\n    ]\n}"
+				}
+			]
+		},
+		{
+			"name": "기사 인기-키워드",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "",
+							"value": "",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://{{test_server}}/news/popular-keyword",
+					"protocol": "http",
+					"host": [
+						"{{test_server}}"
+					],
+					"path": [
+						"news",
+						"popular-keyword"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "기사 인기-키워드(성공)",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/news/popular-keyword",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"news",
+								"popular-keyword"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Mon, 01 Mar 2021 09:43:46 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.8.2"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept, Origin, Cookie"
+						},
+						{
+							"key": "Allow",
+							"value": "GET, HEAD, OPTIONS"
+						},
+						{
+							"key": "Server-Timing",
+							"value": "TimerPanel_utime;dur=21.38100000000076;desc=\"User CPU time\", TimerPanel_stime;dur=6.6790000000001015;desc=\"System CPU time\", TimerPanel_total;dur=28.060000000000862;desc=\"Total CPU time\", TimerPanel_total_time;dur=28.111934661865234;desc=\"Elapsed time\", SQLPanel_sql_time;dur=0.7178783416748047;desc=\"SQL 1 queries\", CachePanel_total_time;dur=0;desc=\"Cache 0 Calls\""
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "106"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"word\": \"포스트맨\"\n    },\n    {\n        \"word\": \"아이유\"\n    },\n    {\n        \"word\": \"최예준\"\n    },\n    {\n        \"word\": \"en;cre\"\n    },\n    {\n        \"word\": \"달고나\"\n    }\n]"
+				}
+			]
+		}
+	]
+}

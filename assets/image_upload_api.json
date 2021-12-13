@@ -1,0 +1,358 @@
+{
+	"info": {
+		"_postman_id": "a807a0c5-32a9-421c-9ce7-5fa676d78986",
+		"name": "Dalgona Image_Manage",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "이미지 업로드 (0501_글쓰기, 0601_글쓰기)",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "jwt eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJ1c2VybmFtZSI6InJvb3RzIiwiZXhwIjoxNjEyODQ2NDgxLCJlbWFpbCI6ImN3YWR2ZW5AbmF2ZXIuY29tIiwib3JpZ19pYXQiOjE2MTIyNDE2ODF9.cUoprvlZF5SurO3T5XTHPOH1PrBkEqgiqcJWUKgmBnk",
+						"description": "회원인지 확인",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "image",
+							"description": "이미지 업로드 (필수)",
+							"type": "file",
+							"src": "/C:/Users/Sedragon/Pictures/littledeep_illustration_watch_style1.png"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/images/post",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"images",
+						"post"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "이미지 업로드 (실패 : 로그인 한 정보가 없음)",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/images/post",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"images",
+								"post"
+							]
+						}
+					},
+					"status": "Unauthorized",
+					"code": 401,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Tue, 02 Feb 2021 05:25:57 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.7.6"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "WWW-Authenticate",
+							"value": "JWT realm=\"api\""
+						},
+						{
+							"key": "Vary",
+							"value": "Accept, Origin"
+						},
+						{
+							"key": "Allow",
+							"value": "POST, OPTIONS"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "58"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"detail\": \"Authentication credentials were not provided.\"\n}"
+				},
+				{
+					"name": "이미지 업로드 (실패 : image가 body에 없을 경우 및 이미지를 넣지 않았을 경우)",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "jwt eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJ1c2VybmFtZSI6InJvb3RzIiwiZXhwIjoxNjEyODQ2NDgxLCJlbWFpbCI6ImN3YWR2ZW5AbmF2ZXIuY29tIiwib3JpZ19pYXQiOjE2MTIyNDE2ODF9.cUoprvlZF5SurO3T5XTHPOH1PrBkEqgiqcJWUKgmBnk",
+								"description": "회원인지 확인",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://127.0.0.1:8000/images/post",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"images",
+								"post"
+							]
+						}
+					},
+					"status": "Bad Request",
+					"code": 400,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Tue, 02 Feb 2021 05:27:37 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.7.6"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept, Origin"
+						},
+						{
+							"key": "Allow",
+							"value": "POST, OPTIONS"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "36"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"image\": [\n        \"No file was submitted.\"\n    ]\n}"
+				},
+				{
+					"name": "이미지 업로드 (실패 : 이미지가 아닐 경우 이상한 것일 경우)",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "jwt eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJ1c2VybmFtZSI6InJvb3RzIiwiZXhwIjoxNjEyODQ2NDgxLCJlbWFpbCI6ImN3YWR2ZW5AbmF2ZXIuY29tIiwib3JpZ19pYXQiOjE2MTIyNDE2ODF9.cUoprvlZF5SurO3T5XTHPOH1PrBkEqgiqcJWUKgmBnk",
+								"description": "회원인지 확인",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "image",
+									"value": "asdfasdf",
+									"description": "이미지 업로드 (필수)",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/images/post",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"images",
+								"post"
+							]
+						}
+					},
+					"status": "Bad Request",
+					"code": 400,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Tue, 02 Feb 2021 05:28:23 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.7.6"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept, Origin"
+						},
+						{
+							"key": "Allow",
+							"value": "POST, OPTIONS"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "85"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"image\": [\n        \"The submitted data was not a file. Check the encoding type on the form.\"\n    ]\n}"
+				},
+				{
+					"name": "이미지 업로드 (성공)",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "jwt eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJ1c2VybmFtZSI6InJvb3RzIiwiZXhwIjoxNjEyODQ2NDgxLCJlbWFpbCI6ImN3YWR2ZW5AbmF2ZXIuY29tIiwib3JpZ19pYXQiOjE2MTIyNDE2ODF9.cUoprvlZF5SurO3T5XTHPOH1PrBkEqgiqcJWUKgmBnk",
+								"description": "회원인지 확인",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "image",
+									"description": "이미지 업로드 (필수)",
+									"type": "file",
+									"src": "/C:/Users/Sedragon/Pictures/littledeep_illustration_watch_style1.png"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/images/post",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"images",
+								"post"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Tue, 02 Feb 2021 05:30:12 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.7.6"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept, Origin"
+						},
+						{
+							"key": "Allow",
+							"value": "POST, OPTIONS"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "92"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"image\": \"http://127.0.0.1:8000/media/board_image/littledeep_illustration_watch_style1.png\"\n}"
+				}
+			]
+		}
+	]
+}

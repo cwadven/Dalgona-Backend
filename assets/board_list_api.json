@@ -1,0 +1,1923 @@
+{
+	"info": {
+		"_postman_id": "30e00d59-24dc-4b93-b151-4021bd11d8c3",
+		"name": "Dalgona Board_List",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "전체 게시판 조회",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/boardlist",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"boardlist"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "전체 게시판 조회(성공)",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/boardlist",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"boardlist"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Mon, 01 Mar 2021 09:35:50 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.8.2"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept, Origin, Cookie"
+						},
+						{
+							"key": "Allow",
+							"value": "GET, POST, HEAD, OPTIONS"
+						},
+						{
+							"key": "Server-Timing",
+							"value": "TimerPanel_utime;dur=110.17999999999972;desc=\"User CPU time\", TimerPanel_stime;dur=39.09200000000013;desc=\"System CPU time\", TimerPanel_total;dur=149.27199999999985;desc=\"Total CPU time\", TimerPanel_total_time;dur=150.15697479248047;desc=\"Elapsed time\", SQLPanel_sql_time;dur=1.668691635131836;desc=\"SQL 7 queries\", CachePanel_total_time;dur=0;desc=\"Cache 0 Calls\""
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "1511"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"board_url\": \"EXO\",\n        \"board_name\": \"EXO\",\n        \"introduction\": \"EXO 게시판\",\n        \"created_at\": \"2021-03-01T18:32:59.875764\",\n        \"updated_at\": \"2021-03-01T18:35:19.782728\",\n        \"category\": [\n            {\n                \"id\": 2,\n                \"board_url\": \"EXO\",\n                \"category_name\": \"공지\"\n            }\n        ],\n        \"division\": 2,\n        \"is_new\": true,\n        \"write_priority\": -1,\n        \"read_priority\": -1\n    },\n    {\n        \"board_url\": \"IU\",\n        \"board_name\": \"IU\",\n        \"introduction\": \"아이유 게시판\",\n        \"created_at\": \"2021-03-01T18:32:47.443900\",\n        \"updated_at\": \"2021-03-01T18:35:15.340913\",\n        \"category\": [],\n        \"division\": 2,\n        \"is_new\": true,\n        \"write_priority\": -1,\n        \"read_priority\": -1\n    },\n    {\n        \"board_url\": \"free\",\n        \"board_name\": \"free\",\n        \"introduction\": \"\",\n        \"created_at\": \"2021-03-01T18:30:23.196624\",\n        \"updated_at\": \"2021-03-01T18:35:11.542338\",\n        \"category\": [\n            {\n                \"id\": 3,\n                \"board_url\": \"free\",\n                \"category_name\": \"유머\"\n            }\n        ],\n        \"division\": 1,\n        \"is_new\": true,\n        \"write_priority\": -1,\n        \"read_priority\": -1\n    },\n    {\n        \"board_url\": \"hobby\",\n        \"board_name\": \"hobby\",\n        \"introduction\": \"\",\n        \"created_at\": \"2021-03-01T18:30:33.317626\",\n        \"updated_at\": \"2021-03-01T18:35:07.494117\",\n        \"category\": [],\n        \"division\": 1,\n        \"is_new\": true,\n        \"write_priority\": -1,\n        \"read_priority\": -1\n    },\n    {\n        \"board_url\": \"event\",\n        \"board_name\": \"event\",\n        \"introduction\": \"이벤트 게시판\",\n        \"created_at\": \"2021-03-01T18:29:32.172872\",\n        \"updated_at\": \"2021-03-01T18:35:02.757576\",\n        \"category\": [],\n        \"division\": 0,\n        \"is_new\": true,\n        \"write_priority\": -1,\n        \"read_priority\": -1\n    },\n    {\n        \"board_url\": \"notice\",\n        \"board_name\": \"notice\",\n        \"introduction\": \"공지 게시판\",\n        \"created_at\": \"2021-03-01T18:29:53.995143\",\n        \"updated_at\": \"2021-03-01T18:34:57.251541\",\n        \"category\": [],\n        \"division\": 0,\n        \"is_new\": true,\n        \"write_priority\": -1,\n        \"read_priority\": -1\n    }\n]"
+				}
+			]
+		},
+		{
+			"name": "게시판 생성",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "jwt eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJ1c2VybmFtZSI6InJvb3QiLCJleHAiOjE2MTU2MzcyMTgsImVtYWlsIjoiY3dhZHZlbkBuYXZlci5jb20iLCJvcmlnX2lhdCI6MTYxNTAzMjQxOH0.nT1Xih39y-EKqWqgQUzEVPAJXLD_rdtM1U282R4ST4c",
+						"description": "관리자인지 확인하기 위한 사용자 로그인",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "board_url",
+							"value": "event",
+							"description": "(필수) board_url",
+							"type": "text"
+						},
+						{
+							"key": "board_name",
+							"value": "이벤트",
+							"description": "(필수) board_name",
+							"type": "text"
+						},
+						{
+							"key": "division",
+							"value": "0",
+							"description": "(필수) 0 : 달고나 / 1 : 자유 / 2 : 루나",
+							"type": "text"
+						},
+						{
+							"key": "introduction",
+							"value": "이벤트가 뭘까나?",
+							"description": "(선택) 게시판 설명",
+							"type": "text"
+						},
+						{
+							"key": "write_priority",
+							"value": "",
+							"description": "(선택) default (-1) 회원일 경우 (0,1)",
+							"type": "text"
+						},
+						{
+							"key": "read_priority",
+							"value": "",
+							"description": "(선택) default (-1) 회원일 경우 (0,1)",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://{{test_server}}/boardlist",
+					"protocol": "http",
+					"host": [
+						"{{test_server}}"
+					],
+					"path": [
+						"boardlist"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "게시판 생성(성공)",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "jwt eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjo0LCJ1c2VybmFtZSI6InJvb3Q0IiwiZXhwIjoxNjE1MTk2MjU1LCJlbWFpbCI6ImJhc2RmYXNkZjMyYUBuYXZlci5jb20iLCJvcmlnX2lhdCI6MTYxNDU5MTQ1NX0.4y1Hj6sexovjp59a3DubELWWSzbOE8zcihUAj-YP3qw",
+								"description": "관리자인지 확인하기 위한 사용자 로그인",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "board_url",
+									"value": "G-Dragon",
+									"description": "(필수) board_url",
+									"type": "text"
+								},
+								{
+									"key": "board_name",
+									"value": "지드래곤",
+									"description": "(필수) board_name",
+									"type": "text"
+								},
+								{
+									"key": "division",
+									"value": "2",
+									"description": "(필수)",
+									"type": "text"
+								},
+								{
+									"key": "introduction",
+									"value": "GD 게시판 입니당.",
+									"description": "(선택) 게시판 설명",
+									"type": "text"
+								},
+								{
+									"key": "write_priority",
+									"value": "",
+									"description": "(선택) default (-1) 회원일 경우 (0,1)",
+									"type": "text"
+								},
+								{
+									"key": "read_priority",
+									"value": "",
+									"description": "(선택) default (-1) 회원일 경우 (0,1)",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/boardlist",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"boardlist"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Mon, 01 Mar 2021 10:14:28 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.8.2"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept, Origin, Cookie"
+						},
+						{
+							"key": "Allow",
+							"value": "GET, POST, HEAD, OPTIONS"
+						},
+						{
+							"key": "Server-Timing",
+							"value": "TimerPanel_utime;dur=96.5820000000015;desc=\"User CPU time\", TimerPanel_stime;dur=34.37100000000015;desc=\"System CPU time\", TimerPanel_total;dur=130.95300000000165;desc=\"Total CPU time\", TimerPanel_total_time;dur=131.78110122680664;desc=\"Elapsed time\", SQLPanel_sql_time;dur=2.936840057373047;desc=\"SQL 5 queries\", CachePanel_total_time;dur=0;desc=\"Cache 0 Calls\""
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "257"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"board_url\": \"G-Dragon\",\n    \"board_name\": \"지드래곤\",\n    \"introduction\": \"GD 게시판 입니당.\",\n    \"created_at\": \"2021-03-01T19:14:27.912907\",\n    \"updated_at\": \"2021-03-01T19:14:27.912955\",\n    \"category\": [],\n    \"division\": 2,\n    \"is_new\": true,\n    \"write_priority\": -1,\n    \"read_priority\": -1\n}"
+				},
+				{
+					"name": "게시판 생성 (실패 : 관리자가 아니면 회원이 아닌 경우)",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/boardlist",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"boardlist"
+							]
+						}
+					},
+					"status": "Unauthorized",
+					"code": 401,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Tue, 02 Feb 2021 04:14:52 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.7.6"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "WWW-Authenticate",
+							"value": "JWT realm=\"api\""
+						},
+						{
+							"key": "Vary",
+							"value": "Accept, Origin"
+						},
+						{
+							"key": "Allow",
+							"value": "GET, POST, HEAD, OPTIONS"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "58"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"detail\": \"Authentication credentials were not provided.\"\n}"
+				},
+				{
+					"name": "게시판 생성 (실패 : 이미 board_url과 board_name의 동일한 이름을 가진 게시판이 있을 경우)",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "jwt eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJ1c2VybmFtZSI6InJvb3RzIiwiZXhwIjoxNjEyODQ0NTMyLCJlbWFpbCI6ImN3YWR2ZW5AbmF2ZXIuY29tIiwib3JpZ19pYXQiOjE2MTIyMzk3MzJ9._ANVgirOT4h0Xo6cE1WiIXfc11KJqg37duw3_pDDiAI",
+								"description": "관리자인지 확인하기 위한 사용자 로그인",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "board_url",
+									"value": "test",
+									"type": "text"
+								},
+								{
+									"key": "board_name",
+									"value": "a",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/boardlist",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"boardlist"
+							]
+						}
+					},
+					"status": "Bad Request",
+					"code": 400,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Tue, 02 Feb 2021 04:23:59 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.7.6"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept, Origin"
+						},
+						{
+							"key": "Allow",
+							"value": "GET, POST, HEAD, OPTIONS"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "129"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"board_url\": [\n        \"board_list with this board url already exists.\"\n    ],\n    \"board_name\": [\n        \"board_list with this board name already exists.\"\n    ]\n}"
+				},
+				{
+					"name": "게시판 생성 (실패 : board_url과 board_name을 body에 보내지 않았을 경우)",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "jwt eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJ1c2VybmFtZSI6InJvb3RzIiwiZXhwIjoxNjEyODQ0NTMyLCJlbWFpbCI6ImN3YWR2ZW5AbmF2ZXIuY29tIiwib3JpZ19pYXQiOjE2MTIyMzk3MzJ9._ANVgirOT4h0Xo6cE1WiIXfc11KJqg37duw3_pDDiAI",
+								"description": "관리자인지 확인하기 위한 사용자 로그인",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/boardlist",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"boardlist"
+							]
+						}
+					},
+					"status": "Bad Request",
+					"code": 400,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Tue, 02 Feb 2021 04:22:29 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.7.6"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept, Origin"
+						},
+						{
+							"key": "Allow",
+							"value": "GET, POST, HEAD, OPTIONS"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "82"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"board_url\": [\n        \"This field is required.\"\n    ],\n    \"board_name\": [\n        \"This field is required.\"\n    ]\n}"
+				},
+				{
+					"name": "게시판 생성 (실패 : board_url 과 board_name에 빈칸을 적어서 생성 했을 경우)",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "jwt eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJ1c2VybmFtZSI6InJvb3RzIiwiZXhwIjoxNjEyODQ0NTMyLCJlbWFpbCI6ImN3YWR2ZW5AbmF2ZXIuY29tIiwib3JpZ19pYXQiOjE2MTIyMzk3MzJ9._ANVgirOT4h0Xo6cE1WiIXfc11KJqg37duw3_pDDiAI",
+								"description": "관리자인지 확인하기 위한 사용자 로그인",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "board_url",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "board_name",
+									"value": "",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/boardlist",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"boardlist"
+							]
+						}
+					},
+					"status": "Bad Request",
+					"code": 400,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Tue, 02 Feb 2021 04:23:13 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.7.6"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept, Origin"
+						},
+						{
+							"key": "Allow",
+							"value": "GET, POST, HEAD, OPTIONS"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "92"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"board_url\": [\n        \"This field may not be blank.\"\n    ],\n    \"board_name\": [\n        \"This field may not be blank.\"\n    ]\n}"
+				},
+				{
+					"name": "게시판 생성 (실패 : 관리자가 아닌 일반 회원이 게시판을 생성하려고 하는 경우)",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "jwt eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyLCJ1c2VybmFtZSI6InRlc3R0ZXN0IiwiZXhwIjoxNjEyODQ0Mjk0LCJlbWFpbCI6ImN3YWR2ZW5AZ21haWwuY29tIiwib3JpZ19pYXQiOjE2MTIyMzk0OTR9.h6IdjvMwHtKQnEAf-NLSJcHuNBkq4y4rC3zi_Hgz2Z8",
+								"description": "관리자인지 확인하기 위한 사용자 로그인",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/boardlist",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"boardlist"
+							]
+						}
+					},
+					"status": "Forbidden",
+					"code": 403,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Tue, 02 Feb 2021 04:20:07 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.7.6"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept, Origin"
+						},
+						{
+							"key": "Allow",
+							"value": "GET, POST, HEAD, OPTIONS"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "63"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"detail\": \"You do not have permission to perform this action.\"\n}"
+				}
+			]
+		},
+		{
+			"name": "공지게시판에 있는 게시판만 보기 (070101_공지)",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/boardlist/division/0",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"boardlist",
+						"division",
+						"0"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "공지게시판에 있는 게시판만 보기 (성공)",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/boardlist/division/0",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"boardlist",
+								"division",
+								"0"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Mon, 01 Mar 2021 09:38:22 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.8.2"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept, Origin, Cookie"
+						},
+						{
+							"key": "Allow",
+							"value": "GET, HEAD, OPTIONS"
+						},
+						{
+							"key": "Server-Timing",
+							"value": "TimerPanel_utime;dur=67.13900000000095;desc=\"User CPU time\", TimerPanel_stime;dur=35.781999999999314;desc=\"System CPU time\", TimerPanel_total;dur=102.92100000000026;desc=\"Total CPU time\", TimerPanel_total_time;dur=84.03396606445312;desc=\"Elapsed time\", SQLPanel_sql_time;dur=1.2700557708740234;desc=\"SQL 3 queries\", CachePanel_total_time;dur=0;desc=\"Cache 0 Calls\""
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "488"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"board_url\": \"event\",\n        \"board_name\": \"event\",\n        \"introduction\": \"이벤트 게시판\",\n        \"created_at\": \"2021-03-01T18:29:32.172872\",\n        \"updated_at\": \"2021-03-01T18:35:02.757576\",\n        \"category\": [],\n        \"division\": 0,\n        \"is_new\": true,\n        \"write_priority\": -1,\n        \"read_priority\": -1\n    },\n    {\n        \"board_url\": \"notice\",\n        \"board_name\": \"notice\",\n        \"introduction\": \"공지 게시판\",\n        \"created_at\": \"2021-03-01T18:29:53.995143\",\n        \"updated_at\": \"2021-03-01T18:34:57.251541\",\n        \"category\": [],\n        \"division\": 0,\n        \"is_new\": true,\n        \"write_priority\": -1,\n        \"read_priority\": -1\n    }\n]"
+				}
+			]
+		},
+		{
+			"name": "자유게시판에 있는 게시판만 보기 (060101_자유)",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/boardlist/division/1",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"boardlist",
+						"division",
+						"1"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "자유게시판에 있는 게시판만 보기 (성공)",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/boardlist/division/1",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"boardlist",
+								"division",
+								"1"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Mon, 01 Mar 2021 09:38:49 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.8.2"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept, Origin, Cookie"
+						},
+						{
+							"key": "Allow",
+							"value": "GET, HEAD, OPTIONS"
+						},
+						{
+							"key": "Server-Timing",
+							"value": "TimerPanel_utime;dur=59.22800000000095;desc=\"User CPU time\", TimerPanel_stime;dur=19.359999999998934;desc=\"System CPU time\", TimerPanel_total;dur=78.58799999999988;desc=\"Total CPU time\", TimerPanel_total_time;dur=79.15401458740234;desc=\"Elapsed time\", SQLPanel_sql_time;dur=1.547098159790039;desc=\"SQL 3 queries\", CachePanel_total_time;dur=0;desc=\"Cache 0 Calls\""
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "501"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"board_url\": \"free\",\n        \"board_name\": \"free\",\n        \"introduction\": \"\",\n        \"created_at\": \"2021-03-01T18:30:23.196624\",\n        \"updated_at\": \"2021-03-01T18:35:11.542338\",\n        \"category\": [\n            {\n                \"id\": 3,\n                \"board_url\": \"free\",\n                \"category_name\": \"유머\"\n            }\n        ],\n        \"division\": 1,\n        \"is_new\": true,\n        \"write_priority\": -1,\n        \"read_priority\": -1\n    },\n    {\n        \"board_url\": \"hobby\",\n        \"board_name\": \"hobby\",\n        \"introduction\": \"\",\n        \"created_at\": \"2021-03-01T18:30:33.317626\",\n        \"updated_at\": \"2021-03-01T18:35:07.494117\",\n        \"category\": [],\n        \"division\": 1,\n        \"is_new\": true,\n        \"write_priority\": -1,\n        \"read_priority\": -1\n    }\n]"
+				}
+			]
+		},
+		{
+			"name": "루나게시판에 있는 게시판만 보기 (050101_루나)",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/boardlist/division/2",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"boardlist",
+						"division",
+						"2"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "루나게시판에 있는 게시판만 보기 (성공)",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/boardlist/division/2",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"boardlist",
+								"division",
+								"2"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Mon, 01 Mar 2021 09:39:36 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.8.2"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept, Origin, Cookie"
+						},
+						{
+							"key": "Allow",
+							"value": "GET, HEAD, OPTIONS"
+						},
+						{
+							"key": "Server-Timing",
+							"value": "TimerPanel_utime;dur=66.39999999999802;desc=\"User CPU time\", TimerPanel_stime;dur=22.666000000000963;desc=\"System CPU time\", TimerPanel_total;dur=89.06599999999898;desc=\"Total CPU time\", TimerPanel_total_time;dur=89.22600746154785;desc=\"Elapsed time\", SQLPanel_sql_time;dur=1.3546943664550781;desc=\"SQL 4 queries\", CachePanel_total_time;dur=0;desc=\"Cache 0 Calls\""
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "753"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"board_url\": \"CHANGMO\",\n        \"board_name\": \"CHANGMO\",\n        \"introduction\": \"\",\n        \"created_at\": \"2021-03-01T18:37:52.595919\",\n        \"updated_at\": \"2021-03-01T18:37:52.595942\",\n        \"category\": [],\n        \"division\": 2,\n        \"is_new\": true,\n        \"write_priority\": -1,\n        \"read_priority\": -1\n    },\n    {\n        \"board_url\": \"EXO\",\n        \"board_name\": \"EXO\",\n        \"introduction\": \"EXO 게시판\",\n        \"created_at\": \"2021-03-01T18:32:59.875764\",\n        \"updated_at\": \"2021-03-01T18:35:19.782728\",\n        \"category\": [\n            {\n                \"id\": 2,\n                \"board_url\": \"EXO\",\n                \"category_name\": \"공지\"\n            }\n        ],\n        \"division\": 2,\n        \"is_new\": true,\n        \"write_priority\": -1,\n        \"read_priority\": -1\n    },\n    {\n        \"board_url\": \"IU\",\n        \"board_name\": \"IU\",\n        \"introduction\": \"아이유 게시판\",\n        \"created_at\": \"2021-03-01T18:32:47.443900\",\n        \"updated_at\": \"2021-03-01T18:35:15.340913\",\n        \"category\": [],\n        \"division\": 2,\n        \"is_new\": true,\n        \"write_priority\": -1,\n        \"read_priority\": -1\n    }\n]"
+				}
+			]
+		},
+		{
+			"name": "특정 게시판 정보 보기",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/boardlist/IU",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"boardlist",
+						"IU"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "특정 게시판 정보 보기 (실패 : 해당 게시판이 없을 경우)",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/boardlist/free",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"boardlist",
+								"free"
+							]
+						}
+					},
+					"status": "Not Found",
+					"code": 404,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Tue, 02 Feb 2021 04:50:39 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.7.6"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept, Origin"
+						},
+						{
+							"key": "Allow",
+							"value": "GET, PUT, DELETE, HEAD, OPTIONS"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "23"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"detail\": \"Not found.\"\n}"
+				},
+				{
+					"name": "특정 게시판 정보 보기(성공)",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/boardlist/IU",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"boardlist",
+								"IU"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Mon, 01 Mar 2021 09:39:54 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.8.2"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept, Origin, Cookie"
+						},
+						{
+							"key": "Allow",
+							"value": "GET, PUT, DELETE, HEAD, OPTIONS"
+						},
+						{
+							"key": "Server-Timing",
+							"value": "TimerPanel_utime;dur=42.8689999999996;desc=\"User CPU time\", TimerPanel_stime;dur=13.32400000000078;desc=\"System CPU time\", TimerPanel_total;dur=56.19300000000038;desc=\"Total CPU time\", TimerPanel_total_time;dur=56.52189254760742;desc=\"Elapsed time\", SQLPanel_sql_time;dur=1.1072158813476562;desc=\"SQL 2 queries\", CachePanel_total_time;dur=0;desc=\"Cache 0 Calls\""
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "237"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"board_url\": \"IU\",\n    \"board_name\": \"IU\",\n    \"introduction\": \"아이유 게시판\",\n    \"created_at\": \"2021-03-01T18:32:47.443900\",\n    \"updated_at\": \"2021-03-01T18:35:15.340913\",\n    \"category\": [],\n    \"division\": 2,\n    \"is_new\": true,\n    \"write_priority\": -1,\n    \"read_priority\": -1\n}"
+				}
+			]
+		},
+		{
+			"name": "특정 게시판 정보 수정하기",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "jwt eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjo0LCJ1c2VybmFtZSI6InJvb3Q0IiwiZXhwIjoxNjE1MTk2MjU1LCJlbWFpbCI6ImJhc2RmYXNkZjMyYUBuYXZlci5jb20iLCJvcmlnX2lhdCI6MTYxNDU5MTQ1NX0.4y1Hj6sexovjp59a3DubELWWSzbOE8zcihUAj-YP3qw",
+						"description": "관리자인지 확인하기 위한 사용자 로그인",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "board_url",
+							"value": "IU",
+							"description": "변경할 게시판의 url (필수)",
+							"type": "text"
+						},
+						{
+							"key": "board_name",
+							"value": "IU",
+							"description": "변경할 게시판의 이름 (필수)",
+							"type": "text"
+						},
+						{
+							"key": "write_priority",
+							"value": "0",
+							"description": "쓰기 권한 설정 가능 레벨 (선택) [-1(??사용자), 0(일반사용자), 1(??사용자), 2(특수직책), 3(운영자)]",
+							"type": "text"
+						},
+						{
+							"key": "read_priority",
+							"value": "0",
+							"description": "읽기 권한 설정 가능 레벨 (선택) [-1(??사용자), 0(일반사용자), 1(??사용자), 2(특수직책), 3(운영자)]",
+							"type": "text"
+						},
+						{
+							"key": "introduction",
+							"value": "아이유 게시판입니다. ( 수정 )",
+							"description": "해당 게시판의 정보 작성 (선택)",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/boardlist/IU",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"boardlist",
+						"IU"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "특정 게시판 정보 수정하기(성공)",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "jwt eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjo0LCJ1c2VybmFtZSI6InJvb3Q0IiwiZXhwIjoxNjE1MTk2MjU1LCJlbWFpbCI6ImJhc2RmYXNkZjMyYUBuYXZlci5jb20iLCJvcmlnX2lhdCI6MTYxNDU5MTQ1NX0.4y1Hj6sexovjp59a3DubELWWSzbOE8zcihUAj-YP3qw",
+								"description": "관리자인지 확인하기 위한 사용자 로그인",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "board_url",
+									"value": "IU",
+									"description": "변경할 게시판의 url (필수)",
+									"type": "text"
+								},
+								{
+									"key": "board_name",
+									"value": "IU",
+									"description": "변경할 게시판의 이름 (필수)",
+									"type": "text"
+								},
+								{
+									"key": "write_priority",
+									"value": "0",
+									"description": "쓰기 권한 설정 가능 레벨 (선택) [-1(??사용자), 0(일반사용자), 1(??사용자), 2(특수직책), 3(운영자)]",
+									"type": "text"
+								},
+								{
+									"key": "read_priority",
+									"value": "0",
+									"description": "읽기 권한 설정 가능 레벨 (선택) [-1(??사용자), 0(일반사용자), 1(??사용자), 2(특수직책), 3(운영자)]",
+									"type": "text"
+								},
+								{
+									"key": "introduction",
+									"value": "아이유 게시판입니다. ( 수정 )",
+									"description": "해당 게시판의 정보 작성 (선택)",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/boardlist/IU",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"boardlist",
+								"IU"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Mon, 01 Mar 2021 09:40:57 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.8.2"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept, Origin, Cookie"
+						},
+						{
+							"key": "Allow",
+							"value": "GET, PUT, DELETE, HEAD, OPTIONS"
+						},
+						{
+							"key": "Server-Timing",
+							"value": "TimerPanel_utime;dur=106.01699999999781;desc=\"User CPU time\", TimerPanel_stime;dur=35.93299999999999;desc=\"System CPU time\", TimerPanel_total;dur=141.9499999999978;desc=\"Total CPU time\", TimerPanel_total_time;dur=156.26978874206543;desc=\"Elapsed time\", SQLPanel_sql_time;dur=17.130136489868164;desc=\"SQL 6 queries\", CachePanel_total_time;dur=0;desc=\"Cache 0 Calls\""
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "256"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"board_url\": \"IU\",\n    \"board_name\": \"IU\",\n    \"introduction\": \"아이유 게시판입니다. ( 수정 )\",\n    \"created_at\": \"2021-03-01T18:32:47.443900\",\n    \"updated_at\": \"2021-03-01T18:40:57.576828\",\n    \"category\": [],\n    \"division\": 2,\n    \"is_new\": true,\n    \"write_priority\": 0,\n    \"read_priority\": 0\n}"
+				},
+				{
+					"name": "특정 게시판 정보 수정하기 (실패 : 관리자가 아닌 회원이 접근했을 경우)",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "jwt eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyLCJ1c2VybmFtZSI6InRlc3R0ZXN0IiwiZXhwIjoxNjEyODQ2NDM2LCJlbWFpbCI6ImN3YWR2ZW5AZ21haWwuY29tIiwib3JpZ19pYXQiOjE2MTIyNDE2MzZ9.az4b_l4ANN3Kqq9jeVQL-dJ1PQuhWS_XgRORN5hAmIA",
+								"description": "관리자인지 확인하기 위한 사용자 로그인",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://127.0.0.1:8000/boardlist/hobby",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"boardlist",
+								"hobby"
+							]
+						}
+					},
+					"status": "Forbidden",
+					"code": 403,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Tue, 02 Feb 2021 04:54:16 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.7.6"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept, Origin"
+						},
+						{
+							"key": "Allow",
+							"value": "GET, PUT, DELETE, HEAD, OPTIONS"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "63"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"detail\": \"You do not have permission to perform this action.\"\n}"
+				},
+				{
+					"name": "특정 게시판 정보 수정하기 (실패 : board_url 과 board_name을 body에 넣지 않았을 경우)",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "jwt eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJ1c2VybmFtZSI6InJvb3RzIiwiZXhwIjoxNjEyODQ2NDgxLCJlbWFpbCI6ImN3YWR2ZW5AbmF2ZXIuY29tIiwib3JpZ19pYXQiOjE2MTIyNDE2ODF9.cUoprvlZF5SurO3T5XTHPOH1PrBkEqgiqcJWUKgmBnk",
+								"description": "관리자인지 확인하기 위한 사용자 로그인",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://127.0.0.1:8000/boardlist/hobby",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"boardlist",
+								"hobby"
+							]
+						}
+					},
+					"status": "Bad Request",
+					"code": 400,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Tue, 02 Feb 2021 04:56:18 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.7.6"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept, Origin"
+						},
+						{
+							"key": "Allow",
+							"value": "GET, PUT, DELETE, HEAD, OPTIONS"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "82"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"board_url\": [\n        \"This field is required.\"\n    ],\n    \"board_name\": [\n        \"This field is required.\"\n    ]\n}"
+				},
+				{
+					"name": "특정 게시판 정보 수정하기 (실패 : 해당 board_url을 가진 게시판이 없을 경우)",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "jwt eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJ1c2VybmFtZSI6InJvb3RzIiwiZXhwIjoxNjEyODQ2NDgxLCJlbWFpbCI6ImN3YWR2ZW5AbmF2ZXIuY29tIiwib3JpZ19pYXQiOjE2MTIyNDE2ODF9.cUoprvlZF5SurO3T5XTHPOH1PrBkEqgiqcJWUKgmBnk",
+								"description": "관리자인지 확인하기 위한 사용자 로그인",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "board_url",
+									"value": "hobby",
+									"description": "변경할 게시판의 url (필수)",
+									"type": "text"
+								},
+								{
+									"key": "board_name",
+									"value": "취미로하자!!",
+									"description": "변경할 게시판의 이름 (필수)",
+									"type": "text"
+								},
+								{
+									"key": "write_priority",
+									"value": "0",
+									"description": "쓰기 권한 설정 가능 레벨 (선택) [-1(??사용자), 0(일반사용자), 1(??사용자), 2(특수직책), 3(운영자)]",
+									"type": "text"
+								},
+								{
+									"key": "read_priority",
+									"value": "0",
+									"description": "읽기 권한 설정 가능 레벨 (선택) [-1(??사용자), 0(일반사용자), 1(??사용자), 2(특수직책), 3(운영자)]",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/boardlist/hobby3333",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"boardlist",
+								"hobby3333"
+							]
+						}
+					},
+					"status": "Not Found",
+					"code": 404,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Tue, 02 Feb 2021 05:05:09 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.7.6"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept, Origin"
+						},
+						{
+							"key": "Allow",
+							"value": "GET, PUT, DELETE, HEAD, OPTIONS"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "23"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"detail\": \"Not found.\"\n}"
+				},
+				{
+					"name": "특정 게시판 정보 수정하기 (실패 : 로그인 하지 않았을 경우)",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/boardlist/hobby",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"boardlist",
+								"hobby"
+							]
+						}
+					},
+					"status": "Unauthorized",
+					"code": 401,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Tue, 02 Feb 2021 04:53:25 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.7.6"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "WWW-Authenticate",
+							"value": "JWT realm=\"api\""
+						},
+						{
+							"key": "Vary",
+							"value": "Accept, Origin"
+						},
+						{
+							"key": "Allow",
+							"value": "GET, PUT, DELETE, HEAD, OPTIONS"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "58"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"detail\": \"Authentication credentials were not provided.\"\n}"
+				}
+			]
+		},
+		{
+			"name": "특정 게시판 삭제하기",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "jwt eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjo0LCJ1c2VybmFtZSI6InJvb3Q0IiwiZXhwIjoxNjE1MTk2MjU1LCJlbWFpbCI6ImJhc2RmYXNkZjMyYUBuYXZlci5jb20iLCJvcmlnX2lhdCI6MTYxNDU5MTQ1NX0.4y1Hj6sexovjp59a3DubELWWSzbOE8zcihUAj-YP3qw",
+						"description": "관리자인지 확인하기 위한 사용자 로그인",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://127.0.0.1:8000/boardlist/CHANGMO",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"boardlist",
+						"CHANGMO"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "특정 게시판 삭제하기 (실패 : 관리자인지 확인하기 위해서 로그인하지 않았을 경우)",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/boardlist/hobby",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"boardlist",
+								"hobby"
+							]
+						}
+					},
+					"status": "Unauthorized",
+					"code": 401,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Tue, 02 Feb 2021 05:09:05 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.7.6"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "WWW-Authenticate",
+							"value": "JWT realm=\"api\""
+						},
+						{
+							"key": "Vary",
+							"value": "Accept, Origin"
+						},
+						{
+							"key": "Allow",
+							"value": "GET, PUT, DELETE, HEAD, OPTIONS"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "58"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"detail\": \"Authentication credentials were not provided.\"\n}"
+				},
+				{
+					"name": "특정 게시판 삭제하기 (실패 : 해당 board_url 이름을 가진 게시판이 없을 경우)",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "jwt eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJ1c2VybmFtZSI6InJvb3RzIiwiZXhwIjoxNjEyODQ2NDgxLCJlbWFpbCI6ImN3YWR2ZW5AbmF2ZXIuY29tIiwib3JpZ19pYXQiOjE2MTIyNDE2ODF9.cUoprvlZF5SurO3T5XTHPOH1PrBkEqgiqcJWUKgmBnk",
+								"description": "관리자인지 확인하기 위한 사용자 로그인",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://127.0.0.1:8000/boardlist/hobby333",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"boardlist",
+								"hobby333"
+							]
+						}
+					},
+					"status": "Not Found",
+					"code": 404,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Tue, 02 Feb 2021 05:12:13 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.7.6"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept, Origin"
+						},
+						{
+							"key": "Allow",
+							"value": "GET, PUT, DELETE, HEAD, OPTIONS"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "23"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"detail\": \"Not found.\"\n}"
+				},
+				{
+					"name": "특정 게시판 삭제하기 (실패 : 로그인 한 사람이 관리자가 아닐 경우)",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "jwt eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyLCJ1c2VybmFtZSI6InRlc3R0ZXN0IiwiZXhwIjoxNjEyODQ2NDM2LCJlbWFpbCI6ImN3YWR2ZW5AZ21haWwuY29tIiwib3JpZ19pYXQiOjE2MTIyNDE2MzZ9.az4b_l4ANN3Kqq9jeVQL-dJ1PQuhWS_XgRORN5hAmIA",
+								"description": "관리자인지 확인하기 위한 사용자 로그인",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://127.0.0.1:8000/boardlist/hobby",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"boardlist",
+								"hobby"
+							]
+						}
+					},
+					"status": "Forbidden",
+					"code": 403,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Tue, 02 Feb 2021 05:10:05 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.7.6"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept, Origin"
+						},
+						{
+							"key": "Allow",
+							"value": "GET, PUT, DELETE, HEAD, OPTIONS"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "63"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"detail\": \"You do not have permission to perform this action.\"\n}"
+				},
+				{
+					"name": "특정 게시판 삭제하기 (성공)",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "jwt eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJ1c2VybmFtZSI6InJvb3RzIiwiZXhwIjoxNjEyODQ2NDgxLCJlbWFpbCI6ImN3YWR2ZW5AbmF2ZXIuY29tIiwib3JpZ19pYXQiOjE2MTIyNDE2ODF9.cUoprvlZF5SurO3T5XTHPOH1PrBkEqgiqcJWUKgmBnk",
+								"description": "관리자인지 확인하기 위한 사용자 로그인",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://127.0.0.1:8000/boardlist/hobby",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"boardlist",
+								"hobby"
+							]
+						}
+					},
+					"status": "No Content",
+					"code": 204,
+					"_postman_previewlanguage": "plain",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Tue, 02 Feb 2021 05:12:40 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.7.6"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept, Origin"
+						},
+						{
+							"key": "Allow",
+							"value": "GET, PUT, DELETE, HEAD, OPTIONS"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "0"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						}
+					],
+					"cookie": [],
+					"body": ""
+				}
+			]
+		}
+	]
+}

@@ -1,0 +1,6229 @@
+{
+	"info": {
+		"_postman_id": "a76e30be-89fa-4cef-bd29-a2120e9547d1",
+		"name": "Dalgona Battle",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "(검색 또한 있음)모든 투표 게시판 보기(최신순, 0402)",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/battle/vote/board?page=1&searchType=title-content&searchWord=하이라이트&ordering=end_datetime",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"battle",
+						"vote",
+						"board"
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "1",
+							"description": "선택"
+						},
+						{
+							"key": "searchType",
+							"value": "title-content",
+							"description": "검색 종류 title (제목) / content (내용) / title-content (내용 혹은 제목 둘 중 하나) (선택)"
+						},
+						{
+							"key": "searchWord",
+							"value": "하이라이트",
+							"description": "검색 단어"
+						},
+						{
+							"key": "ordering",
+							"value": "end_datetime",
+							"description": "vote_count(투표개수) / reply_count(댓글개수) / end_datetime(끝날기준) 선택"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "(성공) (검색 또한 있음)모든 투표 게시판 보기(최신순, 0402)",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/battle/vote/board?page=1&searchType=title-content&searchWord=하이라이트&ordering=end_datetime",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"battle",
+								"vote",
+								"board"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "1",
+									"description": "선택"
+								},
+								{
+									"key": "searchType",
+									"value": "title-content",
+									"description": "검색 종류 title (제목) / content (내용) / title-content (내용 혹은 제목 둘 중 하나) (선택)"
+								},
+								{
+									"key": "searchWord",
+									"value": "하이라이트",
+									"description": "검색 단어"
+								},
+								{
+									"key": "ordering",
+									"value": "end_datetime",
+									"description": "vote_count(투표개수) / reply_count(댓글개수) / end_datetime(끝날기준) 선택"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Wed, 03 Mar 2021 02:53:42 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.7.6"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept, Origin, Cookie"
+						},
+						{
+							"key": "Allow",
+							"value": "GET, POST, HEAD, OPTIONS"
+						},
+						{
+							"key": "Server-Timing",
+							"value": "TimerPanel_utime;dur=0;desc=\"User CPU time\", TimerPanel_stime;dur=0;desc=\"System CPU time\", TimerPanel_total;dur=0;desc=\"Total CPU time\", TimerPanel_total_time;dur=291.83363914489746;desc=\"Elapsed time\", SQLPanel_sql_time;dur=1.9993782043457031;desc=\"SQL 4 queries\", CachePanel_total_time;dur=0;desc=\"Cache 0 Calls\""
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "1860"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"count\": 6,\n    \"next\": null,\n    \"previous\": null,\n    \"results\": [\n        {\n            \"id\": 2,\n            \"title\": \"하이라이트 vs 데이식스\",\n            \"content\": \"하이라이트 vs 데이식스 투표입니다. (수정)\",\n            \"board_image\": null,\n            \"vote_count\": 0,\n            \"reply_count\": 0,\n            \"is_voted\": false,\n            \"deadline\": 9,\n            \"is_ended\": false,\n            \"start_datetime\": \"2021/03/01 21:42\",\n            \"end_datetime\": \"2021/03/12 21:42\",\n            \"created_at\": \"02/12\"\n        },\n        {\n            \"id\": 9,\n            \"title\": \"하이라이트 vs 데이식스\",\n            \"content\": \"하이라이트 vs 데이식스 투표입니다.\",\n            \"board_image\": null,\n            \"vote_count\": 0,\n            \"reply_count\": 0,\n            \"is_voted\": false,\n            \"deadline\": 7,\n            \"is_ended\": false,\n            \"start_datetime\": \"2021/03/01 21:42\",\n            \"end_datetime\": \"2021/03/10 21:42\",\n            \"created_at\": \"11:24\"\n        },\n        {\n            \"id\": 7,\n            \"title\": \"하이라이트 vs 데이식스\",\n            \"content\": \"하이라이트 vs 데이식스 투표입니다.\",\n            \"board_image\": null,\n            \"vote_count\": 0,\n            \"reply_count\": 0,\n            \"is_voted\": false,\n            \"deadline\": 7,\n            \"is_ended\": false,\n            \"start_datetime\": \"2021/03/01 21:42\",\n            \"end_datetime\": \"2021/03/10 21:42\",\n            \"created_at\": \"10:42\"\n        },\n        {\n            \"id\": 6,\n            \"title\": \"하이라이트 vs 데이식스\",\n            \"content\": \"하이라이트 vs 데이식스 투표입니다.\",\n            \"board_image\": null,\n            \"vote_count\": 0,\n            \"reply_count\": 0,\n            \"is_voted\": false,\n            \"deadline\": 7,\n            \"is_ended\": false,\n            \"start_datetime\": \"2021/03/01 21:42\",\n            \"end_datetime\": \"2021/03/10 21:42\",\n            \"created_at\": \"10:32\"\n        },\n        {\n            \"id\": 5,\n            \"title\": \"하이라이트 vs 데이식스\",\n            \"content\": \"하이라이트 vs 데이식스 투표입니다.\",\n            \"board_image\": null,\n            \"vote_count\": 0,\n            \"reply_count\": 0,\n            \"is_voted\": false,\n            \"deadline\": 7,\n            \"is_ended\": false,\n            \"start_datetime\": \"2021/03/01 21:42\",\n            \"end_datetime\": \"2021/03/10 21:42\",\n            \"created_at\": \"10:15\"\n        },\n        {\n            \"id\": 4,\n            \"title\": \"하이라이트 vs 데이식스\",\n            \"content\": \"하이라이트 vs 데이식스 투표입니다.\",\n            \"board_image\": null,\n            \"vote_count\": 0,\n            \"reply_count\": 0,\n            \"is_voted\": false,\n            \"deadline\": 7,\n            \"is_ended\": false,\n            \"start_datetime\": \"2021/03/01 21:42\",\n            \"end_datetime\": \"2021/03/10 21:42\",\n            \"created_at\": \"10:13\"\n        }\n    ]\n}"
+				}
+			]
+		},
+		{
+			"name": "실시간 이슈 배틀 가져오기(0402)",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/battle/vote/best",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"battle",
+						"vote",
+						"best"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "(성공)실시간 이슈 배틀 가져오기(0402)",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/battle/vote/best",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"battle",
+								"vote",
+								"best"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Tue, 02 Mar 2021 11:33:28 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.8.2"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept, Origin, Cookie"
+						},
+						{
+							"key": "Allow",
+							"value": "GET, HEAD, OPTIONS"
+						},
+						{
+							"key": "Server-Timing",
+							"value": "TimerPanel_utime;dur=0;desc=\"User CPU time\", TimerPanel_stime;dur=0;desc=\"System CPU time\", TimerPanel_total;dur=0;desc=\"Total CPU time\", TimerPanel_total_time;dur=457.7374458312988;desc=\"Elapsed time\", SQLPanel_sql_time;dur=14.986991882324219;desc=\"SQL 2 queries\", CachePanel_total_time;dur=0;desc=\"Cache 0 Calls\""
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "245"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"id\": 9,\n        \"title\": \"하이라이트 vs 데이식스\",\n        \"voteitem\": [\n            {\n                \"id\": 11,\n                \"item_image\": \"http://127.0.0.1:8000/media/voteitem_image/Toystory05.jpg\"\n            },\n            {\n                \"id\": 12,\n                \"item_image\": \"http://127.0.0.1:8000/media/voteitem_image/toy-story-4-movie-review.jpg\"\n            }\n        ]\n    }\n]"
+				}
+			]
+		},
+		{
+			"name": "(관리자)투표 게시판 생성",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"description": "관리자인지 확인하기 위한 사용자 로그인(필수)",
+						"key": "Authorization",
+						"type": "text",
+						"value": "jwt eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJ1c2VybmFtZSI6InJvb3QiLCJleHAiOjE2MjQzNjY3ODcsImVtYWlsIjoiY3dhZHZlbkBuYXZlci5jb20iLCJvcmlnX2lhdCI6MTYyMzc2MTk4N30.H3MP_iA2TpSbVSvwA9U-nuQ9CvYaWxx4fyJoEaMVbwQ"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "title",
+							"value": "하이라이트 vs 데이식스",
+							"description": "투표 제목(필수)",
+							"type": "text"
+						},
+						{
+							"key": "content",
+							"value": "하이라이트 vs 데이식스 투표입니다.",
+							"description": "투표 내용(필수)",
+							"type": "text"
+						},
+						{
+							"key": "board_image",
+							"description": "투표에 들어갈 이미지(선택)",
+							"type": "file",
+							"src": "/C:/Users/Sedragon/Downloads/KakaoTalk_20210112_003626969.jpg",
+							"disabled": true
+						},
+						{
+							"key": "start_datetime",
+							"value": "2021-03-01 21:42:00",
+							"description": "투표 시작 시간(필수)",
+							"type": "text"
+						},
+						{
+							"key": "end_datetime",
+							"value": "2021-03-10 21:42:00",
+							"description": "투표 종료 시간(필수)",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/battle/vote/board",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"battle",
+						"vote",
+						"board"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "(실패: 관리자가 아닌 일반 회원이 게시판을 생성하려고 할 경우)투표 게시판 생성",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"description": "관리자인지 확인하기 위한 사용자 로그인(필수)",
+								"key": "Authorization",
+								"type": "text",
+								"value": "jwt eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyMSwidXNlcm5hbWUiOiJxd2VydHkiLCJleHAiOjE2MTUyMzcxMTksImVtYWlsIjoiMTIzNDVAbmF2ZXIuY29tIiwib3JpZ19pYXQiOjE2MTQ2MzIzMTl9.xcE_WUkpOfNimEqVSVMxXXiAWB7_XMzZAgXUEpsgSOU"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "title",
+									"value": "하이라이트 vs 데이식스",
+									"description": "투표 제목(필수)",
+									"type": "text"
+								},
+								{
+									"key": "content",
+									"value": "하이라이트 vs 데이식스 투표입니다.",
+									"description": "투표 내용(필수)",
+									"type": "text"
+								},
+								{
+									"key": "board_image",
+									"description": "투표에 들어갈 이미지(선택)",
+									"type": "file",
+									"src": "/C:/Users/minch/OneDrive/바탕 화면/image/디즈니/5b14ef902ce1e4a4e83678bd6a38a039.jpg",
+									"disabled": true
+								},
+								{
+									"key": "start_datetime",
+									"value": "2021-03-01 21:42:00",
+									"description": "투표 시작 시간(필수)",
+									"type": "text"
+								},
+								{
+									"key": "end_datetime",
+									"value": "2021-03-10 21:42:00",
+									"description": "투표 종료 시간(필수)",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/battle/vote/board",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"battle",
+								"vote",
+								"board"
+							]
+						}
+					},
+					"status": "Forbidden",
+					"code": 403,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Mon, 01 Mar 2021 20:59:50 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.8.2"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept, Origin, Cookie"
+						},
+						{
+							"key": "Allow",
+							"value": "GET, POST, HEAD, OPTIONS"
+						},
+						{
+							"key": "Server-Timing",
+							"value": "TimerPanel_utime;dur=0;desc=\"User CPU time\", TimerPanel_stime;dur=0;desc=\"System CPU time\", TimerPanel_total;dur=0;desc=\"Total CPU time\", TimerPanel_total_time;dur=237.86211013793945;desc=\"Elapsed time\", SQLPanel_sql_time;dur=6.997108459472656;desc=\"SQL 1 queries\", CachePanel_total_time;dur=0;desc=\"Cache 0 Calls\""
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "63"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"detail\": \"You do not have permission to perform this action.\"\n}"
+				},
+				{
+					"name": "(실패: 로그인하지 않았을 경우)투표 게시판 생성 ",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"description": "관리자인지 확인하기 위한 사용자 로그인(필수)",
+								"key": "Authorization",
+								"type": "text",
+								"value": "jwt eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxMiwidXNlcm5hbWUiOiJyb290IiwiZXhwIjoxNjE1MjM2Njg2LCJlbWFpbCI6Im1pbmNoYWUwNzVAbmF2ZXIuY29tIiwib3JpZ19pYXQiOjE2MTQ2MzE4ODZ9.BZz74kLL6IElVvhF166WPSTFxNsNv1BlPdi2CUcL44g",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "title",
+									"value": "하이라이트 vs 데이식스",
+									"description": "투표 제목(필수)",
+									"type": "text"
+								},
+								{
+									"key": "content",
+									"value": "하이라이트 vs 데이식스 투표입니다.",
+									"description": "투표 내용(필수)",
+									"type": "text"
+								},
+								{
+									"key": "board_image",
+									"description": "투표에 들어갈 이미지(선택)",
+									"type": "file",
+									"src": "/C:/Users/minch/OneDrive/바탕 화면/image/디즈니/5b14ef902ce1e4a4e83678bd6a38a039.jpg",
+									"disabled": true
+								},
+								{
+									"key": "start_datetime",
+									"value": "2021-03-01 21:42:00",
+									"description": "투표 시작 시간(필수)",
+									"type": "text"
+								},
+								{
+									"key": "end_datetime",
+									"value": "2021-03-10 21:42:00",
+									"description": "투표 종료 시간(필수)",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/battle/vote/board",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"battle",
+								"vote",
+								"board"
+							]
+						}
+					},
+					"status": "Unauthorized",
+					"code": 401,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Mon, 01 Mar 2021 20:57:45 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.8.2"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "WWW-Authenticate",
+							"value": "JWT realm=\"api\""
+						},
+						{
+							"key": "Vary",
+							"value": "Accept, Origin, Cookie"
+						},
+						{
+							"key": "Allow",
+							"value": "GET, POST, HEAD, OPTIONS"
+						},
+						{
+							"key": "Server-Timing",
+							"value": "TimerPanel_utime;dur=0;desc=\"User CPU time\", TimerPanel_stime;dur=0;desc=\"System CPU time\", TimerPanel_total;dur=0;desc=\"Total CPU time\", TimerPanel_total_time;dur=139.77932929992676;desc=\"Elapsed time\", SQLPanel_sql_time;dur=0;desc=\"SQL 0 queries\", CachePanel_total_time;dur=0;desc=\"Cache 0 Calls\""
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "58"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"detail\": \"Authentication credentials were not provided.\"\n}"
+				},
+				{
+					"name": "(성공) (관리자)투표 게시판 생성",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"description": "관리자인지 확인하기 위한 사용자 로그인(필수)",
+								"key": "Authorization",
+								"type": "text",
+								"value": "jwt eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxOCwidXNlcm5hbWUiOiJyb290IiwiZXhwIjoxNjE1MzMxNDM2LCJlbWFpbCI6ImN3YWR2ZW5AZ21haWwuY29tIiwib3JpZ19pYXQiOjE2MTQ3MjY2MzZ9.FOZ7EKMj0rHr-Goh79lkxhGIn3AKIPFht3I3DpQXTbM"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "title",
+									"value": "하이라이트 vs 데이식스",
+									"description": "투표 제목(필수)",
+									"type": "text"
+								},
+								{
+									"key": "content",
+									"value": "하이라이트 vs 데이식스 투표입니다.",
+									"description": "투표 내용(필수)",
+									"type": "text"
+								},
+								{
+									"key": "board_image",
+									"description": "투표에 들어갈 이미지(선택)",
+									"type": "file",
+									"src": "/C:/Users/Sedragon/Downloads/KakaoTalk_20210112_003626969.jpg",
+									"disabled": true
+								},
+								{
+									"key": "start_datetime",
+									"value": "2021-03-01 21:42:00",
+									"description": "투표 시작 시간(필수)",
+									"type": "text"
+								},
+								{
+									"key": "end_datetime",
+									"value": "2021-03-10 21:42:00",
+									"description": "투표 종료 시간(필수)",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/battle/vote/board",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"battle",
+								"vote",
+								"board"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Wed, 03 Mar 2021 02:56:22 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.7.6"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept, Origin, Cookie"
+						},
+						{
+							"key": "Allow",
+							"value": "GET, POST, HEAD, OPTIONS"
+						},
+						{
+							"key": "Server-Timing",
+							"value": "TimerPanel_utime;dur=0;desc=\"User CPU time\", TimerPanel_stime;dur=0;desc=\"System CPU time\", TimerPanel_total;dur=0;desc=\"Total CPU time\", TimerPanel_total_time;dur=867.5024509429932;desc=\"Elapsed time\", SQLPanel_sql_time;dur=5.995035171508789;desc=\"SQL 8 queries\", CachePanel_total_time;dur=0;desc=\"Cache 0 Calls\""
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "314"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id\": 10,\n    \"title\": \"하이라이트 vs 데이식스\",\n    \"content\": \"하이라이트 vs 데이식스 투표입니다.\",\n    \"board_image\": null,\n    \"vote_count\": 0,\n    \"reply_count\": 0,\n    \"is_voted\": false,\n    \"deadline\": 7,\n    \"is_ended\": false,\n    \"start_datetime\": \"2021/03/01 21:42\",\n    \"end_datetime\": \"2021/03/10 21:42\",\n    \"created_at\": \"11:56\",\n    \"voteitem\": []\n}"
+				}
+			]
+		},
+		{
+			"name": "특정 투표 게시판의 정보 보기(0402_투표 detail)",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"description": "JWT 로그인을 위한 Hearder (필수)",
+						"key": "Authorization",
+						"type": "text",
+						"value": "jwt eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxOCwidXNlcm5hbWUiOiJyb290IiwiZXhwIjoxNjE1MzMxNDM2LCJlbWFpbCI6ImN3YWR2ZW5AZ21haWwuY29tIiwib3JpZ19pYXQiOjE2MTQ3MjY2MzZ9.FOZ7EKMj0rHr-Goh79lkxhGIn3AKIPFht3I3DpQXTbM"
+					}
+				],
+				"url": {
+					"raw": "http://127.0.0.1:8000/battle/vote/board/1",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"battle",
+						"vote",
+						"board",
+						"1"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "(성공) 특정 투표 게시판의 정보 보기(0402_투표 detail)",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"description": "JWT 로그인을 위한 Hearder (필수)",
+								"key": "Authorization",
+								"type": "text",
+								"value": "jwt eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxOCwidXNlcm5hbWUiOiJyb290IiwiZXhwIjoxNjE1MzMxNDM2LCJlbWFpbCI6ImN3YWR2ZW5AZ21haWwuY29tIiwib3JpZ19pYXQiOjE2MTQ3MjY2MzZ9.FOZ7EKMj0rHr-Goh79lkxhGIn3AKIPFht3I3DpQXTbM"
+							}
+						],
+						"url": {
+							"raw": "http://127.0.0.1:8000/battle/vote/board/1",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"battle",
+								"vote",
+								"board",
+								"1"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Wed, 03 Mar 2021 02:23:42 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.7.6"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept, Origin, Cookie"
+						},
+						{
+							"key": "Allow",
+							"value": "GET, PUT, PATCH, DELETE, HEAD, OPTIONS"
+						},
+						{
+							"key": "Server-Timing",
+							"value": "TimerPanel_utime;dur=0;desc=\"User CPU time\", TimerPanel_stime;dur=0;desc=\"System CPU time\", TimerPanel_total;dur=0;desc=\"Total CPU time\", TimerPanel_total_time;dur=849.5123386383057;desc=\"Elapsed time\", SQLPanel_sql_time;dur=5.000114440917969;desc=\"SQL 7 queries\", CachePanel_total_time;dur=0;desc=\"Cache 0 Calls\""
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "602"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id\": 1,\n    \"title\": \"투표수정해보자아요요용투표수정해보자아요요용\",\n    \"content\": \"투표수정해보자아요요용\",\n    \"board_image\": null,\n    \"vote_count\": 1,\n    \"reply_count\": 3,\n    \"is_voted\": true,\n    \"deadline\": 9,\n    \"is_ended\": false,\n    \"start_datetime\": \"2021/03/01 21:42\",\n    \"end_datetime\": \"2021/03/12 21:42\",\n    \"created_at\": \"02/05\",\n    \"voteitem\": [\n        {\n            \"id\": 1,\n            \"voteboard_id\": 1,\n            \"item_name\": \"아이템1\",\n            \"item_content\": \"아이템1 설명\",\n            \"item_image\": null,\n            \"vote_count\": 1,\n            \"is_voted\": true\n        },\n        {\n            \"id\": 2,\n            \"voteboard_id\": 1,\n            \"item_name\": \"아이템2\",\n            \"item_content\": \"아이템2 설명\",\n            \"item_image\": null,\n            \"vote_count\": 0,\n            \"is_voted\": false\n        }\n    ]\n}"
+				}
+			]
+		},
+		{
+			"name": "(관리자)특정 투표 게시판 수정하기",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"description": "관리자인지 확인하기 위한 사용자 로그인 (필수)",
+						"key": "Authorization",
+						"type": "text",
+						"value": "jwt eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxOCwidXNlcm5hbWUiOiJyb290IiwiZXhwIjoxNjE1MzMxNDM2LCJlbWFpbCI6ImN3YWR2ZW5AZ21haWwuY29tIiwib3JpZ19pYXQiOjE2MTQ3MjY2MzZ9.FOZ7EKMj0rHr-Goh79lkxhGIn3AKIPFht3I3DpQXTbM"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "title",
+							"value": "투표수정해보자아요요용투표수정해보자아요요용",
+							"description": "수정할 투표 제목(필수)",
+							"type": "text"
+						},
+						{
+							"key": "content",
+							"value": "투표수정해보자아요요용",
+							"description": "수정할 투표 내용(필수)",
+							"type": "text"
+						},
+						{
+							"key": "board_image",
+							"description": "수정할 투표 이미지(선택)",
+							"type": "file",
+							"src": "/C:/Users/minch/OneDrive/바탕 화면/image/디즈니/5b14ef902ce1e4a4e83678bd6a38a039.jpg",
+							"disabled": true
+						},
+						{
+							"key": "start_datetime",
+							"value": "2021-03-01T21:42:00",
+							"description": "투표 시작 시간(필수)",
+							"type": "text"
+						},
+						{
+							"key": "end_datetime",
+							"value": "2021-03-02T21:42:00",
+							"description": "투표 종료 시간(필수)",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/battle/vote/board/1",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"battle",
+						"vote",
+						"board",
+						"1"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "(실패: 로그인하지 않았을 경우)특정 투표 게시판 수정하기 ",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [
+							{
+								"description": "관리자인지 확인하기 위한 사용자 로그인 (필수)",
+								"key": "Authorization",
+								"type": "text",
+								"value": "jwt eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyMSwidXNlcm5hbWUiOiJxd2VydHkiLCJleHAiOjE2MTUyMzcxMTksImVtYWlsIjoiMTIzNDVAbmF2ZXIuY29tIiwib3JpZ19pYXQiOjE2MTQ2MzIzMTl9.xcE_WUkpOfNimEqVSVMxXXiAWB7_XMzZAgXUEpsgSOU",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "title",
+									"value": "하이라이트 vs 데이식스",
+									"description": "수정할 투표 제목(필수)",
+									"type": "text"
+								},
+								{
+									"key": "content",
+									"value": "하이라이트 vs 데이식스 투표입니다. (수정)",
+									"description": "수정할 투표 내용(필수)",
+									"type": "text"
+								},
+								{
+									"key": "board_image",
+									"description": "수정할 투표 이미지(선택)",
+									"type": "file",
+									"src": "/C:/Users/minch/OneDrive/바탕 화면/image/디즈니/5b14ef902ce1e4a4e83678bd6a38a039.jpg",
+									"disabled": true
+								},
+								{
+									"key": "start_datetime",
+									"value": "2021-03-01T21:42:00",
+									"description": "투표 시작 시간(필수)",
+									"type": "text"
+								},
+								{
+									"key": "end_datetime",
+									"value": "2021-03-12T21:42:00",
+									"description": "투표 종료 시간(필수)",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/battle/vote/board/9",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"battle",
+								"vote",
+								"board",
+								"9"
+							]
+						}
+					},
+					"status": "Unauthorized",
+					"code": 401,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Tue, 02 Mar 2021 09:49:30 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.8.2"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "WWW-Authenticate",
+							"value": "JWT realm=\"api\""
+						},
+						{
+							"key": "Vary",
+							"value": "Accept, Origin, Cookie"
+						},
+						{
+							"key": "Allow",
+							"value": "GET, PUT, PATCH, DELETE, HEAD, OPTIONS"
+						},
+						{
+							"key": "Server-Timing",
+							"value": "TimerPanel_utime;dur=0;desc=\"User CPU time\", TimerPanel_stime;dur=0;desc=\"System CPU time\", TimerPanel_total;dur=0;desc=\"Total CPU time\", TimerPanel_total_time;dur=150.62928199768066;desc=\"Elapsed time\", SQLPanel_sql_time;dur=0;desc=\"SQL 0 queries\", CachePanel_total_time;dur=0;desc=\"Cache 0 Calls\""
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "58"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"detail\": \"Authentication credentials were not provided.\"\n}"
+				},
+				{
+					"name": "(실패: 관리자가 아닌 일반 사용자가 수정하려고 할 경우)특정 투표 게시판 수정하기 ",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [
+							{
+								"description": "관리자인지 확인하기 위한 사용자 로그인 (필수)",
+								"key": "Authorization",
+								"type": "text",
+								"value": "jwt eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyMSwidXNlcm5hbWUiOiJxd2VydHkiLCJleHAiOjE2MTUyMzcxMTksImVtYWlsIjoiMTIzNDVAbmF2ZXIuY29tIiwib3JpZ19pYXQiOjE2MTQ2MzIzMTl9.xcE_WUkpOfNimEqVSVMxXXiAWB7_XMzZAgXUEpsgSOU"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "title",
+									"value": "하이라이트 vs 데이식스",
+									"description": "수정할 투표 제목(필수)",
+									"type": "text"
+								},
+								{
+									"key": "content",
+									"value": "하이라이트 vs 데이식스 투표입니다. (수정)",
+									"description": "수정할 투표 내용(필수)",
+									"type": "text"
+								},
+								{
+									"key": "board_image",
+									"description": "수정할 투표 이미지(선택)",
+									"type": "file",
+									"src": "/C:/Users/minch/OneDrive/바탕 화면/image/디즈니/5b14ef902ce1e4a4e83678bd6a38a039.jpg",
+									"disabled": true
+								},
+								{
+									"key": "start_datetime",
+									"value": "2021-03-01T21:42:00",
+									"description": "투표 시작 시간(필수)",
+									"type": "text"
+								},
+								{
+									"key": "end_datetime",
+									"value": "2021-03-12T21:42:00",
+									"description": "투표 종료 시간(필수)",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/battle/vote/board/9",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"battle",
+								"vote",
+								"board",
+								"9"
+							]
+						}
+					},
+					"status": "Forbidden",
+					"code": 403,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Tue, 02 Mar 2021 09:49:49 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.8.2"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept, Origin, Cookie"
+						},
+						{
+							"key": "Allow",
+							"value": "GET, PUT, PATCH, DELETE, HEAD, OPTIONS"
+						},
+						{
+							"key": "Server-Timing",
+							"value": "TimerPanel_utime;dur=0;desc=\"User CPU time\", TimerPanel_stime;dur=0;desc=\"System CPU time\", TimerPanel_total;dur=0;desc=\"Total CPU time\", TimerPanel_total_time;dur=355.79419136047363;desc=\"Elapsed time\", SQLPanel_sql_time;dur=11.993169784545898;desc=\"SQL 1 queries\", CachePanel_total_time;dur=0;desc=\"Cache 0 Calls\""
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "63"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"detail\": \"You do not have permission to perform this action.\"\n}"
+				},
+				{
+					"name": "(성공) (관리자)특정 투표 게시판 수정하기",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [
+							{
+								"description": "관리자인지 확인하기 위한 사용자 로그인 (필수)",
+								"key": "Authorization",
+								"type": "text",
+								"value": "jwt eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxOCwidXNlcm5hbWUiOiJyb290IiwiZXhwIjoxNjE1MzMxNDM2LCJlbWFpbCI6ImN3YWR2ZW5AZ21haWwuY29tIiwib3JpZ19pYXQiOjE2MTQ3MjY2MzZ9.FOZ7EKMj0rHr-Goh79lkxhGIn3AKIPFht3I3DpQXTbM"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "title",
+									"value": "투표수정해보자아요요용투표수정해보자아요요용",
+									"description": "수정할 투표 제목(필수)",
+									"type": "text"
+								},
+								{
+									"key": "content",
+									"value": "투표수정해보자아요요용",
+									"description": "수정할 투표 내용(필수)",
+									"type": "text"
+								},
+								{
+									"key": "board_image",
+									"description": "수정할 투표 이미지(선택)",
+									"type": "file",
+									"src": "/C:/Users/minch/OneDrive/바탕 화면/image/디즈니/5b14ef902ce1e4a4e83678bd6a38a039.jpg",
+									"disabled": true
+								},
+								{
+									"key": "start_datetime",
+									"value": "2021-03-01T21:42:00",
+									"description": "투표 시작 시간(필수)",
+									"type": "text"
+								},
+								{
+									"key": "end_datetime",
+									"value": "2021-03-02T21:42:00",
+									"description": "투표 종료 시간(필수)",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/battle/vote/board/1",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"battle",
+								"vote",
+								"board",
+								"1"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Wed, 03 Mar 2021 03:02:06 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.7.6"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept, Origin, Cookie"
+						},
+						{
+							"key": "Allow",
+							"value": "GET, PUT, PATCH, DELETE, HEAD, OPTIONS"
+						},
+						{
+							"key": "Server-Timing",
+							"value": "TimerPanel_utime;dur=0;desc=\"User CPU time\", TimerPanel_stime;dur=0;desc=\"System CPU time\", TimerPanel_total;dur=0;desc=\"Total CPU time\", TimerPanel_total_time;dur=692.603349685669;desc=\"Elapsed time\", SQLPanel_sql_time;dur=12.989997863769531;desc=\"SQL 13 queries\", CachePanel_total_time;dur=0;desc=\"Cache 0 Calls\""
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "601"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id\": 1,\n    \"title\": \"투표수정해보자아요요용투표수정해보자아요요용\",\n    \"content\": \"투표수정해보자아요요용\",\n    \"board_image\": null,\n    \"vote_count\": 1,\n    \"reply_count\": 3,\n    \"is_voted\": true,\n    \"deadline\": 0,\n    \"is_ended\": true,\n    \"start_datetime\": \"2021/03/01 21:42\",\n    \"end_datetime\": \"2021/03/02 21:42\",\n    \"created_at\": \"02/05\",\n    \"voteitem\": [\n        {\n            \"id\": 1,\n            \"voteboard_id\": 1,\n            \"item_name\": \"아이템1\",\n            \"item_content\": \"아이템1 설명\",\n            \"item_image\": null,\n            \"vote_count\": 1,\n            \"is_voted\": true\n        },\n        {\n            \"id\": 2,\n            \"voteboard_id\": 1,\n            \"item_name\": \"아이템2\",\n            \"item_content\": \"아이템2 설명\",\n            \"item_image\": null,\n            \"vote_count\": 0,\n            \"is_voted\": false\n        }\n    ]\n}"
+				}
+			]
+		},
+		{
+			"name": "(관리자)투표 게시판 삭제",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"description": "관라자인지 확인하기 위한 사용자 로그 (필수)",
+						"key": "Authorization",
+						"type": "text",
+						"value": "jwt eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyMSwidXNlcm5hbWUiOiJxd2VydHkiLCJleHAiOjE2MTUyODkxODEsImVtYWlsIjoiMTIzNDVAbmF2ZXIuY29tIiwib3JpZ19pYXQiOjE2MTQ2ODQzODF9.ZnjBLnx39AnHw_OzSkpKp1yq0MTGAyFgztURsS_TzyU"
+					}
+				],
+				"url": {
+					"raw": "http://127.0.0.1:8000/battle/vote/board/5",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"battle",
+						"vote",
+						"board",
+						"5"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "(성공)투표 게시판 삭제",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [
+							{
+								"description": "관라자인지 확인하기 위한 사용자 로그 (필수)",
+								"key": "Authorization",
+								"type": "text",
+								"value": "jwt eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxMiwidXNlcm5hbWUiOiJyb290IiwiZXhwIjoxNjE1MjM2Njg2LCJlbWFpbCI6Im1pbmNoYWUwNzVAbmF2ZXIuY29tIiwib3JpZ19pYXQiOjE2MTQ2MzE4ODZ9.BZz74kLL6IElVvhF166WPSTFxNsNv1BlPdi2CUcL44g"
+							}
+						],
+						"url": {
+							"raw": "http://127.0.0.1:8000/battle/vote/board/5",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"battle",
+								"vote",
+								"board",
+								"5"
+							]
+						}
+					},
+					"status": "No Content",
+					"code": 204,
+					"_postman_previewlanguage": "plain",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Tue, 02 Mar 2021 11:40:43 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.8.2"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept, Origin, Cookie"
+						},
+						{
+							"key": "Allow",
+							"value": "GET, PUT, PATCH, DELETE, HEAD, OPTIONS"
+						},
+						{
+							"key": "Server-Timing",
+							"value": "TimerPanel_utime;dur=0;desc=\"User CPU time\", TimerPanel_stime;dur=0;desc=\"System CPU time\", TimerPanel_total;dur=0;desc=\"Total CPU time\", TimerPanel_total_time;dur=1224.2987155914307;desc=\"Elapsed time\", SQLPanel_sql_time;dur=47.9583740234375;desc=\"SQL 14 queries\", CachePanel_total_time;dur=0;desc=\"Cache 0 Calls\""
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "0"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						}
+					],
+					"cookie": [],
+					"body": ""
+				},
+				{
+					"name": "(실패: 로그인 하지 않았을 경우)투표 게시판 삭제",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [
+							{
+								"description": "관라자인지 확인하기 위한 사용자 로그 (필수)",
+								"key": "Authorization",
+								"type": "text",
+								"value": "jwt eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyMSwidXNlcm5hbWUiOiJxd2VydHkiLCJleHAiOjE2MTUyODkxODEsImVtYWlsIjoiMTIzNDVAbmF2ZXIuY29tIiwib3JpZ19pYXQiOjE2MTQ2ODQzODF9.ZnjBLnx39AnHw_OzSkpKp1yq0MTGAyFgztURsS_TzyU",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "http://127.0.0.1:8000/battle/vote/board/5",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"battle",
+								"vote",
+								"board",
+								"5"
+							]
+						}
+					},
+					"status": "Unauthorized",
+					"code": 401,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Tue, 02 Mar 2021 11:39:49 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.8.2"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "WWW-Authenticate",
+							"value": "JWT realm=\"api\""
+						},
+						{
+							"key": "Vary",
+							"value": "Accept, Origin, Cookie"
+						},
+						{
+							"key": "Allow",
+							"value": "GET, PUT, PATCH, DELETE, HEAD, OPTIONS"
+						},
+						{
+							"key": "Server-Timing",
+							"value": "TimerPanel_utime;dur=0;desc=\"User CPU time\", TimerPanel_stime;dur=0;desc=\"System CPU time\", TimerPanel_total;dur=0;desc=\"Total CPU time\", TimerPanel_total_time;dur=200.88529586791992;desc=\"Elapsed time\", SQLPanel_sql_time;dur=0;desc=\"SQL 0 queries\", CachePanel_total_time;dur=0;desc=\"Cache 0 Calls\""
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "58"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"detail\": \"Authentication credentials were not provided.\"\n}"
+				},
+				{
+					"name": "(실패: 관리자가 아닌 일반 사용자가 삭제하려고 할 경우)투표 게시판 삭제",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [
+							{
+								"description": "관라자인지 확인하기 위한 사용자 로그 (필수)",
+								"key": "Authorization",
+								"type": "text",
+								"value": "jwt eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyMSwidXNlcm5hbWUiOiJxd2VydHkiLCJleHAiOjE2MTUyODkxODEsImVtYWlsIjoiMTIzNDVAbmF2ZXIuY29tIiwib3JpZ19pYXQiOjE2MTQ2ODQzODF9.ZnjBLnx39AnHw_OzSkpKp1yq0MTGAyFgztURsS_TzyU"
+							}
+						],
+						"url": {
+							"raw": "http://127.0.0.1:8000/battle/vote/board/5",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"battle",
+								"vote",
+								"board",
+								"5"
+							]
+						}
+					},
+					"status": "Forbidden",
+					"code": 403,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Tue, 02 Mar 2021 11:40:07 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.8.2"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept, Origin, Cookie"
+						},
+						{
+							"key": "Allow",
+							"value": "GET, PUT, PATCH, DELETE, HEAD, OPTIONS"
+						},
+						{
+							"key": "Server-Timing",
+							"value": "TimerPanel_utime;dur=0;desc=\"User CPU time\", TimerPanel_stime;dur=0;desc=\"System CPU time\", TimerPanel_total;dur=0;desc=\"Total CPU time\", TimerPanel_total_time;dur=363.79194259643555;desc=\"Elapsed time\", SQLPanel_sql_time;dur=9.993553161621094;desc=\"SQL 1 queries\", CachePanel_total_time;dur=0;desc=\"Cache 0 Calls\""
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "63"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"detail\": \"You do not have permission to perform this action.\"\n}"
+				}
+			]
+		},
+		{
+			"name": "(관리자)투표 아이템 생성",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"description": "관리자인지 확인하기 위한 사용자 로그 (필수)",
+						"key": "Authorization",
+						"type": "text",
+						"value": "jwt eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJ1c2VybmFtZSI6InJvb3QiLCJleHAiOjE2MTUzNDYzODQsImVtYWlsIjoiY3dhZHZlbkBuYXZlci5jb20iLCJvcmlnX2lhdCI6MTYxNDc0MTU4NH0.75fZ6QiRotCLzis6ElywA2iVusHpnYSZs8HZ68ngmgY"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "voteboard_id",
+							"value": "9",
+							"description": "투표 아이템이 들어갈 투표 공간의 id(필수)",
+							"type": "text"
+						},
+						{
+							"key": "item_name",
+							"value": "하이라이트",
+							"description": "투표아이템 이름(필수)",
+							"type": "text"
+						},
+						{
+							"key": "item_content",
+							"value": "하이라이트 투표 아이템입니다.",
+							"description": "투표아이템 설명(필수)",
+							"type": "text"
+						},
+						{
+							"key": "item_image",
+							"description": "투표아이템 이미지(선택)",
+							"type": "file",
+							"src": "/C:/Users/minch/OneDrive/바탕 화면/image/디즈니/Toy+story+05.jpg"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/battle/vote/item",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"battle",
+						"vote",
+						"item"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "(실패: 로그인하지 않았을 경우)투표 아이템 생성 ",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "jwt eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyMSwidXNlcm5hbWUiOiJxd2VydHkiLCJleHAiOjE2MTUyMzcxMTksImVtYWlsIjoiMTIzNDVAbmF2ZXIuY29tIiwib3JpZ19pYXQiOjE2MTQ2MzIzMTl9.xcE_WUkpOfNimEqVSVMxXXiAWB7_XMzZAgXUEpsgSOU",
+								"type": "text",
+								"description": "관리자인지 확인하기 위한 사용자 로그인 (필수)",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "voteboard_id",
+									"value": "9",
+									"description": "투표 아이템이 들어갈 투표 공간의 id(필수)",
+									"type": "text"
+								},
+								{
+									"key": "item_name",
+									"value": "하이라이트",
+									"description": "투표아이템 이름(필수)",
+									"type": "text"
+								},
+								{
+									"key": "item_content",
+									"value": "하이라이트 투표 아이템입니다.",
+									"description": "투표아이템 설명(필수)",
+									"type": "text"
+								},
+								{
+									"key": "item_image",
+									"description": "투표아이템 이미지(선택)",
+									"type": "file",
+									"src": "/C:/Users/minch/OneDrive/바탕 화면/image/디즈니/Toy+story+05.jpg"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/battle/vote/item",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"battle",
+								"vote",
+								"item"
+							]
+						}
+					},
+					"status": "Unauthorized",
+					"code": 401,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Tue, 02 Mar 2021 10:03:57 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.8.2"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "WWW-Authenticate",
+							"value": "JWT realm=\"api\""
+						},
+						{
+							"key": "Vary",
+							"value": "Accept, Origin, Cookie"
+						},
+						{
+							"key": "Allow",
+							"value": "POST, OPTIONS"
+						},
+						{
+							"key": "Server-Timing",
+							"value": "TimerPanel_utime;dur=0;desc=\"User CPU time\", TimerPanel_stime;dur=0;desc=\"System CPU time\", TimerPanel_total;dur=0;desc=\"Total CPU time\", TimerPanel_total_time;dur=239.86124992370605;desc=\"Elapsed time\", SQLPanel_sql_time;dur=0;desc=\"SQL 0 queries\", CachePanel_total_time;dur=0;desc=\"Cache 0 Calls\""
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "58"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"detail\": \"Authentication credentials were not provided.\"\n}"
+				},
+				{
+					"name": "(실패: 관리자가 아닌 일반 사용자일 경우)투표 아이템 생성 ",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"description": "관리자인지 확인하기 위한 사용자 로그인 (필수)",
+								"key": "Authorization",
+								"type": "text",
+								"value": "jwt eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyMSwidXNlcm5hbWUiOiJxd2VydHkiLCJleHAiOjE2MTUyMzcxMTksImVtYWlsIjoiMTIzNDVAbmF2ZXIuY29tIiwib3JpZ19pYXQiOjE2MTQ2MzIzMTl9.xcE_WUkpOfNimEqVSVMxXXiAWB7_XMzZAgXUEpsgSOU"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "voteboard_id",
+									"value": "9",
+									"description": "투표 아이템이 들어갈 투표 공간의 id(필수)",
+									"type": "text"
+								},
+								{
+									"key": "item_name",
+									"value": "하이라이트",
+									"description": "투표아이템 이름(필수)",
+									"type": "text"
+								},
+								{
+									"key": "item_content",
+									"value": "하이라이트 투표 아이템입니다.",
+									"description": "투표아이템 설명(필수)",
+									"type": "text"
+								},
+								{
+									"key": "item_image",
+									"description": "투표아이템 이미지(선택)",
+									"type": "file",
+									"src": "/C:/Users/minch/OneDrive/바탕 화면/image/디즈니/Toy+story+05.jpg"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/battle/vote/item",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"battle",
+								"vote",
+								"item"
+							]
+						}
+					},
+					"status": "Forbidden",
+					"code": 403,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Tue, 02 Mar 2021 10:04:38 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.8.2"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept, Origin, Cookie"
+						},
+						{
+							"key": "Allow",
+							"value": "POST, OPTIONS"
+						},
+						{
+							"key": "Server-Timing",
+							"value": "TimerPanel_utime;dur=0;desc=\"User CPU time\", TimerPanel_stime;dur=0;desc=\"System CPU time\", TimerPanel_total;dur=0;desc=\"Total CPU time\", TimerPanel_total_time;dur=291.83316230773926;desc=\"Elapsed time\", SQLPanel_sql_time;dur=7.994651794433594;desc=\"SQL 1 queries\", CachePanel_total_time;dur=0;desc=\"Cache 0 Calls\""
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "63"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"detail\": \"You do not have permission to perform this action.\"\n}"
+				},
+				{
+					"name": "(성공)투표 아이템 생성 ",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"description": "관리자인지 확인하기 위한 사용자 로그인 (필수)",
+								"key": "Authorization",
+								"type": "text",
+								"value": "jwt eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxMiwidXNlcm5hbWUiOiJyb290IiwiZXhwIjoxNjE1MjM2Njg2LCJlbWFpbCI6Im1pbmNoYWUwNzVAbmF2ZXIuY29tIiwib3JpZ19pYXQiOjE2MTQ2MzE4ODZ9.BZz74kLL6IElVvhF166WPSTFxNsNv1BlPdi2CUcL44g"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "voteboard_id",
+									"value": "9",
+									"description": "투표 아이템이 들어갈 투표 공간의 id(필수)",
+									"type": "text"
+								},
+								{
+									"key": "item_name",
+									"value": "하이라이트",
+									"description": "투표아이템 이름(필수)",
+									"type": "text"
+								},
+								{
+									"key": "item_content",
+									"value": "하이라이트 투표 아이템입니다.",
+									"description": "투표아이템 설명(필수)",
+									"type": "text"
+								},
+								{
+									"key": "item_image",
+									"description": "투표아이템 이미지(선택)",
+									"type": "file",
+									"src": "/C:/Users/minch/OneDrive/바탕 화면/image/디즈니/Toy+story+05.jpg"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/battle/vote/item",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"battle",
+								"vote",
+								"item"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Tue, 02 Mar 2021 10:05:12 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.8.2"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept, Origin, Cookie"
+						},
+						{
+							"key": "Allow",
+							"value": "POST, OPTIONS"
+						},
+						{
+							"key": "Server-Timing",
+							"value": "TimerPanel_utime;dur=0;desc=\"User CPU time\", TimerPanel_stime;dur=0;desc=\"System CPU time\", TimerPanel_total;dur=0;desc=\"Total CPU time\", TimerPanel_total_time;dur=1093.1284427642822;desc=\"Elapsed time\", SQLPanel_sql_time;dur=34.11746025085449;desc=\"SQL 5 queries\", CachePanel_total_time;dur=0;desc=\"Cache 0 Calls\""
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "221"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id\": 11,\n    \"voteboard_id\": 9,\n    \"item_name\": \"하이라이트\",\n    \"item_content\": \"하이라이트 투표 아이템입니다.\",\n    \"item_image\": \"http://127.0.0.1:8000/media/voteitem_image/Toystory05.jpg\",\n    \"vote_count\": 0,\n    \"is_voted\": false\n}"
+				}
+			]
+		},
+		{
+			"name": "(이용 안함) 특정 투표 아이템 가져오기",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/battle/vote/item/11",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"battle",
+						"vote",
+						"item",
+						"11"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "(성공)특정 투표 아이템 가져오기 ",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/battle/vote/item/11",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"battle",
+								"vote",
+								"item",
+								"11"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Tue, 02 Mar 2021 10:07:03 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.8.2"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept, Origin, Cookie"
+						},
+						{
+							"key": "Allow",
+							"value": "GET, PUT, PATCH, DELETE, HEAD, OPTIONS"
+						},
+						{
+							"key": "Server-Timing",
+							"value": "TimerPanel_utime;dur=0;desc=\"User CPU time\", TimerPanel_stime;dur=0;desc=\"System CPU time\", TimerPanel_total;dur=0;desc=\"Total CPU time\", TimerPanel_total_time;dur=399.71423149108887;desc=\"Elapsed time\", SQLPanel_sql_time;dur=11.938810348510742;desc=\"SQL 2 queries\", CachePanel_total_time;dur=0;desc=\"Cache 0 Calls\""
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "242"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id\": 11,\n    \"voteboard_id\": 9,\n    \"item_name\": \"하이라이트\",\n    \"item_content\": \"하이라이트 투표 아이템입니다.\",\n    \"item_image\": \"http://127.0.0.1:8000/media/voteitem_image/Toystory05.jpg\",\n    \"vote_count\": 0,\n    \"is_voted\": false,\n    \"created_at\": \"19:05\"\n}"
+				}
+			]
+		},
+		{
+			"name": "(관리자)특정 투표 아이템 수정하기",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "jwt eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxOCwidXNlcm5hbWUiOiJyb290IiwiZXhwIjoxNjE1MzMxNDM2LCJlbWFpbCI6ImN3YWR2ZW5AZ21haWwuY29tIiwib3JpZ19pYXQiOjE2MTQ3MjY2MzZ9.FOZ7EKMj0rHr-Goh79lkxhGIn3AKIPFht3I3DpQXTbM",
+						"type": "text",
+						"description": "관리자인지 확인하기 위한 사용자 로그인 (필수)"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "item_name",
+							"value": "하이라이트",
+							"description": "수정할 아이템 이름(필수)",
+							"type": "text"
+						},
+						{
+							"key": "item_content",
+							"value": "하이라이트 투표 아이템 수정",
+							"description": "수정할 아이템에 대한 설명(필수)",
+							"type": "text"
+						},
+						{
+							"key": "item_image",
+							"description": "수정할 아이템 이미지(선택)",
+							"type": "file",
+							"src": "/C:/Users/minch/OneDrive/바탕 화면/image/디즈니/Toy+story+05.jpg",
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/battle/vote/item/3",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"battle",
+						"vote",
+						"item",
+						"3"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": " (실패: 로그인하지 않았을 경우)특정 투표 아이템 수정하기",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "jwt eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxMiwidXNlcm5hbWUiOiJyb290IiwiZXhwIjoxNjE1MjM2Njg2LCJlbWFpbCI6Im1pbmNoYWUwNzVAbmF2ZXIuY29tIiwib3JpZ19pYXQiOjE2MTQ2MzE4ODZ9.BZz74kLL6IElVvhF166WPSTFxNsNv1BlPdi2CUcL44g",
+								"type": "text",
+								"description": "관리자인지 확인하기 위한 사용자 로그인 (필수)",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "item_name",
+									"value": "하이라이트",
+									"description": "수정할 아이템 이름(필수)",
+									"type": "text"
+								},
+								{
+									"key": "item_content",
+									"value": "하이라이트 투표 아이템 수정",
+									"description": "수정할 아이템에 대한 설명(필수)",
+									"type": "text"
+								},
+								{
+									"key": "item_image",
+									"description": "수정할 아이템 이미지(선택)",
+									"type": "file",
+									"src": "/C:/Users/minch/OneDrive/바탕 화면/image/디즈니/Toy+story+05.jpg",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/battle/vote/item/11",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"battle",
+								"vote",
+								"item",
+								"11"
+							]
+						}
+					},
+					"status": "Unauthorized",
+					"code": 401,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Tue, 02 Mar 2021 10:09:15 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.8.2"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "WWW-Authenticate",
+							"value": "JWT realm=\"api\""
+						},
+						{
+							"key": "Vary",
+							"value": "Accept, Origin, Cookie"
+						},
+						{
+							"key": "Allow",
+							"value": "GET, PUT, PATCH, DELETE, HEAD, OPTIONS"
+						},
+						{
+							"key": "Server-Timing",
+							"value": "TimerPanel_utime;dur=0;desc=\"User CPU time\", TimerPanel_stime;dur=0;desc=\"System CPU time\", TimerPanel_total;dur=0;desc=\"Total CPU time\", TimerPanel_total_time;dur=202.88372039794922;desc=\"Elapsed time\", SQLPanel_sql_time;dur=0;desc=\"SQL 0 queries\", CachePanel_total_time;dur=0;desc=\"Cache 0 Calls\""
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "58"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"detail\": \"Authentication credentials were not provided.\"\n}"
+				},
+				{
+					"name": " (실패: 일반 사용자가 수정할 경우)특정 투표 아이템 수정하기",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "jwt eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyMSwidXNlcm5hbWUiOiJxd2VydHkiLCJleHAiOjE2MTUyMzcxMTksImVtYWlsIjoiMTIzNDVAbmF2ZXIuY29tIiwib3JpZ19pYXQiOjE2MTQ2MzIzMTl9.xcE_WUkpOfNimEqVSVMxXXiAWB7_XMzZAgXUEpsgSOU",
+								"type": "text",
+								"description": "관리자인지 확인하기 위한 사용자 로그인 (필수)"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "item_name",
+									"value": "하이라이트",
+									"description": "수정할 아이템 이름(필수)",
+									"type": "text"
+								},
+								{
+									"key": "item_content",
+									"value": "하이라이트 투표 아이템 수정",
+									"description": "수정할 아이템에 대한 설명(필수)",
+									"type": "text"
+								},
+								{
+									"key": "item_image",
+									"description": "수정할 아이템 이미지(선택)",
+									"type": "file",
+									"src": "/C:/Users/minch/OneDrive/바탕 화면/image/디즈니/Toy+story+05.jpg",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/battle/vote/item/11",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"battle",
+								"vote",
+								"item",
+								"11"
+							]
+						}
+					},
+					"status": "Forbidden",
+					"code": 403,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Tue, 02 Mar 2021 10:09:40 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.8.2"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept, Origin, Cookie"
+						},
+						{
+							"key": "Allow",
+							"value": "GET, PUT, PATCH, DELETE, HEAD, OPTIONS"
+						},
+						{
+							"key": "Server-Timing",
+							"value": "TimerPanel_utime;dur=0;desc=\"User CPU time\", TimerPanel_stime;dur=0;desc=\"System CPU time\", TimerPanel_total;dur=0;desc=\"Total CPU time\", TimerPanel_total_time;dur=400.7713794708252;desc=\"Elapsed time\", SQLPanel_sql_time;dur=11.992931365966797;desc=\"SQL 1 queries\", CachePanel_total_time;dur=0;desc=\"Cache 0 Calls\""
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "63"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"detail\": \"You do not have permission to perform this action.\"\n}"
+				},
+				{
+					"name": "(성공) (관리자)특정 투표 아이템 수정하기",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "jwt eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxOCwidXNlcm5hbWUiOiJyb290IiwiZXhwIjoxNjE1MzMxNDM2LCJlbWFpbCI6ImN3YWR2ZW5AZ21haWwuY29tIiwib3JpZ19pYXQiOjE2MTQ3MjY2MzZ9.FOZ7EKMj0rHr-Goh79lkxhGIn3AKIPFht3I3DpQXTbM",
+								"type": "text",
+								"description": "관리자인지 확인하기 위한 사용자 로그인 (필수)"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "item_name",
+									"value": "하이라이트",
+									"description": "수정할 아이템 이름(필수)",
+									"type": "text"
+								},
+								{
+									"key": "item_content",
+									"value": "하이라이트 투표 아이템 수정",
+									"description": "수정할 아이템에 대한 설명(필수)",
+									"type": "text"
+								},
+								{
+									"key": "item_image",
+									"description": "수정할 아이템 이미지(선택)",
+									"type": "file",
+									"src": "/C:/Users/minch/OneDrive/바탕 화면/image/디즈니/Toy+story+05.jpg",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/battle/vote/item/3",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"battle",
+								"vote",
+								"item",
+								"3"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Wed, 03 Mar 2021 01:45:59 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.7.6"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept, Origin, Cookie"
+						},
+						{
+							"key": "Allow",
+							"value": "GET, PUT, PATCH, DELETE, HEAD, OPTIONS"
+						},
+						{
+							"key": "Server-Timing",
+							"value": "TimerPanel_utime;dur=0;desc=\"User CPU time\", TimerPanel_stime;dur=0;desc=\"System CPU time\", TimerPanel_total;dur=0;desc=\"Total CPU time\", TimerPanel_total_time;dur=703.5977840423584;desc=\"Elapsed time\", SQLPanel_sql_time;dur=6.99162483215332;desc=\"SQL 7 queries\", CachePanel_total_time;dur=0;desc=\"Cache 0 Calls\""
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "162"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id\": 3,\n    \"voteboard_id\": 3,\n    \"item_name\": \"하이라이트\",\n    \"item_content\": \"하이라이트 투표 아이템 수정\",\n    \"item_image\": null,\n    \"vote_count\": 0,\n    \"is_voted\": false\n}"
+				}
+			]
+		},
+		{
+			"name": "(관리자)특정 투표 아이템 삭제하기",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "jwt eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyMSwidXNlcm5hbWUiOiJxd2VydHkiLCJleHAiOjE2MTUyODkxODEsImVtYWlsIjoiMTIzNDVAbmF2ZXIuY29tIiwib3JpZ19pYXQiOjE2MTQ2ODQzODF9.ZnjBLnx39AnHw_OzSkpKp1yq0MTGAyFgztURsS_TzyU",
+						"type": "text",
+						"description": "관리자인지 확인하기 위한 사용자 로그 (필수)"
+					}
+				],
+				"url": {
+					"raw": "http://127.0.0.1:8000/battle/vote/item/3",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"battle",
+						"vote",
+						"item",
+						"3"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "(실패: 관리자가 아닌 일반 사용자가 삭제할 경우)특정 투표 아이템 삭제하기",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "jwt eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyMSwidXNlcm5hbWUiOiJxd2VydHkiLCJleHAiOjE2MTUyODkxODEsImVtYWlsIjoiMTIzNDVAbmF2ZXIuY29tIiwib3JpZ19pYXQiOjE2MTQ2ODQzODF9.ZnjBLnx39AnHw_OzSkpKp1yq0MTGAyFgztURsS_TzyU",
+								"type": "text",
+								"description": "관리자인지 확인하기 위한 사용자 로그 (필수)"
+							}
+						],
+						"url": {
+							"raw": "http://127.0.0.1:8000/battle/vote/item/3",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"battle",
+								"vote",
+								"item",
+								"3"
+							]
+						}
+					},
+					"status": "Forbidden",
+					"code": 403,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Tue, 02 Mar 2021 11:42:38 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.8.2"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept, Origin, Cookie"
+						},
+						{
+							"key": "Allow",
+							"value": "GET, PUT, PATCH, DELETE, HEAD, OPTIONS"
+						},
+						{
+							"key": "Server-Timing",
+							"value": "TimerPanel_utime;dur=0;desc=\"User CPU time\", TimerPanel_stime;dur=0;desc=\"System CPU time\", TimerPanel_total;dur=0;desc=\"Total CPU time\", TimerPanel_total_time;dur=297.82700538635254;desc=\"Elapsed time\", SQLPanel_sql_time;dur=9.993553161621094;desc=\"SQL 1 queries\", CachePanel_total_time;dur=0;desc=\"Cache 0 Calls\""
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "63"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"detail\": \"You do not have permission to perform this action.\"\n}"
+				},
+				{
+					"name": "(성공)특정 투표 아이템 삭제하기",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "jwt eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxMiwidXNlcm5hbWUiOiJyb290IiwiZXhwIjoxNjE1MjM2Njg2LCJlbWFpbCI6Im1pbmNoYWUwNzVAbmF2ZXIuY29tIiwib3JpZ19pYXQiOjE2MTQ2MzE4ODZ9.BZz74kLL6IElVvhF166WPSTFxNsNv1BlPdi2CUcL44g",
+								"type": "text",
+								"description": "관리자인지 확인하기 위한 사용자 로그 (필수)"
+							}
+						],
+						"url": {
+							"raw": "http://127.0.0.1:8000/battle/vote/item/3",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"battle",
+								"vote",
+								"item",
+								"3"
+							]
+						}
+					},
+					"status": "No Content",
+					"code": 204,
+					"_postman_previewlanguage": "plain",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Tue, 02 Mar 2021 11:43:04 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.8.2"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept, Origin, Cookie"
+						},
+						{
+							"key": "Allow",
+							"value": "GET, PUT, PATCH, DELETE, HEAD, OPTIONS"
+						},
+						{
+							"key": "Server-Timing",
+							"value": "TimerPanel_utime;dur=0;desc=\"User CPU time\", TimerPanel_stime;dur=0;desc=\"System CPU time\", TimerPanel_total;dur=0;desc=\"Total CPU time\", TimerPanel_total_time;dur=542.7439212799072;desc=\"Elapsed time\", SQLPanel_sql_time;dur=20.989418029785156;desc=\"SQL 4 queries\", CachePanel_total_time;dur=0;desc=\"Cache 0 Calls\""
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "0"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						}
+					],
+					"cookie": [],
+					"body": ""
+				},
+				{
+					"name": "(실패: 로그인하지 않았을 경우)특정 투표 아이템 삭제하기",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "jwt eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyMSwidXNlcm5hbWUiOiJxd2VydHkiLCJleHAiOjE2MTUyODkxODEsImVtYWlsIjoiMTIzNDVAbmF2ZXIuY29tIiwib3JpZ19pYXQiOjE2MTQ2ODQzODF9.ZnjBLnx39AnHw_OzSkpKp1yq0MTGAyFgztURsS_TzyU",
+								"type": "text",
+								"description": "관리자인지 확인하기 위한 사용자 로그 (필수)",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "http://127.0.0.1:8000/battle/vote/item/3",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"battle",
+								"vote",
+								"item",
+								"3"
+							]
+						}
+					},
+					"status": "Unauthorized",
+					"code": 401,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Tue, 02 Mar 2021 11:42:14 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.8.2"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "WWW-Authenticate",
+							"value": "JWT realm=\"api\""
+						},
+						{
+							"key": "Vary",
+							"value": "Accept, Origin, Cookie"
+						},
+						{
+							"key": "Allow",
+							"value": "GET, PUT, PATCH, DELETE, HEAD, OPTIONS"
+						},
+						{
+							"key": "Server-Timing",
+							"value": "TimerPanel_utime;dur=0;desc=\"User CPU time\", TimerPanel_stime;dur=0;desc=\"System CPU time\", TimerPanel_total;dur=0;desc=\"Total CPU time\", TimerPanel_total_time;dur=159.26218032836914;desc=\"Elapsed time\", SQLPanel_sql_time;dur=0;desc=\"SQL 0 queries\", CachePanel_total_time;dur=0;desc=\"Cache 0 Calls\""
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "58"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"detail\": \"Authentication credentials were not provided.\"\n}"
+				}
+			]
+		},
+		{
+			"name": "(유저)특정 투표 아이템에 투표하기(0402_투표하기)",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"description": "투표를 위한 JWT Hearder (필수)",
+						"key": "Authorization",
+						"type": "text",
+						"value": "jwt eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxOCwidXNlcm5hbWUiOiJyb290IiwiZXhwIjoxNjE1MzMxNDM2LCJlbWFpbCI6ImN3YWR2ZW5AZ21haWwuY29tIiwib3JpZ19pYXQiOjE2MTQ3MjY2MzZ9.FOZ7EKMj0rHr-Goh79lkxhGIn3AKIPFht3I3DpQXTbM"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "voteitem_id",
+							"value": "12",
+							"description": "투표할 아이템의 id(필수)",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/battle/vote",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"battle",
+						"vote"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "(투표 성공)특정 투표 아이템에 투표하기(0402_투표하기)",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"description": "투표를 위한 JWT Hearder (필수)",
+								"key": "Authorization",
+								"type": "text",
+								"value": "jwt eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxMiwidXNlcm5hbWUiOiJyb290IiwiZXhwIjoxNjE1MjM2Njg2LCJlbWFpbCI6Im1pbmNoYWUwNzVAbmF2ZXIuY29tIiwib3JpZ19pYXQiOjE2MTQ2MzE4ODZ9.BZz74kLL6IElVvhF166WPSTFxNsNv1BlPdi2CUcL44g"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "voteitem_id",
+									"value": "12",
+									"description": "투표할 아이템의 id(필수)",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/battle/vote",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"battle",
+								"vote"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Tue, 02 Mar 2021 10:14:36 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.8.2"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept, Origin, Cookie"
+						},
+						{
+							"key": "Allow",
+							"value": "POST, OPTIONS"
+						},
+						{
+							"key": "Server-Timing",
+							"value": "TimerPanel_utime;dur=0;desc=\"User CPU time\", TimerPanel_stime;dur=0;desc=\"System CPU time\", TimerPanel_total;dur=0;desc=\"Total CPU time\", TimerPanel_total_time;dur=607.6548099517822;desc=\"Elapsed time\", SQLPanel_sql_time;dur=28.965473175048828;desc=\"SQL 5 queries\", CachePanel_total_time;dur=0;desc=\"Cache 0 Calls\""
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "39"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"result\": \"투표가 되었습니다.\"\n}"
+				},
+				{
+					"name": "(이미 참여한 경우: 투표 취소 및 수정 불가)특정 투표 아이템에 투표하기(0402_투표하기)",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"description": "투표를 위한 JWT Hearder (필수)",
+								"key": "Authorization",
+								"type": "text",
+								"value": "jwt eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxMiwidXNlcm5hbWUiOiJyb290IiwiZXhwIjoxNjE1MjM2Njg2LCJlbWFpbCI6Im1pbmNoYWUwNzVAbmF2ZXIuY29tIiwib3JpZ19pYXQiOjE2MTQ2MzE4ODZ9.BZz74kLL6IElVvhF166WPSTFxNsNv1BlPdi2CUcL44g"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "voteitem_id",
+									"value": "12",
+									"description": "투표할 아이템의 id(필수)",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/battle/vote",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"battle",
+								"vote"
+							]
+						}
+					},
+					"status": "Bad Request",
+					"code": 400,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Tue, 02 Mar 2021 10:15:33 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.8.2"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept, Origin, Cookie"
+						},
+						{
+							"key": "Allow",
+							"value": "POST, OPTIONS"
+						},
+						{
+							"key": "Server-Timing",
+							"value": "TimerPanel_utime;dur=0;desc=\"User CPU time\", TimerPanel_stime;dur=0;desc=\"System CPU time\", TimerPanel_total;dur=0;desc=\"Total CPU time\", TimerPanel_total_time;dur=492.1903610229492;desc=\"Elapsed time\", SQLPanel_sql_time;dur=19.826650619506836;desc=\"SQL 4 queries\", CachePanel_total_time;dur=0;desc=\"Cache 0 Calls\""
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "46"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"result\": \"이미 참여한 투표입니다.\"\n}"
+				},
+				{
+					"name": "(마감일이 지난 경우 투표 불가)특정 투표 아이템에 투표하기(0402_투표하기)",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"description": "투표를 위한 JWT Hearder (필수)",
+								"key": "Authorization",
+								"type": "text",
+								"value": "jwt eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxMiwidXNlcm5hbWUiOiJyb290IiwiZXhwIjoxNjE1MjM2Njg2LCJlbWFpbCI6Im1pbmNoYWUwNzVAbmF2ZXIuY29tIiwib3JpZ19pYXQiOjE2MTQ2MzE4ODZ9.BZz74kLL6IElVvhF166WPSTFxNsNv1BlPdi2CUcL44g"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "voteitem_id",
+									"value": "3",
+									"description": "투표할 아이템의 id(필수)",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/battle/vote",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"battle",
+								"vote"
+							]
+						}
+					},
+					"status": "Bad Request",
+					"code": 400,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Tue, 02 Mar 2021 10:14:00 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.8.2"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept, Origin, Cookie"
+						},
+						{
+							"key": "Allow",
+							"value": "POST, OPTIONS"
+						},
+						{
+							"key": "Server-Timing",
+							"value": "TimerPanel_utime;dur=0;desc=\"User CPU time\", TimerPanel_stime;dur=0;desc=\"System CPU time\", TimerPanel_total;dur=0;desc=\"Total CPU time\", TimerPanel_total_time;dur=455.7199478149414;desc=\"Elapsed time\", SQLPanel_sql_time;dur=13.997554779052734;desc=\"SQL 3 queries\", CachePanel_total_time;dur=0;desc=\"Cache 0 Calls\""
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "39"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"result\": \"마감된 투표입니다.\"\n}"
+				},
+				{
+					"name": "(실패: 로그인하지 않았을 경우)특정 투표 아이템에 투표하기(0402_투표하기) ",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"description": "투표를 위한 JWT Hearder (필수)",
+								"key": "Authorization",
+								"type": "text",
+								"value": "jwt eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxMiwidXNlcm5hbWUiOiJyb290IiwiZXhwIjoxNjE1MjM2Njg2LCJlbWFpbCI6Im1pbmNoYWUwNzVAbmF2ZXIuY29tIiwib3JpZ19pYXQiOjE2MTQ2MzE4ODZ9.BZz74kLL6IElVvhF166WPSTFxNsNv1BlPdi2CUcL44g",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "voteitem_id",
+									"value": "12",
+									"description": "투표할 아이템의 id(필수)",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/battle/vote",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"battle",
+								"vote"
+							]
+						}
+					},
+					"status": "Unauthorized",
+					"code": 401,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Tue, 02 Mar 2021 10:11:58 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.8.2"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "WWW-Authenticate",
+							"value": "JWT realm=\"api\""
+						},
+						{
+							"key": "Vary",
+							"value": "Accept, Origin, Cookie"
+						},
+						{
+							"key": "Allow",
+							"value": "POST, OPTIONS"
+						},
+						{
+							"key": "Server-Timing",
+							"value": "TimerPanel_utime;dur=0;desc=\"User CPU time\", TimerPanel_stime;dur=0;desc=\"System CPU time\", TimerPanel_total;dur=0;desc=\"Total CPU time\", TimerPanel_total_time;dur=228.87015342712402;desc=\"Elapsed time\", SQLPanel_sql_time;dur=0;desc=\"SQL 0 queries\", CachePanel_total_time;dur=0;desc=\"Cache 0 Calls\""
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "58"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"detail\": \"Authentication credentials were not provided.\"\n}"
+				}
+			]
+		},
+		{
+			"name": "특정 투표 게시판의 전체 댓글 보기(최신순, 추천순, 0402_투표 detail)",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/battle/vote/board/9/reply?page=1",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"battle",
+						"vote",
+						"board",
+						"9",
+						"reply"
+					],
+					"query": [
+						{
+							"key": "ordering",
+							"value": "created_at",
+							"description": "최신순으로 정렬 (선택)",
+							"disabled": true
+						},
+						{
+							"key": "ordering",
+							"value": "recommend_count",
+							"description": "추천순으로 정렬 (선택)",
+							"disabled": true
+						},
+						{
+							"key": "page",
+							"value": "1",
+							"description": "선택"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "(최신순)특정 투표 게시판의 전체 댓글 보기(최신순, 추천순, 0402_투표 detail)",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/battle/vote/board/9/reply?ordering=created_at",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"battle",
+								"vote",
+								"board",
+								"9",
+								"reply"
+							],
+							"query": [
+								{
+									"key": "ordering",
+									"value": "created_at",
+									"description": "최신순으로 정렬 (선택)"
+								},
+								{
+									"key": "ordering",
+									"value": "recommend_count",
+									"description": "추천순으로 정렬 (선택)",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Tue, 02 Mar 2021 11:02:01 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.8.2"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept, Origin, Cookie"
+						},
+						{
+							"key": "Allow",
+							"value": "GET, HEAD, OPTIONS"
+						},
+						{
+							"key": "Server-Timing",
+							"value": "TimerPanel_utime;dur=0;desc=\"User CPU time\", TimerPanel_stime;dur=0;desc=\"System CPU time\", TimerPanel_total;dur=0;desc=\"Total CPU time\", TimerPanel_total_time;dur=714.3080234527588;desc=\"Elapsed time\", SQLPanel_sql_time;dur=33.69259834289551;desc=\"SQL 5 queries\", CachePanel_total_time;dur=0;desc=\"Cache 0 Calls\""
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "1548"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"count\": 3,\n    \"next\": null,\n    \"previous\": null,\n    \"results\": [\n        {\n            \"id\": 46,\n            \"author\": {\n                \"nickname\": \"민채\",\n                \"profile_image\": null\n            },\n            \"content\": \"저는 하이라이트요!!!\",\n            \"votereply_image\": null,\n            \"is_author\": false,\n            \"recommended\": false,\n            \"recommend_count\": 0,\n            \"anonymous\": false,\n            \"created_at\": \"20:00\",\n            \"voteboardrereply\": []\n        },\n        {\n            \"id\": 45,\n            \"author\": {\n                \"nickname\": \"민채\",\n                \"profile_image\": null\n            },\n            \"content\": \"저는 데이식스한테 투표했어요ㅎㅎ\",\n            \"votereply_image\": \"http://127.0.0.1:8000/media/votereply_image/181113111112-toy-story-4-trailer_ivTaF9i.jpg\",\n            \"is_author\": false,\n            \"recommended\": false,\n            \"recommend_count\": 0,\n            \"anonymous\": false,\n            \"created_at\": \"19:59\",\n            \"voteboardrereply\": [\n                {\n                    \"id\": 33,\n                    \"author\": {\n                        \"nickname\": \"민채\",\n                        \"profile_image\": null\n                    },\n                    \"content\": \"데이식스 최고입니다,,,,,\",\n                    \"recommended\": false,\n                    \"recommend_count\": 0,\n                    \"is_author\": false,\n                    \"anonymous\": false,\n                    \"created_at\": \"20:01\"\n                }\n            ]\n        },\n        {\n            \"id\": 44,\n            \"author\": {\n                \"nickname\": \"민채\",\n                \"profile_image\": null\n            },\n            \"content\": \"하이라이트 댓글 수정\",\n            \"votereply_image\": \"http://127.0.0.1:8000/media/votereply_image/181113111112-toy-story-4-trailer.jpg\",\n            \"is_author\": false,\n            \"recommended\": false,\n            \"recommend_count\": 0,\n            \"anonymous\": false,\n            \"created_at\": \"19:23\",\n            \"voteboardrereply\": [\n                {\n                    \"id\": 31,\n                    \"author\": null,\n                    \"content\": \"데이식스 최고 (수정)\",\n                    \"recommended\": false,\n                    \"recommend_count\": 0,\n                    \"is_author\": false,\n                    \"anonymous\": true,\n                    \"created_at\": \"19:53\"\n                },\n                {\n                    \"id\": 32,\n                    \"author\": {\n                        \"nickname\": \"민채\",\n                        \"profile_image\": null\n                    },\n                    \"content\": \"하이라이트한테 투표하셨나요??\",\n                    \"recommended\": false,\n                    \"recommend_count\": 0,\n                    \"is_author\": false,\n                    \"anonymous\": false,\n                    \"created_at\": \"20:00\"\n                }\n            ]\n        }\n    ]\n}"
+				},
+				{
+					"name": "(추천순 성공: 로그인 X)특정 투표 게시판의 전체 댓글 보기(최신순, 추천순, 0402_투표 detail)",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/battle/vote/board/9/reply?ordering=recommend_count",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"battle",
+								"vote",
+								"board",
+								"9",
+								"reply"
+							],
+							"query": [
+								{
+									"key": "ordering",
+									"value": "created_at",
+									"description": "최신순으로 정렬 (선택)",
+									"disabled": true
+								},
+								{
+									"key": "ordering",
+									"value": "recommend_count",
+									"description": "추천순으로 정렬 (선택)"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Tue, 02 Mar 2021 11:07:29 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.8.2"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept, Origin, Cookie"
+						},
+						{
+							"key": "Allow",
+							"value": "GET, HEAD, OPTIONS"
+						},
+						{
+							"key": "Server-Timing",
+							"value": "TimerPanel_utime;dur=0;desc=\"User CPU time\", TimerPanel_stime;dur=0;desc=\"System CPU time\", TimerPanel_total;dur=0;desc=\"Total CPU time\", TimerPanel_total_time;dur=866.9369220733643;desc=\"Elapsed time\", SQLPanel_sql_time;dur=30.423641204833984;desc=\"SQL 6 queries\", CachePanel_total_time;dur=0;desc=\"Cache 0 Calls\""
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "1548"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"count\": 3,\n    \"next\": null,\n    \"previous\": null,\n    \"results\": [\n        {\n            \"id\": 45,\n            \"author\": {\n                \"nickname\": \"민채\",\n                \"profile_image\": null\n            },\n            \"content\": \"저는 데이식스한테 투표했어요ㅎㅎ\",\n            \"votereply_image\": \"http://127.0.0.1:8000/media/votereply_image/181113111112-toy-story-4-trailer_ivTaF9i.jpg\",\n            \"is_author\": false,\n            \"recommended\": false,\n            \"recommend_count\": 2,\n            \"anonymous\": false,\n            \"created_at\": \"19:59\",\n            \"voteboardrereply\": [\n                {\n                    \"id\": 33,\n                    \"author\": {\n                        \"nickname\": \"민채\",\n                        \"profile_image\": null\n                    },\n                    \"content\": \"데이식스 최고입니다,,,,,\",\n                    \"recommended\": false,\n                    \"recommend_count\": 1,\n                    \"is_author\": false,\n                    \"anonymous\": false,\n                    \"created_at\": \"20:01\"\n                }\n            ]\n        },\n        {\n            \"id\": 46,\n            \"author\": {\n                \"nickname\": \"민채\",\n                \"profile_image\": null\n            },\n            \"content\": \"저는 하이라이트요!!!\",\n            \"votereply_image\": null,\n            \"is_author\": false,\n            \"recommended\": false,\n            \"recommend_count\": 1,\n            \"anonymous\": false,\n            \"created_at\": \"20:00\",\n            \"voteboardrereply\": []\n        },\n        {\n            \"id\": 44,\n            \"author\": {\n                \"nickname\": \"민채\",\n                \"profile_image\": null\n            },\n            \"content\": \"하이라이트 댓글 수정\",\n            \"votereply_image\": \"http://127.0.0.1:8000/media/votereply_image/181113111112-toy-story-4-trailer.jpg\",\n            \"is_author\": false,\n            \"recommended\": false,\n            \"recommend_count\": 0,\n            \"anonymous\": false,\n            \"created_at\": \"19:23\",\n            \"voteboardrereply\": [\n                {\n                    \"id\": 31,\n                    \"author\": null,\n                    \"content\": \"데이식스 최고 (수정)\",\n                    \"recommended\": false,\n                    \"recommend_count\": 0,\n                    \"is_author\": false,\n                    \"anonymous\": true,\n                    \"created_at\": \"19:53\"\n                },\n                {\n                    \"id\": 32,\n                    \"author\": {\n                        \"nickname\": \"민채\",\n                        \"profile_image\": null\n                    },\n                    \"content\": \"하이라이트한테 투표하셨나요??\",\n                    \"recommended\": false,\n                    \"recommend_count\": 1,\n                    \"is_author\": false,\n                    \"anonymous\": false,\n                    \"created_at\": \"20:00\"\n                }\n            ]\n        }\n    ]\n}"
+				},
+				{
+					"name": "(추천순 성공: 로그인 O)특정 투표 게시판의 전체 댓글 보기(최신순, 추천순, 0402_투표 detail)",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "jwt eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyMSwidXNlcm5hbWUiOiJxd2VydHkiLCJleHAiOjE2MTUyMzcxMTksImVtYWlsIjoiMTIzNDVAbmF2ZXIuY29tIiwib3JpZ19pYXQiOjE2MTQ2MzIzMTl9.xcE_WUkpOfNimEqVSVMxXXiAWB7_XMzZAgXUEpsgSOU",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://127.0.0.1:8000/battle/vote/board/9/reply?ordering=recommend_count",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"battle",
+								"vote",
+								"board",
+								"9",
+								"reply"
+							],
+							"query": [
+								{
+									"key": "ordering",
+									"value": "created_at",
+									"description": "최신순으로 정렬 (선택)",
+									"disabled": true
+								},
+								{
+									"key": "ordering",
+									"value": "recommend_count",
+									"description": "추천순으로 정렬 (선택)"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Tue, 02 Mar 2021 11:09:03 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.8.2"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept, Origin, Cookie"
+						},
+						{
+							"key": "Allow",
+							"value": "GET, HEAD, OPTIONS"
+						},
+						{
+							"key": "Server-Timing",
+							"value": "TimerPanel_utime;dur=0;desc=\"User CPU time\", TimerPanel_stime;dur=0;desc=\"System CPU time\", TimerPanel_total;dur=0;desc=\"Total CPU time\", TimerPanel_total_time;dur=1085.3805541992188;desc=\"Elapsed time\", SQLPanel_sql_time;dur=40.97795486450195;desc=\"SQL 8 queries\", CachePanel_total_time;dur=0;desc=\"Cache 0 Calls\""
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "1547"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"count\": 3,\n    \"next\": null,\n    \"previous\": null,\n    \"results\": [\n        {\n            \"id\": 45,\n            \"author\": {\n                \"nickname\": \"민채\",\n                \"profile_image\": null\n            },\n            \"content\": \"저는 데이식스한테 투표했어요ㅎㅎ\",\n            \"votereply_image\": \"http://127.0.0.1:8000/media/votereply_image/181113111112-toy-story-4-trailer_ivTaF9i.jpg\",\n            \"is_author\": false,\n            \"recommended\": true,\n            \"recommend_count\": 2,\n            \"anonymous\": false,\n            \"created_at\": \"19:59\",\n            \"voteboardrereply\": [\n                {\n                    \"id\": 33,\n                    \"author\": {\n                        \"nickname\": \"민채\",\n                        \"profile_image\": null\n                    },\n                    \"content\": \"데이식스 최고입니다,,,,,\",\n                    \"recommended\": false,\n                    \"recommend_count\": 1,\n                    \"is_author\": false,\n                    \"anonymous\": false,\n                    \"created_at\": \"20:01\"\n                }\n            ]\n        },\n        {\n            \"id\": 46,\n            \"author\": {\n                \"nickname\": \"민채\",\n                \"profile_image\": null\n            },\n            \"content\": \"저는 하이라이트요!!!\",\n            \"votereply_image\": null,\n            \"is_author\": false,\n            \"recommended\": false,\n            \"recommend_count\": 1,\n            \"anonymous\": false,\n            \"created_at\": \"20:00\",\n            \"voteboardrereply\": []\n        },\n        {\n            \"id\": 44,\n            \"author\": {\n                \"nickname\": \"민채\",\n                \"profile_image\": null\n            },\n            \"content\": \"하이라이트 댓글 수정\",\n            \"votereply_image\": \"http://127.0.0.1:8000/media/votereply_image/181113111112-toy-story-4-trailer.jpg\",\n            \"is_author\": false,\n            \"recommended\": false,\n            \"recommend_count\": 0,\n            \"anonymous\": false,\n            \"created_at\": \"19:23\",\n            \"voteboardrereply\": [\n                {\n                    \"id\": 31,\n                    \"author\": null,\n                    \"content\": \"데이식스 최고 (수정)\",\n                    \"recommended\": false,\n                    \"recommend_count\": 0,\n                    \"is_author\": false,\n                    \"anonymous\": true,\n                    \"created_at\": \"19:53\"\n                },\n                {\n                    \"id\": 32,\n                    \"author\": {\n                        \"nickname\": \"민채\",\n                        \"profile_image\": null\n                    },\n                    \"content\": \"하이라이트한테 투표하셨나요??\",\n                    \"recommended\": false,\n                    \"recommend_count\": 1,\n                    \"is_author\": false,\n                    \"anonymous\": false,\n                    \"created_at\": \"20:00\"\n                }\n            ]\n        }\n    ]\n}"
+				},
+				{
+					"name": "(페이지네이션)특정 투표 게시판의 전체 댓글 보기(최신순, 추천순, 0402_투표 detail)",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/battle/vote/board/9/reply?ordering=recommend_count&page=1",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"battle",
+								"vote",
+								"board",
+								"9",
+								"reply"
+							],
+							"query": [
+								{
+									"key": "ordering",
+									"value": "created_at",
+									"description": "최신순으로 정렬 (선택)",
+									"disabled": true
+								},
+								{
+									"key": "ordering",
+									"value": "recommend_count",
+									"description": "추천순으로 정렬 (선택)"
+								},
+								{
+									"key": "page",
+									"value": "1",
+									"description": "선"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Tue, 02 Mar 2021 11:49:43 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.8.2"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept, Origin, Cookie"
+						},
+						{
+							"key": "Allow",
+							"value": "GET, HEAD, OPTIONS"
+						},
+						{
+							"key": "Server-Timing",
+							"value": "TimerPanel_utime;dur=0;desc=\"User CPU time\", TimerPanel_stime;dur=0;desc=\"System CPU time\", TimerPanel_total;dur=0;desc=\"Total CPU time\", TimerPanel_total_time;dur=883.2197189331055;desc=\"Elapsed time\", SQLPanel_sql_time;dur=31.321048736572266;desc=\"SQL 6 queries\", CachePanel_total_time;dur=0;desc=\"Cache 0 Calls\""
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "2037"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"count\": 4,\n    \"next\": null,\n    \"previous\": null,\n    \"results\": [\n        {\n            \"id\": 45,\n            \"author\": {\n                \"nickname\": \"\",\n                \"profile_image\": null\n            },\n            \"content\": \"삭제된 댓글 입니다!\",\n            \"votereply_image\": \"http://127.0.0.1:8000/media/votereply_image/181113111112-toy-story-4-trailer_ivTaF9i.jpg\",\n            \"is_author\": false,\n            \"recommended\": false,\n            \"recommend_count\": 2,\n            \"anonymous\": false,\n            \"created_at\": \"19:59\",\n            \"voteboardrereply\": [\n                {\n                    \"id\": 33,\n                    \"author\": {\n                        \"nickname\": \"민채\",\n                        \"profile_image\": null\n                    },\n                    \"content\": \"데이식스 최고입니다,,,,,\",\n                    \"recommended\": false,\n                    \"recommend_count\": 1,\n                    \"is_author\": false,\n                    \"anonymous\": false,\n                    \"created_at\": \"20:01\"\n                }\n            ]\n        },\n        {\n            \"id\": 46,\n            \"author\": {\n                \"nickname\": \"민채\",\n                \"profile_image\": null\n            },\n            \"content\": \"저는 하이라이트요!!!\",\n            \"votereply_image\": null,\n            \"is_author\": false,\n            \"recommended\": false,\n            \"recommend_count\": 1,\n            \"anonymous\": false,\n            \"created_at\": \"20:00\",\n            \"voteboardrereply\": [\n                {\n                    \"id\": 34,\n                    \"author\": {\n                        \"nickname\": \"qwer\",\n                        \"profile_image\": null\n                    },\n                    \"content\": \"대댓글도 남겨볼게요\",\n                    \"recommended\": false,\n                    \"recommend_count\": 0,\n                    \"is_author\": false,\n                    \"anonymous\": false,\n                    \"created_at\": \"20:17\"\n                }\n            ]\n        },\n        {\n            \"id\": 44,\n            \"author\": {\n                \"nickname\": \"\",\n                \"profile_image\": null\n            },\n            \"content\": \"삭제된 댓글 입니다!\",\n            \"votereply_image\": \"http://127.0.0.1:8000/media/votereply_image/181113111112-toy-story-4-trailer.jpg\",\n            \"is_author\": false,\n            \"recommended\": false,\n            \"recommend_count\": 0,\n            \"anonymous\": false,\n            \"created_at\": \"19:23\",\n            \"voteboardrereply\": [\n                {\n                    \"id\": 31,\n                    \"author\": null,\n                    \"content\": \"데이식스 최고 (수정)\",\n                    \"recommended\": false,\n                    \"recommend_count\": 0,\n                    \"is_author\": false,\n                    \"anonymous\": true,\n                    \"created_at\": \"19:53\"\n                },\n                {\n                    \"id\": 32,\n                    \"author\": {\n                        \"nickname\": \"민채\",\n                        \"profile_image\": null\n                    },\n                    \"content\": \"하이라이트한테 투표하셨나요??\",\n                    \"recommended\": false,\n                    \"recommend_count\": 1,\n                    \"is_author\": false,\n                    \"anonymous\": false,\n                    \"created_at\": \"20:00\"\n                }\n            ]\n        },\n        {\n            \"id\": 47,\n            \"author\": {\n                \"nickname\": \"qwer\",\n                \"profile_image\": null\n            },\n            \"content\": \"댓글을 남겨볼게요\",\n            \"votereply_image\": \"http://127.0.0.1:8000/media/votereply_image/181113111112-toy-story-4-trailer_NdvRZEy.jpg\",\n            \"is_author\": false,\n            \"recommended\": false,\n            \"recommend_count\": 0,\n            \"anonymous\": false,\n            \"created_at\": \"20:17\",\n            \"voteboardrereply\": []\n        }\n    ]\n}"
+				}
+			]
+		},
+		{
+			"name": "(유저)특정 투표게시판의 댓글 작성(0402_투표 detail)",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"description": "댓글 작성을 위한 JWT header (필수)",
+						"key": "Authorization",
+						"type": "text",
+						"value": "jwt eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxMiwidXNlcm5hbWUiOiJyb290IiwiZXhwIjoxNjE1MjM2Njg2LCJlbWFpbCI6Im1pbmNoYWUwNzVAbmF2ZXIuY29tIiwib3JpZ19pYXQiOjE2MTQ2MzE4ODZ9.BZz74kLL6IElVvhF166WPSTFxNsNv1BlPdi2CUcL44g"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "voteboard_id",
+							"value": "9",
+							"description": "댓글을 남길 투표 공간의 id (필수)",
+							"type": "text"
+						},
+						{
+							"key": "content",
+							"value": "하이라이트 최고!!",
+							"description": "댓글 내용 (필수)",
+							"type": "text"
+						},
+						{
+							"key": "votereply_image",
+							"description": "댓글에 올릴 이미지 (선택)",
+							"type": "file",
+							"src": "/C:/Users/minch/OneDrive/바탕 화면/image/디즈니/181113111112-toy-story-4-trailer.jpg"
+						},
+						{
+							"key": "anonymous",
+							"value": "False",
+							"description": "익명여부 (선택, 기본값은 False)",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/battle/vote/board/reply",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"battle",
+						"vote",
+						"board",
+						"reply"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "(실패: 로그인 하지 않았을 경우)특정 투표게시판의 댓글 작성(0402_투표 detail)",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"description": "댓글 작성을 위한 JWT header (필수)",
+								"key": "Authorization",
+								"type": "text",
+								"value": "jwt eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxMiwidXNlcm5hbWUiOiJyb290IiwiZXhwIjoxNjE1MjM2Njg2LCJlbWFpbCI6Im1pbmNoYWUwNzVAbmF2ZXIuY29tIiwib3JpZ19pYXQiOjE2MTQ2MzE4ODZ9.BZz74kLL6IElVvhF166WPSTFxNsNv1BlPdi2CUcL44g",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "voteboard_id",
+									"value": "9",
+									"description": "댓글을 남길 투표 공간의 id (필수)",
+									"type": "text"
+								},
+								{
+									"key": "content",
+									"value": "하이라이트 최고!!",
+									"description": "댓글 내용 (필수)",
+									"type": "text"
+								},
+								{
+									"key": "votereply_image",
+									"description": "댓글에 올릴 이미지 (선택)",
+									"type": "file",
+									"src": "/C:/Users/minch/OneDrive/바탕 화면/image/디즈니/181113111112-toy-story-4-trailer.jpg"
+								},
+								{
+									"key": "anonymous",
+									"value": "False",
+									"description": "익명여부 (선택, 기본값은 False)",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/battle/vote/board/reply",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"battle",
+								"vote",
+								"board",
+								"reply"
+							]
+						}
+					},
+					"status": "Unauthorized",
+					"code": 401,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Tue, 02 Mar 2021 10:23:13 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.8.2"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "WWW-Authenticate",
+							"value": "JWT realm=\"api\""
+						},
+						{
+							"key": "Vary",
+							"value": "Accept, Origin, Cookie"
+						},
+						{
+							"key": "Allow",
+							"value": "POST, OPTIONS"
+						},
+						{
+							"key": "Server-Timing",
+							"value": "TimerPanel_utime;dur=0;desc=\"User CPU time\", TimerPanel_stime;dur=0;desc=\"System CPU time\", TimerPanel_total;dur=0;desc=\"Total CPU time\", TimerPanel_total_time;dur=173.89941215515137;desc=\"Elapsed time\", SQLPanel_sql_time;dur=0;desc=\"SQL 0 queries\", CachePanel_total_time;dur=0;desc=\"Cache 0 Calls\""
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "58"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"detail\": \"Authentication credentials were not provided.\"\n}"
+				},
+				{
+					"name": "(실패: 3자 이하 작성시)특정 투표게시판의 댓글 작성(0402_투표 detail)",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"description": "댓글 작성을 위한 JWT header (필수)",
+								"key": "Authorization",
+								"type": "text",
+								"value": "jwt eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxMiwidXNlcm5hbWUiOiJyb290IiwiZXhwIjoxNjE1MjM2Njg2LCJlbWFpbCI6Im1pbmNoYWUwNzVAbmF2ZXIuY29tIiwib3JpZ19pYXQiOjE2MTQ2MzE4ODZ9.BZz74kLL6IElVvhF166WPSTFxNsNv1BlPdi2CUcL44g"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "voteboard_id",
+									"value": "9",
+									"description": "댓글을 남길 투표 공간의 id (필수)",
+									"type": "text"
+								},
+								{
+									"key": "content",
+									"value": "최고~",
+									"description": "댓글 내용 (필수, 3자 초과해서 작성)",
+									"type": "text"
+								},
+								{
+									"key": "votereply_image",
+									"description": "댓글에 올릴 이미지 (선택)",
+									"type": "file",
+									"src": "/C:/Users/minch/OneDrive/바탕 화면/image/디즈니/181113111112-toy-story-4-trailer.jpg"
+								},
+								{
+									"key": "anonymous",
+									"value": "False",
+									"description": "익명여부 (선택, 기본값은 False)",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/battle/vote/board/reply",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"battle",
+								"vote",
+								"board",
+								"reply"
+							]
+						}
+					},
+					"status": "Bad Request",
+					"code": 400,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Tue, 02 Mar 2021 10:25:55 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.8.2"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept, Origin, Cookie"
+						},
+						{
+							"key": "Allow",
+							"value": "POST, OPTIONS"
+						},
+						{
+							"key": "Server-Timing",
+							"value": "TimerPanel_utime;dur=0;desc=\"User CPU time\", TimerPanel_stime;dur=0;desc=\"System CPU time\", TimerPanel_total;dur=0;desc=\"Total CPU time\", TimerPanel_total_time;dur=347.72729873657227;desc=\"Elapsed time\", SQLPanel_sql_time;dur=8.882284164428711;desc=\"SQL 2 queries\", CachePanel_total_time;dur=0;desc=\"Cache 0 Calls\""
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "60"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"content\": [\n        \"Ensure this field has at least 4 characters.\"\n    ]\n}"
+				},
+				{
+					"name": "(성공)특정 투표게시판의 댓글 작성(0402_투표 detail)",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"description": "댓글 작성을 위한 JWT header (필수)",
+								"key": "Authorization",
+								"type": "text",
+								"value": "jwt eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxMiwidXNlcm5hbWUiOiJyb290IiwiZXhwIjoxNjE1MjM2Njg2LCJlbWFpbCI6Im1pbmNoYWUwNzVAbmF2ZXIuY29tIiwib3JpZ19pYXQiOjE2MTQ2MzE4ODZ9.BZz74kLL6IElVvhF166WPSTFxNsNv1BlPdi2CUcL44g"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "voteboard_id",
+									"value": "9",
+									"description": "댓글을 남길 투표 공간의 id (필수)",
+									"type": "text"
+								},
+								{
+									"key": "content",
+									"value": "하이라이트 최고!!",
+									"description": "댓글 내용 (필수)",
+									"type": "text"
+								},
+								{
+									"key": "votereply_image",
+									"description": "댓글에 올릴 이미지 (선택)",
+									"type": "file",
+									"src": "/C:/Users/minch/OneDrive/바탕 화면/image/디즈니/181113111112-toy-story-4-trailer.jpg"
+								},
+								{
+									"key": "anonymous",
+									"value": "False",
+									"description": "익명여부 (선택, 기본값은 False)",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/battle/vote/board/reply",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"battle",
+								"vote",
+								"board",
+								"reply"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Tue, 02 Mar 2021 10:23:35 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.8.2"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept, Origin, Cookie"
+						},
+						{
+							"key": "Allow",
+							"value": "POST, OPTIONS"
+						},
+						{
+							"key": "Server-Timing",
+							"value": "TimerPanel_utime;dur=0;desc=\"User CPU time\", TimerPanel_stime;dur=0;desc=\"System CPU time\", TimerPanel_total;dur=0;desc=\"Total CPU time\", TimerPanel_total_time;dur=1098.1688499450684;desc=\"Elapsed time\", SQLPanel_sql_time;dur=53.057193756103516;desc=\"SQL 12 queries\", CachePanel_total_time;dur=0;desc=\"Cache 0 Calls\""
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "317"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id\": 44,\n    \"author\": {\n        \"nickname\": \"민채\",\n        \"profile_image\": null\n    },\n    \"content\": \"하이라이트 최고!!\",\n    \"votereply_image\": \"http://127.0.0.1:8000/media/votereply_image/181113111112-toy-story-4-trailer.jpg\",\n    \"is_author\": true,\n    \"recommended\": false,\n    \"recommend_count\": 0,\n    \"anonymous\": false,\n    \"created_at\": \"19:23\",\n    \"voteboardrereply\": []\n}"
+				}
+			]
+		},
+		{
+			"name": "(유저)투표게시판 댓글 수정(0402 투표 detail)",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"description": "댓글 수정을 위한 JWT header (필수)",
+						"key": "Authorization",
+						"type": "text",
+						"value": "jwt eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxMiwidXNlcm5hbWUiOiJyb290IiwiZXhwIjoxNjE1MjM2Njg2LCJlbWFpbCI6Im1pbmNoYWUwNzVAbmF2ZXIuY29tIiwib3JpZ19pYXQiOjE2MTQ2MzE4ODZ9.BZz74kLL6IElVvhF166WPSTFxNsNv1BlPdi2CUcL44g"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "content",
+							"value": "하이라이트 댓글 수정",
+							"description": "수정할 댓글 내용 (필수, 3자 초과해서 작성)",
+							"type": "text"
+						},
+						{
+							"key": "votereply_image",
+							"description": "수정할 댓글 이미지 (선택)",
+							"type": "file",
+							"src": "/C:/Users/minch/OneDrive/바탕 화면/image/디즈니/181113111112-toy-story-4-trailer.jpg",
+							"disabled": true
+						},
+						{
+							"key": "anonymous",
+							"value": "False",
+							"description": "익명여부 (선택, 기본값 False)",
+							"type": "text",
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/battle/vote/board/reply/44",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"battle",
+						"vote",
+						"board",
+						"reply",
+						"44"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "(3자 이하 작성시 수정 불가)투표게시판 댓글 수정(0402 투표 detail)",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [
+							{
+								"description": "댓글 수정을 위한 JWT header (필수)",
+								"key": "Authorization",
+								"type": "text",
+								"value": "jwt eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxMiwidXNlcm5hbWUiOiJyb290IiwiZXhwIjoxNjE1MjM2Njg2LCJlbWFpbCI6Im1pbmNoYWUwNzVAbmF2ZXIuY29tIiwib3JpZ19pYXQiOjE2MTQ2MzE4ODZ9.BZz74kLL6IElVvhF166WPSTFxNsNv1BlPdi2CUcL44g"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "content",
+									"value": "수정!",
+									"description": "수정할 댓글 내용 (필수, 3자 초과해서 작성)",
+									"type": "text"
+								},
+								{
+									"key": "votereply_image",
+									"description": "수정할 댓글 이미지 (선택)",
+									"type": "file",
+									"src": "/C:/Users/minch/OneDrive/바탕 화면/image/디즈니/181113111112-toy-story-4-trailer.jpg",
+									"disabled": true
+								},
+								{
+									"key": "anonymous",
+									"value": "False",
+									"description": "익명여부 (선택, 기본값 False)",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/battle/vote/board/reply/44",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"battle",
+								"vote",
+								"board",
+								"reply",
+								"44"
+							]
+						}
+					},
+					"status": "Bad Request",
+					"code": 400,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Tue, 02 Mar 2021 10:28:21 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.8.2"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept, Origin, Cookie"
+						},
+						{
+							"key": "Allow",
+							"value": "GET, PUT, PATCH, DELETE, HEAD, OPTIONS"
+						},
+						{
+							"key": "Server-Timing",
+							"value": "TimerPanel_utime;dur=0;desc=\"User CPU time\", TimerPanel_stime;dur=0;desc=\"System CPU time\", TimerPanel_total;dur=0;desc=\"Total CPU time\", TimerPanel_total_time;dur=505.71370124816895;desc=\"Elapsed time\", SQLPanel_sql_time;dur=15.992403030395508;desc=\"SQL 3 queries\", CachePanel_total_time;dur=0;desc=\"Cache 0 Calls\""
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "60"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"content\": [\n        \"Ensure this field has at least 4 characters.\"\n    ]\n}"
+				},
+				{
+					"name": "(실패: 로그인하지 않았을 경우)투표게시판 댓글 수정(0403_투표 detail)",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [
+							{
+								"description": "댓글 수정을 위한 JWT header (필수)",
+								"key": "Authorization",
+								"type": "text",
+								"value": "jwt eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxMiwidXNlcm5hbWUiOiJyb290IiwiZXhwIjoxNjE1MjM2Njg2LCJlbWFpbCI6Im1pbmNoYWUwNzVAbmF2ZXIuY29tIiwib3JpZ19pYXQiOjE2MTQ2MzE4ODZ9.BZz74kLL6IElVvhF166WPSTFxNsNv1BlPdi2CUcL44g",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "content",
+									"value": "하이라이트 댓글 수정",
+									"description": "수정할 댓글 내용 (필수, 3자 초과해서 작성)",
+									"type": "text"
+								},
+								{
+									"key": "votereply_image",
+									"description": "수정할 댓글 이미지 (선택)",
+									"type": "file",
+									"src": "/C:/Users/minch/OneDrive/바탕 화면/image/디즈니/181113111112-toy-story-4-trailer.jpg",
+									"disabled": true
+								},
+								{
+									"key": "anonymous",
+									"value": "False",
+									"description": "익명여부 (선택, 기본값 False)",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/battle/vote/board/reply/44",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"battle",
+								"vote",
+								"board",
+								"reply",
+								"44"
+							]
+						}
+					},
+					"status": "Unauthorized",
+					"code": 401,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Tue, 02 Mar 2021 10:27:14 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.8.2"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "WWW-Authenticate",
+							"value": "JWT realm=\"api\""
+						},
+						{
+							"key": "Vary",
+							"value": "Accept, Origin, Cookie"
+						},
+						{
+							"key": "Allow",
+							"value": "GET, PUT, PATCH, DELETE, HEAD, OPTIONS"
+						},
+						{
+							"key": "Server-Timing",
+							"value": "TimerPanel_utime;dur=0;desc=\"User CPU time\", TimerPanel_stime;dur=0;desc=\"System CPU time\", TimerPanel_total;dur=0;desc=\"Total CPU time\", TimerPanel_total_time;dur=210.88147163391113;desc=\"Elapsed time\", SQLPanel_sql_time;dur=0;desc=\"SQL 0 queries\", CachePanel_total_time;dur=0;desc=\"Cache 0 Calls\""
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "58"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"detail\": \"Authentication credentials were not provided.\"\n}"
+				},
+				{
+					"name": "(성공)투표게시판 댓글 수정(0402 투표 detail)",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [
+							{
+								"description": "댓글 수정을 위한 JWT header (필수)",
+								"key": "Authorization",
+								"type": "text",
+								"value": "jwt eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxMiwidXNlcm5hbWUiOiJyb290IiwiZXhwIjoxNjE1MjM2Njg2LCJlbWFpbCI6Im1pbmNoYWUwNzVAbmF2ZXIuY29tIiwib3JpZ19pYXQiOjE2MTQ2MzE4ODZ9.BZz74kLL6IElVvhF166WPSTFxNsNv1BlPdi2CUcL44g"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "content",
+									"value": "하이라이트 댓글 수정",
+									"description": "수정할 댓글 내용 (필수, 3자 초과해서 작성)",
+									"type": "text"
+								},
+								{
+									"key": "votereply_image",
+									"description": "수정할 댓글 이미지 (선택)",
+									"type": "file",
+									"src": "/C:/Users/minch/OneDrive/바탕 화면/image/디즈니/181113111112-toy-story-4-trailer.jpg",
+									"disabled": true
+								},
+								{
+									"key": "anonymous",
+									"value": "False",
+									"description": "익명여부 (선택, 기본값 False)",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/battle/vote/board/reply/44",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"battle",
+								"vote",
+								"board",
+								"reply",
+								"44"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Tue, 02 Mar 2021 10:29:01 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.8.2"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept, Origin, Cookie"
+						},
+						{
+							"key": "Allow",
+							"value": "GET, PUT, PATCH, DELETE, HEAD, OPTIONS"
+						},
+						{
+							"key": "Server-Timing",
+							"value": "TimerPanel_utime;dur=0;desc=\"User CPU time\", TimerPanel_stime;dur=0;desc=\"System CPU time\", TimerPanel_total;dur=0;desc=\"Total CPU time\", TimerPanel_total_time;dur=492.98715591430664;desc=\"Elapsed time\", SQLPanel_sql_time;dur=17.284393310546875;desc=\"SQL 4 queries\", CachePanel_total_time;dur=0;desc=\"Cache 0 Calls\""
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "243"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id\": 44,\n    \"author\": {\n        \"nickname\": \"민채\",\n        \"profile_image\": null\n    },\n    \"content\": \"하이라이트 댓글 수정\",\n    \"votereply_image\": \"http://127.0.0.1:8000/media/votereply_image/181113111112-toy-story-4-trailer.jpg\",\n    \"anonymous\": false,\n    \"created_at\": \"19:23\"\n}"
+				}
+			]
+		},
+		{
+			"name": "(유저)특정 게시판의 댓글 삭제(0402_투표detail)",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"description": "댓글 삭제를 위한 JWT Hearder (필수)",
+						"key": "Authorization",
+						"type": "text",
+						"value": "jwt eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxMiwidXNlcm5hbWUiOiJyb290IiwiZXhwIjoxNjE1MjM2Njg2LCJlbWFpbCI6Im1pbmNoYWUwNzVAbmF2ZXIuY29tIiwib3JpZ19pYXQiOjE2MTQ2MzE4ODZ9.BZz74kLL6IElVvhF166WPSTFxNsNv1BlPdi2CUcL44g"
+					}
+				],
+				"url": {
+					"raw": "http://127.0.0.1:8000/battle/vote/board/reply/44",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"battle",
+						"vote",
+						"board",
+						"reply",
+						"44"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "(성공)특정 게시판의 댓글 삭제(0402_투표detail)",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [
+							{
+								"description": "댓글 삭제를 위한 JWT Hearder (필수)",
+								"key": "Authorization",
+								"type": "text",
+								"value": "jwt eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxMiwidXNlcm5hbWUiOiJyb290IiwiZXhwIjoxNjE1MjM2Njg2LCJlbWFpbCI6Im1pbmNoYWUwNzVAbmF2ZXIuY29tIiwib3JpZ19pYXQiOjE2MTQ2MzE4ODZ9.BZz74kLL6IElVvhF166WPSTFxNsNv1BlPdi2CUcL44g"
+							}
+						],
+						"url": {
+							"raw": "http://127.0.0.1:8000/battle/vote/board/reply/49",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"battle",
+								"vote",
+								"board",
+								"reply",
+								"49"
+							]
+						}
+					},
+					"status": "No Content",
+					"code": 204,
+					"_postman_previewlanguage": "plain",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Tue, 02 Mar 2021 11:29:32 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.8.2"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept, Origin, Cookie"
+						},
+						{
+							"key": "Allow",
+							"value": "GET, PUT, PATCH, DELETE, HEAD, OPTIONS"
+						},
+						{
+							"key": "Server-Timing",
+							"value": "TimerPanel_utime;dur=0;desc=\"User CPU time\", TimerPanel_stime;dur=0;desc=\"System CPU time\", TimerPanel_total;dur=0;desc=\"Total CPU time\", TimerPanel_total_time;dur=1237.313985824585;desc=\"Elapsed time\", SQLPanel_sql_time;dur=28.955698013305664;desc=\"SQL 12 queries\", CachePanel_total_time;dur=0;desc=\"Cache 0 Calls\""
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "0"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						}
+					],
+					"cookie": [],
+					"body": ""
+				},
+				{
+					"name": "(포인트 부족으로 삭제 실패)특정 게시판의 댓글 삭제(0402_투표detail)",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [
+							{
+								"description": "댓글 삭제를 위한 JWT Hearder (필수)",
+								"key": "Authorization",
+								"type": "text",
+								"value": "jwt eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxMiwidXNlcm5hbWUiOiJyb290IiwiZXhwIjoxNjE1MjM2Njg2LCJlbWFpbCI6Im1pbmNoYWUwNzVAbmF2ZXIuY29tIiwib3JpZ19pYXQiOjE2MTQ2MzE4ODZ9.BZz74kLL6IElVvhF166WPSTFxNsNv1BlPdi2CUcL44g"
+							}
+						],
+						"url": {
+							"raw": "http://127.0.0.1:8000/battle/vote/board/reply/46",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"battle",
+								"vote",
+								"board",
+								"reply",
+								"46"
+							]
+						}
+					},
+					"status": "Bad Request",
+					"code": 400,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Tue, 02 Mar 2021 11:31:20 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.8.2"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept, Origin, Cookie"
+						},
+						{
+							"key": "Allow",
+							"value": "GET, PUT, PATCH, DELETE, HEAD, OPTIONS"
+						},
+						{
+							"key": "Server-Timing",
+							"value": "TimerPanel_utime;dur=0;desc=\"User CPU time\", TimerPanel_stime;dur=0;desc=\"System CPU time\", TimerPanel_total;dur=0;desc=\"Total CPU time\", TimerPanel_total_time;dur=526.6995429992676;desc=\"Elapsed time\", SQLPanel_sql_time;dur=16.989469528198242;desc=\"SQL 2 queries\", CachePanel_total_time;dur=0;desc=\"Cache 0 Calls\""
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "29"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"result\": \"not enough point\"\n}"
+				},
+				{
+					"name": "(실패: 로그인하지 않았을 경우)특정 게시판의 댓글 삭제(0402_투표detail)",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [
+							{
+								"description": "댓글 삭제를 위한 JWT Hearder (필수)",
+								"key": "Authorization",
+								"type": "text",
+								"value": "jwt eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyMSwidXNlcm5hbWUiOiJxd2VydHkiLCJleHAiOjE2MTUyMzcxMTksImVtYWlsIjoiMTIzNDVAbmF2ZXIuY29tIiwib3JpZ19pYXQiOjE2MTQ2MzIzMTl9.xcE_WUkpOfNimEqVSVMxXXiAWB7_XMzZAgXUEpsgSOU",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "http://127.0.0.1:8000/battle/vote/board/reply/44",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"battle",
+								"vote",
+								"board",
+								"reply",
+								"44"
+							]
+						}
+					},
+					"status": "Unauthorized",
+					"code": 401,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Tue, 02 Mar 2021 11:10:08 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.8.2"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "WWW-Authenticate",
+							"value": "JWT realm=\"api\""
+						},
+						{
+							"key": "Vary",
+							"value": "Accept, Origin, Cookie"
+						},
+						{
+							"key": "Allow",
+							"value": "GET, PUT, PATCH, DELETE, HEAD, OPTIONS"
+						},
+						{
+							"key": "Server-Timing",
+							"value": "TimerPanel_utime;dur=0;desc=\"User CPU time\", TimerPanel_stime;dur=0;desc=\"System CPU time\", TimerPanel_total;dur=0;desc=\"Total CPU time\", TimerPanel_total_time;dur=175.89998245239258;desc=\"Elapsed time\", SQLPanel_sql_time;dur=0;desc=\"SQL 0 queries\", CachePanel_total_time;dur=0;desc=\"Cache 0 Calls\""
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "58"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"detail\": \"Authentication credentials were not provided.\"\n}"
+				},
+				{
+					"name": "(댓글 작성자가 아닐 경우 삭제 불가)특정 게시판의 댓글 삭제(0402_투표detail)",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [
+							{
+								"description": "댓글 삭제를 위한 JWT Hearder (필수)",
+								"key": "Authorization",
+								"type": "text",
+								"value": "jwt eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyMSwidXNlcm5hbWUiOiJxd2VydHkiLCJleHAiOjE2MTUyODkxODEsImVtYWlsIjoiMTIzNDVAbmF2ZXIuY29tIiwib3JpZ19pYXQiOjE2MTQ2ODQzODF9.ZnjBLnx39AnHw_OzSkpKp1yq0MTGAyFgztURsS_TzyU"
+							}
+						],
+						"url": {
+							"raw": "http://127.0.0.1:8000/battle/vote/board/reply/49",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"battle",
+								"vote",
+								"board",
+								"reply",
+								"49"
+							]
+						}
+					},
+					"status": "Forbidden",
+					"code": 403,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Tue, 02 Mar 2021 11:28:59 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.8.2"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept, Origin, Cookie"
+						},
+						{
+							"key": "Allow",
+							"value": "GET, PUT, PATCH, DELETE, HEAD, OPTIONS"
+						},
+						{
+							"key": "Server-Timing",
+							"value": "TimerPanel_utime;dur=0;desc=\"User CPU time\", TimerPanel_stime;dur=0;desc=\"System CPU time\", TimerPanel_total;dur=0;desc=\"Total CPU time\", TimerPanel_total_time;dur=1170.271396636963;desc=\"Elapsed time\", SQLPanel_sql_time;dur=33.00285339355469;desc=\"SQL 10 queries\", CachePanel_total_time;dur=0;desc=\"Cache 0 Calls\""
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "63"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"detail\": \"You do not have permission to perform this action.\"\n}"
+				}
+			]
+		},
+		{
+			"name": "(유저)특정 댓글의 대댓글 작성(0402 투표 detail)",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "jwt eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxMiwidXNlcm5hbWUiOiJyb290IiwiZXhwIjoxNjE1MjM2Njg2LCJlbWFpbCI6Im1pbmNoYWUwNzVAbmF2ZXIuY29tIiwib3JpZ19pYXQiOjE2MTQ2MzE4ODZ9.BZz74kLL6IElVvhF166WPSTFxNsNv1BlPdi2CUcL44g",
+						"description": "대댓글 작성을 위한 JWT header (필수)",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "voteboardreply_id",
+							"value": "44",
+							"description": "대댓글을 남길 댓글의 id (필수)",
+							"type": "text"
+						},
+						{
+							"key": "content",
+							"value": "저는 데이식스요!",
+							"description": "대댓글 내용 (필수)",
+							"type": "text"
+						},
+						{
+							"key": "voterereply_image",
+							"description": "대댓글에 올릴 이미지 (선택)",
+							"type": "file",
+							"src": [],
+							"disabled": true
+						},
+						{
+							"key": "anonymous",
+							"value": "False",
+							"description": "익명여부 (선택, 기본값은 False)",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/battle/vote/board/rereply",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"battle",
+						"vote",
+						"board",
+						"rereply"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "(성공)특정 댓글의 대댓글 작성(0402 투표 detail)",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "jwt eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxMiwidXNlcm5hbWUiOiJyb290IiwiZXhwIjoxNjE1MjM2Njg2LCJlbWFpbCI6Im1pbmNoYWUwNzVAbmF2ZXIuY29tIiwib3JpZ19pYXQiOjE2MTQ2MzE4ODZ9.BZz74kLL6IElVvhF166WPSTFxNsNv1BlPdi2CUcL44g",
+								"description": "대댓글 작성을 위한 JWT header (필수)",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "voteboardreply_id",
+									"value": "44",
+									"description": "대댓글을 남길 댓글의 id (필수)",
+									"type": "text"
+								},
+								{
+									"key": "content",
+									"value": "저는 데이식스요!",
+									"description": "대댓글 내용 (필수, 3자 초과해서 작성)",
+									"type": "text"
+								},
+								{
+									"key": "voterereply_image",
+									"description": "대댓글에 올릴 이미지 (선택)",
+									"type": "file",
+									"src": [],
+									"disabled": true
+								},
+								{
+									"key": "anonymous",
+									"value": "False",
+									"description": "익명여부 (선택, 기본값은 False)",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/battle/vote/board/rereply",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"battle",
+								"vote",
+								"board",
+								"rereply"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Tue, 02 Mar 2021 10:53:03 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.8.2"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept, Origin, Cookie"
+						},
+						{
+							"key": "Allow",
+							"value": "GET, POST, HEAD, OPTIONS"
+						},
+						{
+							"key": "Server-Timing",
+							"value": "TimerPanel_utime;dur=0;desc=\"User CPU time\", TimerPanel_stime;dur=0;desc=\"System CPU time\", TimerPanel_total;dur=0;desc=\"Total CPU time\", TimerPanel_total_time;dur=1322.1461772918701;desc=\"Elapsed time\", SQLPanel_sql_time;dur=40.49420356750488;desc=\"SQL 12 queries\", CachePanel_total_time;dur=0;desc=\"Cache 0 Calls\""
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "218"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id\": 31,\n    \"author\": {\n        \"nickname\": \"민채\",\n        \"profile_image\": null\n    },\n    \"content\": \"저는 데이식스요!\",\n    \"voterereply_image\": null,\n    \"is_author\": true,\n    \"recommended\": false,\n    \"recommend_count\": 0,\n    \"anonymous\": false,\n    \"created_at\": \"19:53\"\n}"
+				},
+				{
+					"name": "(실패: 3자 이하 작성시)특정 댓글의 대댓글 작성(0402 투표 detail)",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "jwt eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxMiwidXNlcm5hbWUiOiJyb290IiwiZXhwIjoxNjE1MjM2Njg2LCJlbWFpbCI6Im1pbmNoYWUwNzVAbmF2ZXIuY29tIiwib3JpZ19pYXQiOjE2MTQ2MzE4ODZ9.BZz74kLL6IElVvhF166WPSTFxNsNv1BlPdi2CUcL44g",
+								"description": "대댓글 작성을 위한 JWT header (필수)",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "voteboardreply_id",
+									"value": "44",
+									"description": "대댓글을 남길 댓글의 id (필수)",
+									"type": "text"
+								},
+								{
+									"key": "content",
+									"value": "대댓글",
+									"description": "대댓글 내용 (필수, 3자 초과해서 작성)",
+									"type": "text"
+								},
+								{
+									"key": "voterereply_image",
+									"description": "대댓글에 올릴 이미지 (선택)",
+									"type": "file",
+									"src": [],
+									"disabled": true
+								},
+								{
+									"key": "anonymous",
+									"value": "False",
+									"description": "익명여부 (선택, 기본값은 False)",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/battle/vote/board/rereply",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"battle",
+								"vote",
+								"board",
+								"rereply"
+							]
+						}
+					},
+					"status": "Bad Request",
+					"code": 400,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Tue, 02 Mar 2021 10:52:17 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.8.2"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept, Origin, Cookie"
+						},
+						{
+							"key": "Allow",
+							"value": "GET, POST, HEAD, OPTIONS"
+						},
+						{
+							"key": "Server-Timing",
+							"value": "TimerPanel_utime;dur=0;desc=\"User CPU time\", TimerPanel_stime;dur=0;desc=\"System CPU time\", TimerPanel_total;dur=0;desc=\"Total CPU time\", TimerPanel_total_time;dur=516.7040824890137;desc=\"Elapsed time\", SQLPanel_sql_time;dur=15.990972518920898;desc=\"SQL 2 queries\", CachePanel_total_time;dur=0;desc=\"Cache 0 Calls\""
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "60"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"content\": [\n        \"Ensure this field has at least 4 characters.\"\n    ]\n}"
+				},
+				{
+					"name": "(실패: 로그인하지 않았을 경우)특정 댓글의 대댓글 작성(0402 투표 detail)",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "jwt eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxMiwidXNlcm5hbWUiOiJyb290IiwiZXhwIjoxNjE1MjM2Njg2LCJlbWFpbCI6Im1pbmNoYWUwNzVAbmF2ZXIuY29tIiwib3JpZ19pYXQiOjE2MTQ2MzE4ODZ9.BZz74kLL6IElVvhF166WPSTFxNsNv1BlPdi2CUcL44g",
+								"description": "대댓글 작성을 위한 JWT header (필수)",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "voteboardreply_id",
+									"value": "44",
+									"description": "대댓글을 남길 댓글의 id (필수)",
+									"type": "text"
+								},
+								{
+									"key": "content",
+									"value": "저는 데이식스요!",
+									"description": "대댓글 내용 (필수)",
+									"type": "text"
+								},
+								{
+									"key": "voterereply_image",
+									"description": "대댓글에 올릴 이미지 (선택)",
+									"type": "file",
+									"src": [],
+									"disabled": true
+								},
+								{
+									"key": "anonymous",
+									"value": "False",
+									"description": "익명여부 (선택, 기본값은 False)",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/battle/vote/board/rereply",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"battle",
+								"vote",
+								"board",
+								"rereply"
+							]
+						}
+					},
+					"status": "Unauthorized",
+					"code": 401,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Tue, 02 Mar 2021 10:51:22 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.8.2"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "WWW-Authenticate",
+							"value": "JWT realm=\"api\""
+						},
+						{
+							"key": "Vary",
+							"value": "Accept, Origin, Cookie"
+						},
+						{
+							"key": "Allow",
+							"value": "GET, POST, HEAD, OPTIONS"
+						},
+						{
+							"key": "Server-Timing",
+							"value": "TimerPanel_utime;dur=0;desc=\"User CPU time\", TimerPanel_stime;dur=0;desc=\"System CPU time\", TimerPanel_total;dur=0;desc=\"Total CPU time\", TimerPanel_total_time;dur=167.90294647216797;desc=\"Elapsed time\", SQLPanel_sql_time;dur=0;desc=\"SQL 0 queries\", CachePanel_total_time;dur=0;desc=\"Cache 0 Calls\""
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "58"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"detail\": \"Authentication credentials were not provided.\"\n}"
+				}
+			]
+		},
+		{
+			"name": "(유저)특정 댓글의 대댓글 수정(0404 투표 detail)",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "jwt eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxMiwidXNlcm5hbWUiOiJyb290IiwiZXhwIjoxNjE1MjM2Njg2LCJlbWFpbCI6Im1pbmNoYWUwNzVAbmF2ZXIuY29tIiwib3JpZ19pYXQiOjE2MTQ2MzE4ODZ9.BZz74kLL6IElVvhF166WPSTFxNsNv1BlPdi2CUcL44g",
+						"description": "대댓글 수정을 위한 jwt header (필수)",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "content",
+							"value": "데이식스 최고 (수정)",
+							"description": "수정할 대댓글 내용 (필수)",
+							"type": "text"
+						},
+						{
+							"key": "voterereply_image",
+							"description": "수정할 대댓글 이미지 (선택)",
+							"type": "file",
+							"src": [],
+							"disabled": true
+						},
+						{
+							"key": "anonymous",
+							"value": "True",
+							"description": "익명여부 수정 (선택, 기본값을 False",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/battle/vote/board/rereply/31",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"battle",
+						"vote",
+						"board",
+						"rereply",
+						"31"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "(실패: 로그인하지 않았을 경우)특정 댓글의 대댓글 수정(0402 투표 detail)",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "jwt eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxMiwidXNlcm5hbWUiOiJyb290IiwiZXhwIjoxNjE1MjM2Njg2LCJlbWFpbCI6Im1pbmNoYWUwNzVAbmF2ZXIuY29tIiwib3JpZ19pYXQiOjE2MTQ2MzE4ODZ9.BZz74kLL6IElVvhF166WPSTFxNsNv1BlPdi2CUcL44g",
+								"description": "대댓글 수정을 위한 jwt header (필수)",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "content",
+									"value": "데이식스 최고 (수정)",
+									"description": "수정할 대댓글 내용 (필수)",
+									"type": "text"
+								},
+								{
+									"key": "voterereply_image",
+									"description": "수정할 대댓글 이미지 (선택)",
+									"type": "file",
+									"src": [],
+									"disabled": true
+								},
+								{
+									"key": "anonymous",
+									"value": "True",
+									"description": "익명여부 수정 (선택, 기본값은 False)",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/battle/vote/board/rereply/31",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"battle",
+								"vote",
+								"board",
+								"rereply",
+								"31"
+							]
+						}
+					},
+					"status": "Unauthorized",
+					"code": 401,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Tue, 02 Mar 2021 10:54:42 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.8.2"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "WWW-Authenticate",
+							"value": "JWT realm=\"api\""
+						},
+						{
+							"key": "Vary",
+							"value": "Accept, Origin, Cookie"
+						},
+						{
+							"key": "Allow",
+							"value": "GET, PUT, PATCH, DELETE, HEAD, OPTIONS"
+						},
+						{
+							"key": "Server-Timing",
+							"value": "TimerPanel_utime;dur=0;desc=\"User CPU time\", TimerPanel_stime;dur=0;desc=\"System CPU time\", TimerPanel_total;dur=0;desc=\"Total CPU time\", TimerPanel_total_time;dur=148.91314506530762;desc=\"Elapsed time\", SQLPanel_sql_time;dur=0;desc=\"SQL 0 queries\", CachePanel_total_time;dur=0;desc=\"Cache 0 Calls\""
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "58"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"detail\": \"Authentication credentials were not provided.\"\n}"
+				},
+				{
+					"name": "(성공)특정 댓글의 대댓글 수정(0402 투표 detail)",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "jwt eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxMiwidXNlcm5hbWUiOiJyb290IiwiZXhwIjoxNjE1MjM2Njg2LCJlbWFpbCI6Im1pbmNoYWUwNzVAbmF2ZXIuY29tIiwib3JpZ19pYXQiOjE2MTQ2MzE4ODZ9.BZz74kLL6IElVvhF166WPSTFxNsNv1BlPdi2CUcL44g",
+								"description": "대댓글 수정을 위한 jwt header (필수)",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "content",
+									"value": "데이식스 최고 (수정)",
+									"description": "수정할 대댓글 내용 (필수)",
+									"type": "text"
+								},
+								{
+									"key": "voterereply_image",
+									"description": "수정할 대댓글 이미지 (선택)",
+									"type": "file",
+									"src": [],
+									"disabled": true
+								},
+								{
+									"key": "anonymous",
+									"value": "True",
+									"description": "익명여부 수정 (선택, 기본값은 False)",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/battle/vote/board/rereply/31",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"battle",
+								"vote",
+								"board",
+								"rereply",
+								"31"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Tue, 02 Mar 2021 10:56:39 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.8.2"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept, Origin, Cookie"
+						},
+						{
+							"key": "Allow",
+							"value": "GET, PUT, PATCH, DELETE, HEAD, OPTIONS"
+						},
+						{
+							"key": "Server-Timing",
+							"value": "TimerPanel_utime;dur=0;desc=\"User CPU time\", TimerPanel_stime;dur=0;desc=\"System CPU time\", TimerPanel_total;dur=0;desc=\"Total CPU time\", TimerPanel_total_time;dur=634.636640548706;desc=\"Elapsed time\", SQLPanel_sql_time;dur=19.987821578979492;desc=\"SQL 4 queries\", CachePanel_total_time;dur=0;desc=\"Cache 0 Calls\""
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "127"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id\": 31,\n    \"author\": null,\n    \"content\": \"데이식스 최고 (수정)\",\n    \"voterereply_image\": null,\n    \"anonymous\": true,\n    \"created_at\": \"19:53\"\n}"
+				},
+				{
+					"name": "(3자 이하 작성시 수정 불가)특정 댓글의 대댓글 수정(0402 투표 detail)",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "jwt eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxMiwidXNlcm5hbWUiOiJyb290IiwiZXhwIjoxNjE1MjM2Njg2LCJlbWFpbCI6Im1pbmNoYWUwNzVAbmF2ZXIuY29tIiwib3JpZ19pYXQiOjE2MTQ2MzE4ODZ9.BZz74kLL6IElVvhF166WPSTFxNsNv1BlPdi2CUcL44g",
+								"description": "대댓글 수정을 위한 jwt header (필수)",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "content",
+									"value": "수정~",
+									"description": "수정할 대댓글 내용 (필수)",
+									"type": "text"
+								},
+								{
+									"key": "voterereply_image",
+									"description": "수정할 대댓글 이미지 (선택)",
+									"type": "file",
+									"src": [],
+									"disabled": true
+								},
+								{
+									"key": "anonymous",
+									"value": "True",
+									"description": "익명여부 수정 (선택, 기본값은 False)",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/battle/vote/board/rereply/31",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"battle",
+								"vote",
+								"board",
+								"rereply",
+								"31"
+							]
+						}
+					},
+					"status": "Bad Request",
+					"code": 400,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Tue, 02 Mar 2021 10:55:31 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.8.2"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept, Origin, Cookie"
+						},
+						{
+							"key": "Allow",
+							"value": "GET, PUT, PATCH, DELETE, HEAD, OPTIONS"
+						},
+						{
+							"key": "Server-Timing",
+							"value": "TimerPanel_utime;dur=0;desc=\"User CPU time\", TimerPanel_stime;dur=0;desc=\"System CPU time\", TimerPanel_total;dur=0;desc=\"Total CPU time\", TimerPanel_total_time;dur=461.73548698425293;desc=\"Elapsed time\", SQLPanel_sql_time;dur=14.990568161010742;desc=\"SQL 3 queries\", CachePanel_total_time;dur=0;desc=\"Cache 0 Calls\""
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "60"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"content\": [\n        \"Ensure this field has at least 4 characters.\"\n    ]\n}"
+				}
+			]
+		},
+		{
+			"name": "(유저)특정 댓글의 대댓글 삭제하기(0402_투표detail)",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"description": "대댓글 삭제를 위한 JWT Hearder (필수)",
+						"key": "Authorization",
+						"type": "text",
+						"value": "jwt eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyMSwidXNlcm5hbWUiOiJxd2VydHkiLCJleHAiOjE2MTUyMzcxMTksImVtYWlsIjoiMTIzNDVAbmF2ZXIuY29tIiwib3JpZ19pYXQiOjE2MTQ2MzIzMTl9.xcE_WUkpOfNimEqVSVMxXXiAWB7_XMzZAgXUEpsgSOU"
+					}
+				],
+				"url": {
+					"raw": "http://127.0.0.1:8000/battle/vote/board/rereply/35",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"battle",
+						"vote",
+						"board",
+						"rereply",
+						"35"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "(실패: 로그인한 사용자가 아닐 경우)특정 댓글의 대댓글 삭제하기(0402_투표detail)",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [
+							{
+								"description": "대댓글 삭제를 위한 JWT Hearder (필수)",
+								"key": "Authorization",
+								"type": "text",
+								"value": "jwt eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyMSwidXNlcm5hbWUiOiJxd2VydHkiLCJleHAiOjE2MTUyMzcxMTksImVtYWlsIjoiMTIzNDVAbmF2ZXIuY29tIiwib3JpZ19pYXQiOjE2MTQ2MzIzMTl9.xcE_WUkpOfNimEqVSVMxXXiAWB7_XMzZAgXUEpsgSOU",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "http://127.0.0.1:8000/battle/vote/board/rereply/35",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"battle",
+								"vote",
+								"board",
+								"rereply",
+								"35"
+							]
+						}
+					},
+					"status": "Unauthorized",
+					"code": 401,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Tue, 02 Mar 2021 11:20:13 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.8.2"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "WWW-Authenticate",
+							"value": "JWT realm=\"api\""
+						},
+						{
+							"key": "Vary",
+							"value": "Accept, Origin, Cookie"
+						},
+						{
+							"key": "Allow",
+							"value": "GET, PUT, PATCH, DELETE, HEAD, OPTIONS"
+						},
+						{
+							"key": "Server-Timing",
+							"value": "TimerPanel_utime;dur=0;desc=\"User CPU time\", TimerPanel_stime;dur=0;desc=\"System CPU time\", TimerPanel_total;dur=0;desc=\"Total CPU time\", TimerPanel_total_time;dur=194.88906860351562;desc=\"Elapsed time\", SQLPanel_sql_time;dur=0;desc=\"SQL 0 queries\", CachePanel_total_time;dur=0;desc=\"Cache 0 Calls\""
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "58"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"detail\": \"Authentication credentials were not provided.\"\n}"
+				},
+				{
+					"name": "(포인트 부족으로 삭제 실패)특정 댓글의 대댓글 삭제하기(0402_투표detail)",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [
+							{
+								"description": "대댓글 삭제를 위한 JWT Hearder (필수)",
+								"key": "Authorization",
+								"type": "text",
+								"value": "jwt eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxMiwidXNlcm5hbWUiOiJyb290IiwiZXhwIjoxNjE1MjM2Njg2LCJlbWFpbCI6Im1pbmNoYWUwNzVAbmF2ZXIuY29tIiwib3JpZ19pYXQiOjE2MTQ2MzE4ODZ9.BZz74kLL6IElVvhF166WPSTFxNsNv1BlPdi2CUcL44g"
+							}
+						],
+						"url": {
+							"raw": "http://127.0.0.1:8000/battle/vote/board/rereply/31",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"battle",
+								"vote",
+								"board",
+								"rereply",
+								"31"
+							]
+						}
+					},
+					"status": "Bad Request",
+					"code": 400,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Tue, 02 Mar 2021 11:31:55 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.8.2"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept, Origin, Cookie"
+						},
+						{
+							"key": "Allow",
+							"value": "GET, PUT, PATCH, DELETE, HEAD, OPTIONS"
+						},
+						{
+							"key": "Server-Timing",
+							"value": "TimerPanel_utime;dur=0;desc=\"User CPU time\", TimerPanel_stime;dur=0;desc=\"System CPU time\", TimerPanel_total;dur=0;desc=\"Total CPU time\", TimerPanel_total_time;dur=363.79241943359375;desc=\"Elapsed time\", SQLPanel_sql_time;dur=14.989614486694336;desc=\"SQL 2 queries\", CachePanel_total_time;dur=0;desc=\"Cache 0 Calls\""
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "29"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"result\": \"not enough point\"\n}"
+				},
+				{
+					"name": "(대댓글 작성자가 아닌 경우 삭제 불가)특정 댓글의 대댓글 삭제하기(0402_투표detail)",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [
+							{
+								"description": "대댓글 삭제를 위한 JWT Hearder (필수)",
+								"key": "Authorization",
+								"type": "text",
+								"value": "jwt eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyMSwidXNlcm5hbWUiOiJxd2VydHkiLCJleHAiOjE2MTUyMzcxMTksImVtYWlsIjoiMTIzNDVAbmF2ZXIuY29tIiwib3JpZ19pYXQiOjE2MTQ2MzIzMTl9.xcE_WUkpOfNimEqVSVMxXXiAWB7_XMzZAgXUEpsgSOU"
+							}
+						],
+						"url": {
+							"raw": "http://127.0.0.1:8000/battle/vote/board/rereply/35",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"battle",
+								"vote",
+								"board",
+								"rereply",
+								"35"
+							]
+						}
+					},
+					"status": "Forbidden",
+					"code": 403,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Tue, 02 Mar 2021 11:20:41 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.8.2"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept, Origin, Cookie"
+						},
+						{
+							"key": "Allow",
+							"value": "GET, PUT, PATCH, DELETE, HEAD, OPTIONS"
+						},
+						{
+							"key": "Server-Timing",
+							"value": "TimerPanel_utime;dur=0;desc=\"User CPU time\", TimerPanel_stime;dur=0;desc=\"System CPU time\", TimerPanel_total;dur=0;desc=\"Total CPU time\", TimerPanel_total_time;dur=2852.3669242858887;desc=\"Elapsed time\", SQLPanel_sql_time;dur=39.97445106506348;desc=\"SQL 11 queries\", CachePanel_total_time;dur=0;desc=\"Cache 0 Calls\""
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "63"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"detail\": \"You do not have permission to perform this action.\"\n}"
+				},
+				{
+					"name": "(성공)특정 댓글의 대댓글 삭제하기(0402_투표detail)",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [
+							{
+								"description": "대댓글 삭제를 위한 JWT Hearder (필수)",
+								"key": "Authorization",
+								"type": "text",
+								"value": "jwt eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxMiwidXNlcm5hbWUiOiJyb290IiwiZXhwIjoxNjE1MjM2Njg2LCJlbWFpbCI6Im1pbmNoYWUwNzVAbmF2ZXIuY29tIiwib3JpZ19pYXQiOjE2MTQ2MzE4ODZ9.BZz74kLL6IElVvhF166WPSTFxNsNv1BlPdi2CUcL44g"
+							}
+						],
+						"url": {
+							"raw": "http://127.0.0.1:8000/battle/vote/board/rereply/35",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"battle",
+								"vote",
+								"board",
+								"rereply",
+								"35"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "plain",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Tue, 02 Mar 2021 11:30:14 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.8.2"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept, Origin, Cookie"
+						},
+						{
+							"key": "Allow",
+							"value": "GET, PUT, PATCH, DELETE, HEAD, OPTIONS"
+						},
+						{
+							"key": "Server-Timing",
+							"value": "TimerPanel_utime;dur=0;desc=\"User CPU time\", TimerPanel_stime;dur=0;desc=\"System CPU time\", TimerPanel_total;dur=0;desc=\"Total CPU time\", TimerPanel_total_time;dur=1818.9575672149658;desc=\"Elapsed time\", SQLPanel_sql_time;dur=39.9782657623291;desc=\"SQL 14 queries\", CachePanel_total_time;dur=0;desc=\"Cache 0 Calls\""
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "0"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						}
+					],
+					"cookie": [],
+					"body": ""
+				}
+			]
+		},
+		{
+			"name": "(유저)댓글 추천 추가 및 취소(0402_투표detail)",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"type": "text",
+						"value": "jwt eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxMiwidXNlcm5hbWUiOiJyb290IiwiZXhwIjoxNjE1MjM2Njg2LCJlbWFpbCI6Im1pbmNoYWUwNzVAbmF2ZXIuY29tIiwib3JpZ19pYXQiOjE2MTQ2MzE4ODZ9.BZz74kLL6IElVvhF166WPSTFxNsNv1BlPdi2CUcL44g",
+						"description": "댓글 추천을 위한 JWT Hearder (필수)"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "voteboardreply_id",
+							"value": "44",
+							"description": "추천할 댓글의 id(필수)",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/battle/vote/board/reply/recommend",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"battle",
+						"vote",
+						"board",
+						"reply",
+						"recommend"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "(추천 성공)댓글 추천 추가 및 취소(0402_투표detail)",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"description": "댓글 추천을 위한 JWT Hearder (필수)",
+								"key": "Authorization",
+								"type": "text",
+								"value": "jwt eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxMiwidXNlcm5hbWUiOiJyb290IiwiZXhwIjoxNjE1MjM2Njg2LCJlbWFpbCI6Im1pbmNoYWUwNzVAbmF2ZXIuY29tIiwib3JpZ19pYXQiOjE2MTQ2MzE4ODZ9.BZz74kLL6IElVvhF166WPSTFxNsNv1BlPdi2CUcL44g"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "voteboardreply_id",
+									"value": "44",
+									"description": "추천할 댓글의 id(필수)",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/battle/vote/board/reply/recommend",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"battle",
+								"vote",
+								"board",
+								"reply",
+								"recommend"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Tue, 02 Mar 2021 11:03:41 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.8.2"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept, Origin, Cookie"
+						},
+						{
+							"key": "Allow",
+							"value": "POST, OPTIONS"
+						},
+						{
+							"key": "Server-Timing",
+							"value": "TimerPanel_utime;dur=0;desc=\"User CPU time\", TimerPanel_stime;dur=0;desc=\"System CPU time\", TimerPanel_total;dur=0;desc=\"Total CPU time\", TimerPanel_total_time;dur=506.5441131591797;desc=\"Elapsed time\", SQLPanel_sql_time;dur=21.306753158569336;desc=\"SQL 4 queries\", CachePanel_total_time;dur=0;desc=\"Cache 0 Calls\""
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "30"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"result\": \"recommend created\"\n}"
+				},
+				{
+					"name": "(추천 취소)댓글 추천 추가 및 취소(0402_투표detail)",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"description": "댓글 추천을 위한 JWT Hearder (필수)",
+								"key": "Authorization",
+								"type": "text",
+								"value": "jwt eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxMiwidXNlcm5hbWUiOiJyb290IiwiZXhwIjoxNjE1MjM2Njg2LCJlbWFpbCI6Im1pbmNoYWUwNzVAbmF2ZXIuY29tIiwib3JpZ19pYXQiOjE2MTQ2MzE4ODZ9.BZz74kLL6IElVvhF166WPSTFxNsNv1BlPdi2CUcL44g"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "voteboardreply_id",
+									"value": "44",
+									"description": "추천할 댓글의 id(필수)",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/battle/vote/board/reply/recommend",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"battle",
+								"vote",
+								"board",
+								"reply",
+								"recommend"
+							]
+						}
+					},
+					"status": "Not Acceptable",
+					"code": 406,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Tue, 02 Mar 2021 11:04:02 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.8.2"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept, Origin, Cookie"
+						},
+						{
+							"key": "Allow",
+							"value": "POST, OPTIONS"
+						},
+						{
+							"key": "Server-Timing",
+							"value": "TimerPanel_utime;dur=0;desc=\"User CPU time\", TimerPanel_stime;dur=0;desc=\"System CPU time\", TimerPanel_total;dur=0;desc=\"Total CPU time\", TimerPanel_total_time;dur=486.37986183166504;desc=\"Elapsed time\", SQLPanel_sql_time;dur=25.070667266845703;desc=\"SQL 4 queries\", CachePanel_total_time;dur=0;desc=\"Cache 0 Calls\""
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "30"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"result\": \"recommend deleted\"\n}"
+				},
+				{
+					"name": "(실패: 로그인하지 않았을 경우)댓글 추천 추가 및 취소(0402_투표detail)",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"description": "댓글 추천을 위한 JWT Hearder (필수)",
+								"key": "Authorization",
+								"type": "text",
+								"value": "jwt eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxMiwidXNlcm5hbWUiOiJyb290IiwiZXhwIjoxNjE1MjM2Njg2LCJlbWFpbCI6Im1pbmNoYWUwNzVAbmF2ZXIuY29tIiwib3JpZ19pYXQiOjE2MTQ2MzE4ODZ9.BZz74kLL6IElVvhF166WPSTFxNsNv1BlPdi2CUcL44g",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "voteboardreply_id",
+									"value": "44",
+									"description": "추천할 댓글의 id(필수)",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/battle/vote/board/reply/recommend",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"battle",
+								"vote",
+								"board",
+								"reply",
+								"recommend"
+							]
+						}
+					},
+					"status": "Unauthorized",
+					"code": 401,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Tue, 02 Mar 2021 11:03:25 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.8.2"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "WWW-Authenticate",
+							"value": "JWT realm=\"api\""
+						},
+						{
+							"key": "Vary",
+							"value": "Accept, Origin, Cookie"
+						},
+						{
+							"key": "Allow",
+							"value": "POST, OPTIONS"
+						},
+						{
+							"key": "Server-Timing",
+							"value": "TimerPanel_utime;dur=0;desc=\"User CPU time\", TimerPanel_stime;dur=0;desc=\"System CPU time\", TimerPanel_total;dur=0;desc=\"Total CPU time\", TimerPanel_total_time;dur=147.91560173034668;desc=\"Elapsed time\", SQLPanel_sql_time;dur=0;desc=\"SQL 0 queries\", CachePanel_total_time;dur=0;desc=\"Cache 0 Calls\""
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "58"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"detail\": \"Authentication credentials were not provided.\"\n}"
+				}
+			]
+		},
+		{
+			"name": "(유저)대댓글 추천 추가 및 취소(0402_투표detail)",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"description": "대댓글 추천을 위한 JWT Hearder (필수)",
+						"key": "Authorization",
+						"type": "text",
+						"value": "jwt eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxMiwidXNlcm5hbWUiOiJyb290IiwiZXhwIjoxNjE1MjM2Njg2LCJlbWFpbCI6Im1pbmNoYWUwNzVAbmF2ZXIuY29tIiwib3JpZ19pYXQiOjE2MTQ2MzE4ODZ9.BZz74kLL6IElVvhF166WPSTFxNsNv1BlPdi2CUcL44g"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "voteboardrereply_id",
+							"value": "31",
+							"description": "추천할 대댓글의 id(필수)",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/battle/vote/board/rereply/recommend",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"battle",
+						"vote",
+						"board",
+						"rereply",
+						"recommend"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "(실패: 로그인하지 않았을 경우)대댓글 추천 추가 및 취소(0402_투표detail)",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"description": "대댓글 추천을 위한 JWT Hearder (필수)",
+								"key": "Authorization",
+								"type": "text",
+								"value": "jwt eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxMiwidXNlcm5hbWUiOiJyb290IiwiZXhwIjoxNjE1MjM2Njg2LCJlbWFpbCI6Im1pbmNoYWUwNzVAbmF2ZXIuY29tIiwib3JpZ19pYXQiOjE2MTQ2MzE4ODZ9.BZz74kLL6IElVvhF166WPSTFxNsNv1BlPdi2CUcL44g",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "voteboardrereply_id",
+									"value": "31",
+									"description": "추천할 대댓글의 id(필수)",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/battle/vote/board/rereply/recommend",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"battle",
+								"vote",
+								"board",
+								"rereply",
+								"recommend"
+							]
+						}
+					},
+					"status": "Unauthorized",
+					"code": 401,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Tue, 02 Mar 2021 11:05:16 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.8.2"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "WWW-Authenticate",
+							"value": "JWT realm=\"api\""
+						},
+						{
+							"key": "Vary",
+							"value": "Accept, Origin, Cookie"
+						},
+						{
+							"key": "Allow",
+							"value": "POST, OPTIONS"
+						},
+						{
+							"key": "Server-Timing",
+							"value": "TimerPanel_utime;dur=0;desc=\"User CPU time\", TimerPanel_stime;dur=0;desc=\"System CPU time\", TimerPanel_total;dur=0;desc=\"Total CPU time\", TimerPanel_total_time;dur=183.89511108398438;desc=\"Elapsed time\", SQLPanel_sql_time;dur=0;desc=\"SQL 0 queries\", CachePanel_total_time;dur=0;desc=\"Cache 0 Calls\""
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "58"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"detail\": \"Authentication credentials were not provided.\"\n}"
+				},
+				{
+					"name": "(추천 성공)대댓글 추천 추가 및 취소(0402_투표detail)",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"description": "대댓글 추천을 위한 JWT Hearder (필수)",
+								"key": "Authorization",
+								"type": "text",
+								"value": "jwt eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxMiwidXNlcm5hbWUiOiJyb290IiwiZXhwIjoxNjE1MjM2Njg2LCJlbWFpbCI6Im1pbmNoYWUwNzVAbmF2ZXIuY29tIiwib3JpZ19pYXQiOjE2MTQ2MzE4ODZ9.BZz74kLL6IElVvhF166WPSTFxNsNv1BlPdi2CUcL44g"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "voteboardrereply_id",
+									"value": "31",
+									"description": "추천할 대댓글의 id(필수)",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/battle/vote/board/rereply/recommend",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"battle",
+								"vote",
+								"board",
+								"rereply",
+								"recommend"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Tue, 02 Mar 2021 11:05:32 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.8.2"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept, Origin, Cookie"
+						},
+						{
+							"key": "Allow",
+							"value": "POST, OPTIONS"
+						},
+						{
+							"key": "Server-Timing",
+							"value": "TimerPanel_utime;dur=0;desc=\"User CPU time\", TimerPanel_stime;dur=0;desc=\"System CPU time\", TimerPanel_total;dur=0;desc=\"Total CPU time\", TimerPanel_total_time;dur=533.6921215057373;desc=\"Elapsed time\", SQLPanel_sql_time;dur=28.98406982421875;desc=\"SQL 4 queries\", CachePanel_total_time;dur=0;desc=\"Cache 0 Calls\""
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "30"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"result\": \"recommend created\"\n}"
+				},
+				{
+					"name": "(추천 취소)대댓글 추천 추가 및 취소(0402_투표detail)",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"description": "대댓글 추천을 위한 JWT Hearder (필수)",
+								"key": "Authorization",
+								"type": "text",
+								"value": "jwt eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxMiwidXNlcm5hbWUiOiJyb290IiwiZXhwIjoxNjE1MjM2Njg2LCJlbWFpbCI6Im1pbmNoYWUwNzVAbmF2ZXIuY29tIiwib3JpZ19pYXQiOjE2MTQ2MzE4ODZ9.BZz74kLL6IElVvhF166WPSTFxNsNv1BlPdi2CUcL44g"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "voteboardrereply_id",
+									"value": "31",
+									"description": "추천할 대댓글의 id(필수)",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/battle/vote/board/rereply/recommend",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"battle",
+								"vote",
+								"board",
+								"rereply",
+								"recommend"
+							]
+						}
+					},
+					"status": "Not Acceptable",
+					"code": 406,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Tue, 02 Mar 2021 11:05:43 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.8.2"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept, Origin, Cookie"
+						},
+						{
+							"key": "Allow",
+							"value": "POST, OPTIONS"
+						},
+						{
+							"key": "Server-Timing",
+							"value": "TimerPanel_utime;dur=0;desc=\"User CPU time\", TimerPanel_stime;dur=0;desc=\"System CPU time\", TimerPanel_total;dur=0;desc=\"Total CPU time\", TimerPanel_total_time;dur=497.96175956726074;desc=\"Elapsed time\", SQLPanel_sql_time;dur=19.988536834716797;desc=\"SQL 4 queries\", CachePanel_total_time;dur=0;desc=\"Cache 0 Calls\""
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "30"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"result\": \"recommend deleted\"\n}"
+				}
+			]
+		}
+	]
+}

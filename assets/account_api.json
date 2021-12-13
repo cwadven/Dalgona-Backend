@@ -1,0 +1,4335 @@
+{
+	"info": {
+		"_postman_id": "926fe34c-49c6-49ab-8e89-cc7cadde8013",
+		"name": "Dalgona Accounts",
+		"description": "# Introduction\nWhat does your API do?\n\n# Overview\nThings that the developers should know about\n\n# Authentication\nWhat is the preferred way of using the API?\n\n# Error Codes\nWhat errors and status codes can a user expect?\n\n# Rate limit\nIs there a limit to the number of requests an user can send?",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "사용자 정보 부분 가져오기",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "jwt eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjozLCJ1c2VybmFtZSI6InRlc3RlciIsImV4cCI6MTYxNTI1MjIyMiwiZW1haWwiOiJ0ZXN0ZXJAdGVzdGVyLmNvbSIsIm9yaWdfaWF0IjoxNjE0NjQ3NDIyfQ.F275ilXLzmzeH7fL0AkhPNG1Jqmn-3S4nnAhBLcfhk0",
+						"description": "JWT 로그인을 위한 Hearder (필수)",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://127.0.0.1:8000/accounts/profile",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"accounts",
+						"profile"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "사용자 정보 부분 가져오기 (성공)",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "jwt eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjozLCJ1c2VybmFtZSI6InRlc3RlciIsImV4cCI6MTYxNTI1MjIyMiwiZW1haWwiOiJ0ZXN0ZXJAdGVzdGVyLmNvbSIsIm9yaWdfaWF0IjoxNjE0NjQ3NDIyfQ.F275ilXLzmzeH7fL0AkhPNG1Jqmn-3S4nnAhBLcfhk0",
+								"description": "JWT 로그인을 위한 Hearder (필수)",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://127.0.0.1:8000/accounts/profile",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"accounts",
+								"profile"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Tue, 02 Mar 2021 01:10:40 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.7.3"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept, Origin, Cookie"
+						},
+						{
+							"key": "Allow",
+							"value": "GET, PUT, PATCH, DELETE, HEAD, OPTIONS"
+						},
+						{
+							"key": "Server-Timing",
+							"value": "TimerPanel_utime;dur=0;desc=\"User CPU time\", TimerPanel_stime;dur=0;desc=\"System CPU time\", TimerPanel_total;dur=0;desc=\"Total CPU time\", TimerPanel_total_time;dur=217.00286865234375;desc=\"Elapsed time\", SQLPanel_sql_time;dur=3.9932727813720703;desc=\"SQL 3 queries\", CachePanel_total_time;dur=0;desc=\"Cache 0 Calls\""
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "64"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"nickname\": \"helloworld\",\n    \"introduction\": \"\",\n    \"profile_image\": null\n}"
+				},
+				{
+					"name": "사용자 정보 부분 가져오기 (실패 : 로그인 정보 없음)",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/accounts/profile",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"accounts",
+								"profile"
+							]
+						}
+					},
+					"status": "Unauthorized",
+					"code": 401,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Mon, 01 Feb 2021 03:18:21 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.7.6"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "WWW-Authenticate",
+							"value": "JWT realm=\"api\""
+						},
+						{
+							"key": "Vary",
+							"value": "Accept, Origin"
+						},
+						{
+							"key": "Allow",
+							"value": "GET, PUT, PATCH, DELETE, HEAD, OPTIONS"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "58"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"detail\": \"Authentication credentials were not provided.\"\n}"
+				}
+			]
+		},
+		{
+			"name": "사용자 정보 전부 가져오기",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "jwt eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxOCwidXNlcm5hbWUiOiJyb290IiwiZXhwIjoxNjEzMDk1NDYyLCJlbWFpbCI6ImN3YWR2ZW5AZ21haWwuY29tIiwib3JpZ19pYXQiOjE2MTI0OTA2NjJ9.M4x3eAp2Q06kmlDZ1LpShUCxk9Od0c9tiAxSjs5-Yzk",
+						"description": "JWT 로그인을 위한 Hearder (필수)",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://{{test_server}}/accounts/user",
+					"protocol": "http",
+					"host": [
+						"{{test_server}}"
+					],
+					"path": [
+						"accounts",
+						"user"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "사용자 정보 전부 가져오기 (실패 : 로그인 정보 없음)",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/accounts/user",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"accounts",
+								"user"
+							]
+						}
+					},
+					"status": "Unauthorized",
+					"code": 401,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Mon, 01 Feb 2021 03:20:26 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.7.6"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "WWW-Authenticate",
+							"value": "JWT realm=\"api\""
+						},
+						{
+							"key": "Vary",
+							"value": "Accept, Origin"
+						},
+						{
+							"key": "Allow",
+							"value": "GET, PUT, PATCH, HEAD, OPTIONS"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "58"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"detail\": \"Authentication credentials were not provided.\"\n}"
+				},
+				{
+					"name": "사용자 정보 전부 가져오기 (성공)",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "jwt eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjozLCJ1c2VybmFtZSI6InRlc3RlciIsImV4cCI6MTYxNTI1MjIyMiwiZW1haWwiOiJ0ZXN0ZXJAdGVzdGVyLmNvbSIsIm9yaWdfaWF0IjoxNjE0NjQ3NDIyfQ.F275ilXLzmzeH7fL0AkhPNG1Jqmn-3S4nnAhBLcfhk0",
+								"description": "JWT 로그인을 위한 Hearder (필수)",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://127.0.0.1:8000/accounts/user",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"accounts",
+								"user"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Tue, 02 Mar 2021 01:17:12 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.7.3"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept, Origin, Cookie"
+						},
+						{
+							"key": "Allow",
+							"value": "GET, PUT, PATCH, HEAD, OPTIONS"
+						},
+						{
+							"key": "Server-Timing",
+							"value": "TimerPanel_utime;dur=0;desc=\"User CPU time\", TimerPanel_stime;dur=0;desc=\"System CPU time\", TimerPanel_total;dur=0;desc=\"Total CPU time\", TimerPanel_total_time;dur=139.08672332763672;desc=\"Elapsed time\", SQLPanel_sql_time;dur=3.0024051666259766;desc=\"SQL 2 queries\", CachePanel_total_time;dur=0;desc=\"Cache 0 Calls\""
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "151"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"username\": \"tester\",\n    \"email\": \"tester@tester.com\",\n    \"nickname\": \"helloworld\",\n    \"introduction\": \"\",\n    \"profile_image\": null,\n    \"bookmark\": [],\n    \"points\": \"0\",\n    \"level\": \"0\"\n}"
+				}
+			]
+		},
+		{
+			"name": "회원정보수정 (0801_프로필 수정)",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "jwt eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJ1c2VybmFtZSI6InJvb3QiLCJleHAiOjE2MTI4NTk1MjIsImVtYWlsIjoiY3dhZHZlbkBuYXZlci5jb20iLCJvcmlnX2lhdCI6MTYxMjI1NDcyMn0.3ptmZJKqR4gAn4vK0FXyhjpPtWzT_l6mWDOJHO_-aNs",
+						"description": "회원 정보를 수정하기 위해서 로그인",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "nickname",
+							"value": "안녕",
+							"description": "닉네임 변경 (필수)",
+							"type": "text"
+						},
+						{
+							"key": "introduction",
+							"value": "안녕하세요!",
+							"description": "소개 (선택)",
+							"type": "text"
+						},
+						{
+							"key": "profile_image",
+							"description": "프로필 사진 이미지 변경 (선택 : 변경할 경우만 해당 key를 body에 넣는다)",
+							"type": "file",
+							"src": "/C:/Users/Sedragon/Pictures/morning.jpg"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/accounts/profile",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"accounts",
+						"profile"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "회원정보수정 (실패 : 로그인하지 않은 사람이 접근했을 경우)",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/accounts/profile",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"accounts",
+								"profile"
+							]
+						}
+					},
+					"status": "Unauthorized",
+					"code": 401,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Tue, 02 Feb 2021 08:31:30 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.7.6"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "WWW-Authenticate",
+							"value": "JWT realm=\"api\""
+						},
+						{
+							"key": "Vary",
+							"value": "Accept, Origin"
+						},
+						{
+							"key": "Allow",
+							"value": "GET, PUT, PATCH, DELETE, HEAD, OPTIONS"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "58"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"detail\": \"Authentication credentials were not provided.\"\n}"
+				},
+				{
+					"name": "회원정보수정 (실패 : body에 nickname이 없어서)",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "jwt eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJ1c2VybmFtZSI6InJvb3QiLCJleHAiOjE2MTI4NTk1MjIsImVtYWlsIjoiY3dhZHZlbkBuYXZlci5jb20iLCJvcmlnX2lhdCI6MTYxMjI1NDcyMn0.3ptmZJKqR4gAn4vK0FXyhjpPtWzT_l6mWDOJHO_-aNs",
+								"description": "회원 정보를 수정하기 위해서 로그인",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/accounts/profile",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"accounts",
+								"profile"
+							]
+						}
+					},
+					"status": "Bad Request",
+					"code": 400,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Tue, 02 Feb 2021 08:32:35 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.7.6"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept, Origin"
+						},
+						{
+							"key": "Allow",
+							"value": "GET, PUT, PATCH, DELETE, HEAD, OPTIONS"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "40"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"nickname\": [\n        \"This field is required.\"\n    ]\n}"
+				},
+				{
+					"name": "회원정보수정 (성공)",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "jwt eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJ1c2VybmFtZSI6InJvb3QiLCJleHAiOjE2MTI4NTk1MjIsImVtYWlsIjoiY3dhZHZlbkBuYXZlci5jb20iLCJvcmlnX2lhdCI6MTYxMjI1NDcyMn0.3ptmZJKqR4gAn4vK0FXyhjpPtWzT_l6mWDOJHO_-aNs",
+								"description": "회원 정보를 수정하기 위해서 로그인",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "nickname",
+									"value": "안녕",
+									"description": "닉네임 변경 (필수)",
+									"type": "text"
+								},
+								{
+									"key": "introduction",
+									"value": "안녕하세요!",
+									"description": "소개 (선택)",
+									"type": "text"
+								},
+								{
+									"key": "profile_image",
+									"description": "프로필 사진 이미지 변경 (선택 : 변경할 경우만 해당 key를 body에 넣는다)",
+									"type": "file",
+									"src": "/C:/Users/Sedragon/Pictures/morning.jpg"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/accounts/profile",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"accounts",
+								"profile"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Tue, 02 Feb 2021 08:36:21 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.7.6"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept, Origin"
+						},
+						{
+							"key": "Allow",
+							"value": "GET, PUT, PATCH, DELETE, HEAD, OPTIONS"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "135"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"nickname\": \"안녕\",\n    \"introduction\": \"안녕하세요!\",\n    \"profile_image\": \"http://127.0.0.1:8000/media/profile_image/morning_rHG5LXa.jpg\"\n}"
+				},
+				{
+					"name": "회원정보수정 (실패 : 닉네임은 빈칸이 되면 안된다)",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "jwt eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJ1c2VybmFtZSI6InJvb3QiLCJleHAiOjE2MTI4NTk1MjIsImVtYWlsIjoiY3dhZHZlbkBuYXZlci5jb20iLCJvcmlnX2lhdCI6MTYxMjI1NDcyMn0.3ptmZJKqR4gAn4vK0FXyhjpPtWzT_l6mWDOJHO_-aNs",
+								"description": "회원 정보를 수정하기 위해서 로그인",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "nickname",
+									"value": "",
+									"description": "닉네임 변경 (필수)",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/accounts/profile",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"accounts",
+								"profile"
+							]
+						}
+					},
+					"status": "Bad Request",
+					"code": 400,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Tue, 02 Feb 2021 08:33:38 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.7.6"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept, Origin"
+						},
+						{
+							"key": "Allow",
+							"value": "GET, PUT, PATCH, DELETE, HEAD, OPTIONS"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "45"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"nickname\": [\n        \"This field may not be blank.\"\n    ]\n}"
+				}
+			]
+		},
+		{
+			"name": "회원탈퇴 (0805_회원탈퇴)",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "jwt eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJ1c2VybmFtZSI6InJvb3QiLCJleHAiOjE2MTI4NTk1MjIsImVtYWlsIjoiY3dhZHZlbkBuYXZlci5jb20iLCJvcmlnX2lhdCI6MTYxMjI1NDcyMn0.3ptmZJKqR4gAn4vK0FXyhjpPtWzT_l6mWDOJHO_-aNs",
+						"description": "회원탈퇴를 위한 로그인 과정",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://127.0.0.1:8000/accounts/profile",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"accounts",
+						"profile"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "회원탈퇴 (실패 : 로그인 정보가 없을 경우)",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/accounts/profile",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"accounts",
+								"profile"
+							]
+						}
+					},
+					"status": "Unauthorized",
+					"code": 401,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Tue, 02 Feb 2021 08:37:17 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.7.6"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "WWW-Authenticate",
+							"value": "JWT realm=\"api\""
+						},
+						{
+							"key": "Vary",
+							"value": "Accept, Origin"
+						},
+						{
+							"key": "Allow",
+							"value": "GET, PUT, PATCH, DELETE, HEAD, OPTIONS"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "58"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"detail\": \"Authentication credentials were not provided.\"\n}"
+				},
+				{
+					"name": "회원탈퇴 (성공)",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "jwt eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJ1c2VybmFtZSI6InJvb3QiLCJleHAiOjE2MTI4NTk1MjIsImVtYWlsIjoiY3dhZHZlbkBuYXZlci5jb20iLCJvcmlnX2lhdCI6MTYxMjI1NDcyMn0.3ptmZJKqR4gAn4vK0FXyhjpPtWzT_l6mWDOJHO_-aNs",
+								"description": "회원탈퇴를 위한 로그인 과정",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://127.0.0.1:8000/accounts/profile",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"accounts",
+								"profile"
+							]
+						}
+					},
+					"status": "Accepted",
+					"code": 202,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Tue, 02 Feb 2021 08:38:09 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.7.6"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept, Origin"
+						},
+						{
+							"key": "Allow",
+							"value": "GET, PUT, PATCH, DELETE, HEAD, OPTIONS"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "25"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"detail\": \"user deleted\"\n}"
+				}
+			]
+		},
+		{
+			"name": "게시판 북마크(즐겨찾기) 가져오기",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/accounts/profile/bookmark",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"accounts",
+						"profile",
+						"bookmark"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "[실패 : 로그인하지않았을경우] 게시판 북마크(즐겨찾기) 가져오기",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/accounts/profile/bookmark",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"accounts",
+								"profile",
+								"bookmark"
+							]
+						}
+					},
+					"status": "Unauthorized",
+					"code": 401,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Thu, 11 Mar 2021 03:34:02 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.7.6"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "WWW-Authenticate",
+							"value": "JWT realm=\"api\""
+						},
+						{
+							"key": "Vary",
+							"value": "Accept, Origin, Cookie"
+						},
+						{
+							"key": "Allow",
+							"value": "GET, POST, HEAD, OPTIONS"
+						},
+						{
+							"key": "Server-Timing",
+							"value": "TimerPanel_utime;dur=0;desc=\"User CPU time\", TimerPanel_stime;dur=0;desc=\"System CPU time\", TimerPanel_total;dur=0;desc=\"Total CPU time\", TimerPanel_total_time;dur=21.986007690429688;desc=\"Elapsed time\", SQLPanel_sql_time;dur=0;desc=\"SQL 0 queries\", CachePanel_total_time;dur=0;desc=\"Cache 0 Calls\""
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "58"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"detail\": \"Authentication credentials were not provided.\"\n}"
+				},
+				{
+					"name": "[성공] 게시판 북마크(즐겨찾기) 가져오기",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "jwt eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJ1c2VybmFtZSI6InJvb3QiLCJleHAiOjE2MTU5OTQyNzQsImVtYWlsIjoiY3dhZHZlbkBuYXZlci5jb20iLCJvcmlnX2lhdCI6MTYxNTM4OTQ3NH0.8mkT7WxlTqgiWfLN0ZPXaBpon-UaY5tmt2WpPNlbC3Q",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://127.0.0.1:8000/accounts/profile/bookmark",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"accounts",
+								"profile",
+								"bookmark"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Thu, 11 Mar 2021 03:34:33 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.7.6"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept, Origin, Cookie"
+						},
+						{
+							"key": "Allow",
+							"value": "GET, POST, HEAD, OPTIONS"
+						},
+						{
+							"key": "Server-Timing",
+							"value": "TimerPanel_utime;dur=0;desc=\"User CPU time\", TimerPanel_stime;dur=0;desc=\"System CPU time\", TimerPanel_total;dur=0;desc=\"Total CPU time\", TimerPanel_total_time;dur=288.8338565826416;desc=\"Elapsed time\", SQLPanel_sql_time;dur=5.9967041015625;desc=\"SQL 5 queries\", CachePanel_total_time;dur=0;desc=\"Cache 0 Calls\""
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "518"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"bookmark\": [\n        {\n            \"board_url\": \"secret\",\n            \"board_name\": \"비밀게시판\",\n            \"introduction\": \"adfasdfasdfasdfsafda\",\n            \"created_at\": \"2021-03-08T01:44:21.712339\",\n            \"updated_at\": \"2021-03-10T13:21:19.135306\",\n            \"category\": [],\n            \"division\": 2,\n            \"is_new\": false,\n            \"write_priority\": -1,\n            \"read_priority\": -1\n        },\n        {\n            \"board_url\": \"test\",\n            \"board_name\": \"자유게시판\",\n            \"introduction\": \"asdfasdfasdf\",\n            \"created_at\": \"2021-03-08T01:44:29.497161\",\n            \"updated_at\": \"2021-03-08T01:44:29.497161\",\n            \"category\": [],\n            \"division\": 1,\n            \"is_new\": false,\n            \"write_priority\": -1,\n            \"read_priority\": -1\n        }\n    ]\n}"
+				}
+			]
+		},
+		{
+			"name": "게시판 북마크(즐겨찾기) 추가 및 삭제",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "jwt eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjozLCJ1c2VybmFtZSI6InRlc3RlciIsImV4cCI6MTYxNTI1MjIyMiwiZW1haWwiOiJ0ZXN0ZXJAdGVzdGVyLmNvbSIsIm9yaWdfaWF0IjoxNjE0NjQ3NDIyfQ.F275ilXLzmzeH7fL0AkhPNG1Jqmn-3S4nnAhBLcfhk0",
+						"description": "JWT 로그인을 위한 Hearder (필수)",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "bookmark",
+							"value": "free",
+							"description": "게시판 이름 board_url 를 value로 입력(필수)",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/accounts/profile/bookmark",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"accounts",
+						"profile",
+						"bookmark"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "게시판 북마크(즐겨찾기) 추가 및 삭제 (실패 : 로그인 정보 없음)",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/accounts/profile/bookmark",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"accounts",
+								"profile",
+								"bookmark"
+							]
+						}
+					},
+					"status": "Unauthorized",
+					"code": 401,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Mon, 01 Feb 2021 03:22:34 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.7.6"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "WWW-Authenticate",
+							"value": "JWT realm=\"api\""
+						},
+						{
+							"key": "Vary",
+							"value": "Accept, Origin"
+						},
+						{
+							"key": "Allow",
+							"value": "GET, POST, HEAD, OPTIONS"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "58"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"detail\": \"Authentication credentials were not provided.\"\n}"
+				},
+				{
+					"name": "게시판 북마크(즐겨찾기) 추가 및 삭제 (성공 : 북마크 생성)",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "jwt eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjozLCJ1c2VybmFtZSI6InRlc3RlciIsImV4cCI6MTYxNTI1MjIyMiwiZW1haWwiOiJ0ZXN0ZXJAdGVzdGVyLmNvbSIsIm9yaWdfaWF0IjoxNjE0NjQ3NDIyfQ.F275ilXLzmzeH7fL0AkhPNG1Jqmn-3S4nnAhBLcfhk0",
+								"description": "JWT 로그인을 위한 Hearder (필수)",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "bookmark",
+									"value": "free",
+									"description": "게시판 이름 board_url 를 value로 입력(필수)",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/accounts/profile/bookmark",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"accounts",
+								"profile",
+								"bookmark"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Tue, 02 Mar 2021 01:35:06 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.7.3"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept, Origin, Cookie"
+						},
+						{
+							"key": "Allow",
+							"value": "GET, POST, HEAD, OPTIONS"
+						},
+						{
+							"key": "Server-Timing",
+							"value": "TimerPanel_utime;dur=0;desc=\"User CPU time\", TimerPanel_stime;dur=0;desc=\"System CPU time\", TimerPanel_total;dur=0;desc=\"Total CPU time\", TimerPanel_total_time;dur=339.17975425720215;desc=\"Elapsed time\", SQLPanel_sql_time;dur=14.96744155883789;desc=\"SQL 10 queries\", CachePanel_total_time;dur=0;desc=\"Cache 0 Calls\""
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "248"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"bookmark\": [\n        {\n            \"board_url\": \"free\",\n            \"board_name\": \"자유게시판\",\n            \"introduction\": \"\",\n            \"created_at\": \"2021-03-02T10:33:32.932989\",\n            \"updated_at\": \"2021-03-02T10:34:31.975763\",\n            \"category\": [],\n            \"division\": 1,\n            \"is_new\": true,\n            \"write_priority\": -1,\n            \"read_priority\": -1\n        }\n    ]\n}"
+				},
+				{
+					"name": "게시판 북마크(즐겨찾기) 추가 및 삭제 (실패 : value와 동일한 이름을 가진 게시판을 못 찾음)",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "jwt eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjozLCJ1c2VybmFtZSI6InRlc3RlciIsImV4cCI6MTYxNTI1MjIyMiwiZW1haWwiOiJ0ZXN0ZXJAdGVzdGVyLmNvbSIsIm9yaWdfaWF0IjoxNjE0NjQ3NDIyfQ.F275ilXLzmzeH7fL0AkhPNG1Jqmn-3S4nnAhBLcfhk0",
+								"description": "JWT 로그인을 위한 Hearder (필수)",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "bookmark",
+									"value": "advertisement",
+									"description": "게시판 이름 board_url 를 value로 입력(필수)",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/accounts/profile/bookmark",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"accounts",
+								"profile",
+								"bookmark"
+							]
+						}
+					},
+					"status": "Not Found",
+					"code": 404,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Mon, 01 Feb 2021 03:27:36 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.7.6"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept, Origin"
+						},
+						{
+							"key": "Allow",
+							"value": "GET, POST, HEAD, OPTIONS"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "23"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"detail\": \"Not found.\"\n}"
+				},
+				{
+					"name": "게시판 북마크(즐겨찾기) 추가 및 삭제 (성공 : 북마크 삭제)",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "jwt eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJ1c2VybmFtZSI6InJvb3QiLCJleHAiOjE2MTI3NTQxNTMsImVtYWlsIjoiY3dhZHZlbkBuYXZlci5jb20iLCJvcmlnX2lhdCI6MTYxMjE0OTM1M30.2CS5YWYN3-1dxNS8FqoQAcoDTRRHvY9RDPogMEh16NU",
+								"description": "JWT 로그인을 위한 Hearder (필수)",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "bookmark",
+									"value": "free",
+									"description": "게시판 이름 board_url 를 value로 입력(필수)",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/accounts/profile/bookmark",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"accounts",
+								"profile",
+								"bookmark"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Mon, 01 Feb 2021 03:26:38 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.7.6"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept, Origin"
+						},
+						{
+							"key": "Allow",
+							"value": "GET, POST, HEAD, OPTIONS"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "15"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"bookmark\": []\n}"
+				},
+				{
+					"name": "게시판 북마크(즐겨찾기) 추가 및 삭제 (실패 : bookmark 정보를 입력하지 않았을 경우)",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "jwt eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjozLCJ1c2VybmFtZSI6InRlc3RlciIsImV4cCI6MTYxNTI1MjIyMiwiZW1haWwiOiJ0ZXN0ZXJAdGVzdGVyLmNvbSIsIm9yaWdfaWF0IjoxNjE0NjQ3NDIyfQ.F275ilXLzmzeH7fL0AkhPNG1Jqmn-3S4nnAhBLcfhk0",
+								"description": "JWT 로그인을 위한 Hearder (필수)",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "bookmark",
+									"value": "",
+									"description": "게시판 이름 board_url 를 value로 입력(필수)",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/accounts/profile/bookmark",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"accounts",
+								"profile",
+								"bookmark"
+							]
+						}
+					},
+					"status": "Bad Request",
+					"code": 400,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Mon, 01 Feb 2021 03:24:01 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.7.6"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept, Origin"
+						},
+						{
+							"key": "Allow",
+							"value": "GET, POST, HEAD, OPTIONS"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "40"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"bookmark\": [\n        \"This field is required.\"\n    ]\n}"
+				}
+			]
+		},
+		{
+			"name": "내가 쓴 글 조회 (board 앱에 생성된 테이블 안에서의 글)",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "jwt eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjozLCJ1c2VybmFtZSI6InRlc3RlciIsImV4cCI6MTYxNTI2MDA4NCwiZW1haWwiOiJ0ZXN0ZXJAdGVzdGVyLmNvbSIsIm9yaWdfaWF0IjoxNjE0NjU1Mjg0fQ.PPVnOIYykTmaY5m6XI2PGeSDiy5aYNOV887CVO_93Og",
+						"description": "JWT 로그인을 위한 Hearder (필수)",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://127.0.0.1:8000/accounts/profile/mypost?page=1",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"accounts",
+						"profile",
+						"mypost"
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "1",
+							"description": "페이지네이션 용 param 정보 (없으면 처음 보여줌)"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "내가 쓴 글 조회 (성공)",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "jwt eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjozLCJ1c2VybmFtZSI6InRlc3RlciIsImV4cCI6MTYxNTI2MDA4NCwiZW1haWwiOiJ0ZXN0ZXJAdGVzdGVyLmNvbSIsIm9yaWdfaWF0IjoxNjE0NjU1Mjg0fQ.PPVnOIYykTmaY5m6XI2PGeSDiy5aYNOV887CVO_93Og",
+								"description": "JWT 로그인을 위한 Hearder (필수)",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://127.0.0.1:8000/accounts/profile/mypost?page=1",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"accounts",
+								"profile",
+								"mypost"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "1",
+									"description": "페이지네이션 용 param 정보 (없으면 처음 보여줌)"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Wed, 03 Mar 2021 05:14:32 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.7.3"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept, Origin, Cookie"
+						},
+						{
+							"key": "Allow",
+							"value": "GET, POST, HEAD, OPTIONS"
+						},
+						{
+							"key": "Server-Timing",
+							"value": "TimerPanel_utime;dur=0;desc=\"User CPU time\", TimerPanel_stime;dur=0;desc=\"System CPU time\", TimerPanel_total;dur=0;desc=\"Total CPU time\", TimerPanel_total_time;dur=1275.0623226165771;desc=\"Elapsed time\", SQLPanel_sql_time;dur=7.611751556396484;desc=\"SQL 5 queries\", CachePanel_total_time;dur=0;desc=\"Cache 0 Calls\""
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "628"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"count\": 3,\n    \"next\": null,\n    \"previous\": null,\n    \"results\": [\n        {\n            \"id\": 4,\n            \"title\": \"포인트 로그 2\",\n            \"body\": \"포인트 테스트 다시 합니다\",\n            \"board_list\": {\n                \"board_url\": \"free\",\n                \"board_name\": \"자유게시판\"\n            },\n            \"reply_count\": 3,\n            \"created_at\": \"2021/03/02 14:46\"\n        },\n        {\n            \"id\": 2,\n            \"title\": \"테스트 진행 두 번째\",\n            \"body\": \"다시 테스트합니다.\",\n            \"board_list\": {\n                \"board_url\": \"free\",\n                \"board_name\": \"자유게시판\"\n            },\n            \"reply_count\": 5,\n            \"created_at\": \"2021/03/02 10:57\"\n        },\n        {\n            \"id\": 1,\n            \"title\": \"테스트 진행\",\n            \"body\": \"테스트 진행합니다\",\n            \"board_list\": {\n                \"board_url\": \"free\",\n                \"board_name\": \"자유게시판\"\n            },\n            \"reply_count\": 4,\n            \"created_at\": \"2021/03/02 10:57\"\n        }\n    ]\n}"
+				},
+				{
+					"name": "내가 쓴 글 조회 (실패 : 로그인 실패)",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/accounts/profile/mypost",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"accounts",
+								"profile",
+								"mypost"
+							]
+						}
+					},
+					"status": "Unauthorized",
+					"code": 401,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Mon, 01 Feb 2021 03:30:11 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.7.6"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "WWW-Authenticate",
+							"value": "JWT realm=\"api\""
+						},
+						{
+							"key": "Vary",
+							"value": "Accept, Origin"
+						},
+						{
+							"key": "Allow",
+							"value": "GET, POST, HEAD, OPTIONS"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "58"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"detail\": \"Authentication credentials were not provided.\"\n}"
+				}
+			]
+		},
+		{
+			"name": "내가 쓴 댓글 조회 (board 앱에 생성된 테이블 안에서의 댓글)",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "jwt eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjozLCJ1c2VybmFtZSI6InRlc3RlciIsImV4cCI6MTYxNTI2MDA4NCwiZW1haWwiOiJ0ZXN0ZXJAdGVzdGVyLmNvbSIsIm9yaWdfaWF0IjoxNjE0NjU1Mjg0fQ.PPVnOIYykTmaY5m6XI2PGeSDiy5aYNOV887CVO_93Og",
+						"description": "JWT 로그인을 위한 Hearder (필수)",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://127.0.0.1:8000/accounts/profile/myreply?page=1",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"accounts",
+						"profile",
+						"myreply"
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "1",
+							"description": "페이지네이션 용 param 정보 (없으면 처음 보여줌)"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "내가 쓴 댓글 조회 (board 앱에 생성된 테이블 안에서의 댓글) (실패 : 로그인 실패)",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/accounts/profile/myreply",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"accounts",
+								"profile",
+								"myreply"
+							]
+						}
+					},
+					"status": "Unauthorized",
+					"code": 401,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Mon, 01 Feb 2021 03:33:45 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.7.6"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "WWW-Authenticate",
+							"value": "JWT realm=\"api\""
+						},
+						{
+							"key": "Vary",
+							"value": "Accept, Origin"
+						},
+						{
+							"key": "Allow",
+							"value": "GET, POST, HEAD, OPTIONS"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "58"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"detail\": \"Authentication credentials were not provided.\"\n}"
+				},
+				{
+					"name": "내가 쓴 댓글 조회 (board 앱에 생성된 테이블 안에서의 댓글) (성공)",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "jwt eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjozLCJ1c2VybmFtZSI6InRlc3RlciIsImV4cCI6MTYxNTI2MDA4NCwiZW1haWwiOiJ0ZXN0ZXJAdGVzdGVyLmNvbSIsIm9yaWdfaWF0IjoxNjE0NjU1Mjg0fQ.PPVnOIYykTmaY5m6XI2PGeSDiy5aYNOV887CVO_93Og",
+								"description": "JWT 로그인을 위한 Hearder (필수)",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://127.0.0.1:8000/accounts/profile/myreply?page=1",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"accounts",
+								"profile",
+								"myreply"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "1",
+									"description": "페이지네이션 용 param 정보 (없으면 처음 보여줌)"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Wed, 03 Mar 2021 05:16:59 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.7.3"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept, Origin, Cookie"
+						},
+						{
+							"key": "Allow",
+							"value": "GET, POST, HEAD, OPTIONS"
+						},
+						{
+							"key": "Server-Timing",
+							"value": "TimerPanel_utime;dur=0;desc=\"User CPU time\", TimerPanel_stime;dur=0;desc=\"System CPU time\", TimerPanel_total;dur=0;desc=\"Total CPU time\", TimerPanel_total_time;dur=1375.1990795135498;desc=\"Elapsed time\", SQLPanel_sql_time;dur=9.02247428894043;desc=\"SQL 5 queries\", CachePanel_total_time;dur=0;desc=\"Cache 0 Calls\""
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "404"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"count\": 3,\n    \"next\": null,\n    \"previous\": null,\n    \"results\": [\n        {\n            \"id\": 4,\n            \"body\": \"댓글로 포인트 쌓겠습니다\",\n            \"reply_image\": null,\n            \"recommend_count\": 0,\n            \"created_at\": \"2021/03/02 14:47\"\n        },\n        {\n            \"id\": 2,\n            \"body\": \"여기도 댓글 달고욤\",\n            \"reply_image\": null,\n            \"recommend_count\": 0,\n            \"created_at\": \"2021/03/02 12:26\"\n        },\n        {\n            \"id\": 1,\n            \"body\": \"댓글 달아볼께요\",\n            \"reply_image\": null,\n            \"recommend_count\": 0,\n            \"created_at\": \"2021/03/02 12:26\"\n        }\n    ]\n}"
+				}
+			]
+		},
+		{
+			"name": "내가 쓴 대댓글 조회 (board 앱에 생성된 테이블 안에서의 대댓글)",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "jwt eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjozLCJ1c2VybmFtZSI6InRlc3RlciIsImV4cCI6MTYxNTI2MDA4NCwiZW1haWwiOiJ0ZXN0ZXJAdGVzdGVyLmNvbSIsIm9yaWdfaWF0IjoxNjE0NjU1Mjg0fQ.PPVnOIYykTmaY5m6XI2PGeSDiy5aYNOV887CVO_93Og",
+						"description": "JWT 로그인을 위한 Hearder (필수)",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://127.0.0.1:8000/accounts/profile/myrereply?page=1",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"accounts",
+						"profile",
+						"myrereply"
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "1",
+							"description": "페이지네이션 용 param 정보 (없으면 처음 보여줌)"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "내가 쓴 대댓글 조회 (board 앱에 생성된 테이블 안에서의 대댓글) (성공)",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "jwt eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjozLCJ1c2VybmFtZSI6InRlc3RlciIsImV4cCI6MTYxNTI2MDA4NCwiZW1haWwiOiJ0ZXN0ZXJAdGVzdGVyLmNvbSIsIm9yaWdfaWF0IjoxNjE0NjU1Mjg0fQ.PPVnOIYykTmaY5m6XI2PGeSDiy5aYNOV887CVO_93Og",
+								"description": "JWT 로그인을 위한 Hearder (필수)",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://127.0.0.1:8000/accounts/profile/myrereply?page=1",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"accounts",
+								"profile",
+								"myrereply"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "1",
+									"description": "페이지네이션 용 param 정보 (없으면 처음 보여줌)"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Wed, 03 Mar 2021 05:17:25 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.7.3"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept, Origin, Cookie"
+						},
+						{
+							"key": "Allow",
+							"value": "GET, POST, HEAD, OPTIONS"
+						},
+						{
+							"key": "Server-Timing",
+							"value": "TimerPanel_utime;dur=0;desc=\"User CPU time\", TimerPanel_stime;dur=0;desc=\"System CPU time\", TimerPanel_total;dur=0;desc=\"Total CPU time\", TimerPanel_total_time;dur=1039.6714210510254;desc=\"Elapsed time\", SQLPanel_sql_time;dur=18.862247467041016;desc=\"SQL 5 queries\", CachePanel_total_time;dur=0;desc=\"Cache 0 Calls\""
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "644"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"count\": 4,\n    \"next\": null,\n    \"previous\": null,\n    \"results\": [\n        {\n            \"id\": 4,\n            \"reply_id\": 4,\n            \"body\": \"대댓글로도 포인트 쌓아볼께요\",\n            \"rereply_image\": null,\n            \"recommend_count\": 0,\n            \"created_at\": \"2021/03/02 14:47\"\n        },\n        {\n            \"id\": 3,\n            \"reply_id\": 3,\n            \"body\": \"1 번째 게시글 2 번째 댓글 대댓글 달기\",\n            \"rereply_image\": null,\n            \"recommend_count\": 0,\n            \"created_at\": \"2021/03/02 12:27\"\n        },\n        {\n            \"id\": 2,\n            \"reply_id\": 2,\n            \"body\": \"2번째 게시글 댓글에 대댓글 달기\",\n            \"rereply_image\": null,\n            \"recommend_count\": 0,\n            \"created_at\": \"2021/03/02 12:27\"\n        },\n        {\n            \"id\": 1,\n            \"reply_id\": 1,\n            \"body\": \"첫 번째 댓글에 대댓글 달기\",\n            \"rereply_image\": null,\n            \"recommend_count\": 0,\n            \"created_at\": \"2021/03/02 12:27\"\n        }\n    ]\n}"
+				},
+				{
+					"name": "내가 쓴 대댓글 조회 (board 앱에 생성된 테이블 안에서의 대댓글) (실패 : 로그인 실패)",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/accounts/profile/myrereply",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"accounts",
+								"profile",
+								"myrereply"
+							]
+						}
+					},
+					"status": "Unauthorized",
+					"code": 401,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Mon, 01 Feb 2021 03:34:29 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.7.6"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "WWW-Authenticate",
+							"value": "JWT realm=\"api\""
+						},
+						{
+							"key": "Vary",
+							"value": "Accept, Origin"
+						},
+						{
+							"key": "Allow",
+							"value": "GET, POST, HEAD, OPTIONS"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "58"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"detail\": \"Authentication credentials were not provided.\"\n}"
+				}
+			]
+		},
+		{
+			"name": "나의 별 관련 내역 보기(획득내역)",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "jwt eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjozLCJ1c2VybmFtZSI6InRlc3RlciIsImV4cCI6MTYxNTI2MDA4NCwiZW1haWwiOiJ0ZXN0ZXJAdGVzdGVyLmNvbSIsIm9yaWdfaWF0IjoxNjE0NjU1Mjg0fQ.PPVnOIYykTmaY5m6XI2PGeSDiy5aYNOV887CVO_93Og",
+						"description": "JWT 로그인을 위한 Hearder (필수)",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://127.0.0.1:8000/accounts/profile/mypoint/get?page=1",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"accounts",
+						"profile",
+						"mypoint",
+						"get"
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "1",
+							"description": "페이지네이션 용 param 정보 (없으면 처음 보여줌)"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "나의 별 관련 내역 보기(획득내역) (성공)",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "jwt eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjozLCJ1c2VybmFtZSI6InRlc3RlciIsImV4cCI6MTYxNTI2MDA4NCwiZW1haWwiOiJ0ZXN0ZXJAdGVzdGVyLmNvbSIsIm9yaWdfaWF0IjoxNjE0NjU1Mjg0fQ.PPVnOIYykTmaY5m6XI2PGeSDiy5aYNOV887CVO_93Og",
+								"description": "JWT 로그인을 위한 Hearder (필수)",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://127.0.0.1:8000/accounts/profile/mypoint/get?page=1",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"accounts",
+								"profile",
+								"mypoint",
+								"get"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "1",
+									"description": "페이지네이션 용 param 정보 (없으면 처음 보여줌)"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Tue, 02 Mar 2021 05:47:43 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.7.3"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept, Origin, Cookie"
+						},
+						{
+							"key": "Allow",
+							"value": "GET, POST, HEAD, OPTIONS"
+						},
+						{
+							"key": "Server-Timing",
+							"value": "TimerPanel_utime;dur=0;desc=\"User CPU time\", TimerPanel_stime;dur=0;desc=\"System CPU time\", TimerPanel_total;dur=0;desc=\"Total CPU time\", TimerPanel_total_time;dur=394.99855041503906;desc=\"Elapsed time\", SQLPanel_sql_time;dur=5.003929138183594;desc=\"SQL 5 queries\", CachePanel_total_time;dur=0;desc=\"Cache 0 Calls\""
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "731"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"count\": 4,\n    \"next\": null,\n    \"previous\": null,\n    \"results\": [\n        {\n            \"id\": 4,\n            \"kind\": \"게시글대댓글작성\",\n            \"information\": \"게시글 대댓글 작성으로 포인트가 추가 되었습니다\",\n            \"points\": 1,\n            \"created_at\": \"2021-03-02T14:47:39.557729\"\n        },\n        {\n            \"id\": 3,\n            \"kind\": \"게시글댓글작성\",\n            \"information\": \"게시글 댓글 작성으로 포인트가 추가 되었습니다\",\n            \"points\": 1,\n            \"created_at\": \"2021-03-02T14:47:08.903025\"\n        },\n        {\n            \"id\": 2,\n            \"kind\": \"게시글작성\",\n            \"information\": \"게시글 작성으로 포인트가 추가 되었습니다\",\n            \"points\": 2,\n            \"created_at\": \"2021-03-02T14:46:08.422474\"\n        },\n        {\n            \"id\": 1,\n            \"kind\": \"게시글작성\",\n            \"information\": \"게시글 작성으로 포인트가 추가 되었습니다\",\n            \"points\": 2,\n            \"created_at\": \"2021-03-02T14:45:27.809034\"\n        }\n    ]\n}"
+				},
+				{
+					"name": "나의 별 관련 내역 보기(획득내역) (실패 : 로그인 실패)",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/accounts/profile/mypoint/get",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"accounts",
+								"profile",
+								"mypoint",
+								"get"
+							]
+						}
+					},
+					"status": "Unauthorized",
+					"code": 401,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Mon, 01 Feb 2021 04:45:46 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.7.6"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "WWW-Authenticate",
+							"value": "JWT realm=\"api\""
+						},
+						{
+							"key": "Vary",
+							"value": "Accept, Origin"
+						},
+						{
+							"key": "Allow",
+							"value": "GET, POST, HEAD, OPTIONS"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "58"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"detail\": \"Authentication credentials were not provided.\"\n}"
+				}
+			]
+		},
+		{
+			"name": "나의 별 관련 내역 보기(사용내역)(테스트 케이스 - 아직 사용 관련 기획 없음)",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "jwt eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjozLCJ1c2VybmFtZSI6InRlc3RlciIsImV4cCI6MTYxNTI2MDA4NCwiZW1haWwiOiJ0ZXN0ZXJAdGVzdGVyLmNvbSIsIm9yaWdfaWF0IjoxNjE0NjU1Mjg0fQ.PPVnOIYykTmaY5m6XI2PGeSDiy5aYNOV887CVO_93Og",
+						"description": "JWT 로그인을 위한 Hearder (필수)",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://127.0.0.1:8000/accounts/profile/mypoint/use?page=1",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"accounts",
+						"profile",
+						"mypoint",
+						"use"
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "1",
+							"description": "페이지네이션 용 param 정보 (없으면 처음 보여줌)"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "나의 별 관련 내역 보기(사용내역) (실패 : 로그인 실패)",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/accounts/profile/mypoint/use?page=1",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"accounts",
+								"profile",
+								"mypoint",
+								"use"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "1",
+									"description": "페이지네이션 용 param 정보 (없으면 처음 보여줌)"
+								}
+							]
+						}
+					},
+					"status": "Unauthorized",
+					"code": 401,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Mon, 01 Feb 2021 04:58:59 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.7.6"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "WWW-Authenticate",
+							"value": "JWT realm=\"api\""
+						},
+						{
+							"key": "Vary",
+							"value": "Accept, Origin"
+						},
+						{
+							"key": "Allow",
+							"value": "GET, POST, HEAD, OPTIONS"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "58"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"detail\": \"Authentication credentials were not provided.\"\n}"
+				},
+				{
+					"name": "나의 별 관련 내역 보기(사용내역) (테스트케이스-성공)",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "jwt eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJ1c2VybmFtZSI6InJvb3QiLCJleHAiOjE2MTI3NTQxNTMsImVtYWlsIjoiY3dhZHZlbkBuYXZlci5jb20iLCJvcmlnX2lhdCI6MTYxMjE0OTM1M30.2CS5YWYN3-1dxNS8FqoQAcoDTRRHvY9RDPogMEh16NU",
+								"description": "JWT 로그인을 위한 Hearder (필수)",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://127.0.0.1:8000/accounts/profile/mypoint/use?page=1",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"accounts",
+								"profile",
+								"mypoint",
+								"use"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "1",
+									"description": "페이지네이션 용 param 정보 (없으면 처음 보여줌)"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Mon, 01 Feb 2021 04:58:22 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.7.6"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept, Origin"
+						},
+						{
+							"key": "Allow",
+							"value": "GET, POST, HEAD, OPTIONS"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "179"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"count\": 1,\n    \"next\": null,\n    \"previous\": null,\n    \"results\": [\n        {\n            \"id\": 35,\n            \"kind\": \"별사용\",\n            \"information\": \"별을 사용하셨습니다!\",\n            \"points\": 5,\n            \"created_at\": \"2021-02-01T13:56:37.220250\"\n        }\n    ]\n}"
+				}
+			]
+		},
+		{
+			"name": "나의 별 관련 내역 보기(회수내역)",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "jwt eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjozLCJ1c2VybmFtZSI6InRlc3RlciIsImV4cCI6MTYxNTI2MDA4NCwiZW1haWwiOiJ0ZXN0ZXJAdGVzdGVyLmNvbSIsIm9yaWdfaWF0IjoxNjE0NjU1Mjg0fQ.PPVnOIYykTmaY5m6XI2PGeSDiy5aYNOV887CVO_93Og",
+						"description": "JWT 로그인을 위한 Hearder (필수)",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://127.0.0.1:8000/accounts/profile/mypoint/lose?page=1",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"accounts",
+						"profile",
+						"mypoint",
+						"lose"
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "1",
+							"description": "페이지네이션 용 param 정보 (없으면 처음 보여줌)"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "나의 별 관련 내역 보기(회수내역) (실패 : 로그인 실패)",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/accounts/profile/mypoint/lose?page=1",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"accounts",
+								"profile",
+								"mypoint",
+								"lose"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "1",
+									"description": "페이지네이션 용 param 정보 (없으면 처음 보여줌)"
+								}
+							]
+						}
+					},
+					"status": "Unauthorized",
+					"code": 401,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Mon, 01 Feb 2021 05:00:52 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.7.6"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "WWW-Authenticate",
+							"value": "JWT realm=\"api\""
+						},
+						{
+							"key": "Vary",
+							"value": "Accept, Origin"
+						},
+						{
+							"key": "Allow",
+							"value": "GET, POST, HEAD, OPTIONS"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "58"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"detail\": \"Authentication credentials were not provided.\"\n}"
+				},
+				{
+					"name": "나의 별 관련 내역 보기(회수내역) (성공)",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "jwt eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjozLCJ1c2VybmFtZSI6InRlc3RlciIsImV4cCI6MTYxNTI2MDA4NCwiZW1haWwiOiJ0ZXN0ZXJAdGVzdGVyLmNvbSIsIm9yaWdfaWF0IjoxNjE0NjU1Mjg0fQ.PPVnOIYykTmaY5m6XI2PGeSDiy5aYNOV887CVO_93Og",
+								"description": "JWT 로그인을 위한 Hearder (필수)",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://127.0.0.1:8000/accounts/profile/mypoint/lose?page=1",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"accounts",
+								"profile",
+								"mypoint",
+								"lose"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "1",
+									"description": "페이지네이션 용 param 정보 (없으면 처음 보여줌)"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Tue, 02 Mar 2021 06:08:49 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.7.3"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept, Origin, Cookie"
+						},
+						{
+							"key": "Allow",
+							"value": "GET, POST, HEAD, OPTIONS"
+						},
+						{
+							"key": "Server-Timing",
+							"value": "TimerPanel_utime;dur=0;desc=\"User CPU time\", TimerPanel_stime;dur=0;desc=\"System CPU time\", TimerPanel_total;dur=0;desc=\"Total CPU time\", TimerPanel_total_time;dur=258.1212520599365;desc=\"Elapsed time\", SQLPanel_sql_time;dur=2.9916763305664062;desc=\"SQL 5 queries\", CachePanel_total_time;dur=0;desc=\"Cache 0 Calls\""
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "384"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"count\": 2,\n    \"next\": null,\n    \"previous\": null,\n    \"results\": [\n        {\n            \"id\": 6,\n            \"kind\": \"게시글댓글삭제\",\n            \"information\": \"게시글 댓글 삭제로 받은 포인트가 회수됩니다.\",\n            \"points\": 1,\n            \"created_at\": \"2021-03-02T15:08:45.905230\"\n        },\n        {\n            \"id\": 5,\n            \"kind\": \"게시글삭제\",\n            \"information\": \"게시글 삭제로 받은 포인트가 회수됩니다.\",\n            \"points\": 2,\n            \"created_at\": \"2021-03-02T15:06:42.922312\"\n        }\n    ]\n}"
+				}
+			]
+		},
+		{
+			"name": "이벤트 사용자가 얼마나 많은 것을 작성 했는지 개수",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/accounts/score?date=2021-03-02&ordering=rereply_write",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"accounts",
+						"score"
+					],
+					"query": [
+						{
+							"key": "date",
+							"value": "2021-03-02",
+							"description": "사용자가 작성한 날짜에 따른 작성한 개수들 확인하기 (없으면 모든 날짜 기준)"
+						},
+						{
+							"key": "ordering",
+							"value": "rereply_write",
+							"description": "사용자 닉네임 기준으로 정렬 (없으면 사용자 닉네임 기준으로 정렬)\nvalue에 들어 갈 수 있는 값\nboard_write\nreply_write\nrereply_write\ntotal"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "이벤트 사용자가 얼마나 많은 것을 작성 했는지 개수 (성공, 사용자 닉네임 기준)",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/accounts/score?date=2021-03-02&ordering=",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"accounts",
+								"score"
+							],
+							"query": [
+								{
+									"key": "date",
+									"value": "2021-03-02",
+									"description": "사용자가 작성한 날짜에 따른 작성한 개수들 확인하기 (없으면 모든 날짜 기준)"
+								},
+								{
+									"key": "ordering",
+									"value": "",
+									"description": "사용자 닉네임 기준으로 정렬 (없으면 사용자 닉네임 기준으로 정렬)\nvalue에 들어 갈 수 있는 값\nboard_write\nreply_write\nrereply_write\ntotal"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Tue, 02 Mar 2021 06:27:19 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.7.3"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept, Origin, Cookie"
+						},
+						{
+							"key": "Allow",
+							"value": "GET, HEAD, OPTIONS"
+						},
+						{
+							"key": "Server-Timing",
+							"value": "TimerPanel_utime;dur=0;desc=\"User CPU time\", TimerPanel_stime;dur=0;desc=\"System CPU time\", TimerPanel_total;dur=0;desc=\"Total CPU time\", TimerPanel_total_time;dur=85.968017578125;desc=\"Elapsed time\", SQLPanel_sql_time;dur=1.9998550415039062;desc=\"SQL 1 queries\", CachePanel_total_time;dur=0;desc=\"Cache 0 Calls\""
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "331"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"nickname\": \"\",\n        \"board_write\": 0,\n        \"reply_write\": 0,\n        \"rereply_write\": 0,\n        \"total\": 0\n    },\n    {\n        \"nickname\": \"hellome\",\n        \"board_write\": 0,\n        \"reply_write\": 0,\n        \"rereply_write\": 0,\n        \"total\": 0\n    },\n    {\n        \"nickname\": \"hellosir\",\n        \"board_write\": 1,\n        \"reply_write\": 0,\n        \"rereply_write\": 0,\n        \"total\": 1\n    },\n    {\n        \"nickname\": \"helloworld\",\n        \"board_write\": 3,\n        \"reply_write\": 3,\n        \"rereply_write\": 4,\n        \"total\": 10\n    }\n]"
+				},
+				{
+					"name": "이벤트 사용자가 얼마나 많은 것을 작성 했는지 개수 (성공, reply_write 기준)",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/accounts/score?date=2021-03-02&ordering=reply_write",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"accounts",
+								"score"
+							],
+							"query": [
+								{
+									"key": "date",
+									"value": "2021-03-02",
+									"description": "사용자가 작성한 날짜에 따른 작성한 개수들 확인하기 (없으면 모든 날짜 기준)"
+								},
+								{
+									"key": "ordering",
+									"value": "reply_write",
+									"description": "사용자 닉네임 기준으로 정렬 (없으면 사용자 닉네임 기준으로 정렬)\nvalue에 들어 갈 수 있는 값\nboard_write\nreply_write\nrereply_write\ntotal"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Tue, 02 Mar 2021 06:30:20 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.7.3"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept, Origin, Cookie"
+						},
+						{
+							"key": "Allow",
+							"value": "GET, HEAD, OPTIONS"
+						},
+						{
+							"key": "Server-Timing",
+							"value": "TimerPanel_utime;dur=0;desc=\"User CPU time\", TimerPanel_stime;dur=0;desc=\"System CPU time\", TimerPanel_total;dur=0;desc=\"Total CPU time\", TimerPanel_total_time;dur=99.00069236755371;desc=\"Elapsed time\", SQLPanel_sql_time;dur=1.9986629486083984;desc=\"SQL 1 queries\", CachePanel_total_time;dur=0;desc=\"Cache 0 Calls\""
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "331"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"nickname\": \"helloworld\",\n        \"board_write\": 3,\n        \"reply_write\": 3,\n        \"rereply_write\": 4,\n        \"total\": 10\n    },\n    {\n        \"nickname\": \"hellome\",\n        \"board_write\": 0,\n        \"reply_write\": 2,\n        \"rereply_write\": 0,\n        \"total\": 2\n    },\n    {\n        \"nickname\": \"\",\n        \"board_write\": 0,\n        \"reply_write\": 0,\n        \"rereply_write\": 0,\n        \"total\": 0\n    },\n    {\n        \"nickname\": \"hellosir\",\n        \"board_write\": 1,\n        \"reply_write\": 0,\n        \"rereply_write\": 0,\n        \"total\": 1\n    }\n]"
+				},
+				{
+					"name": "이벤트 사용자가 얼마나 많은 것을 작성 했는지 개수 (성공, board_write 기준)",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/accounts/score?date=2021-03-02&ordering=board_write",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"accounts",
+								"score"
+							],
+							"query": [
+								{
+									"key": "date",
+									"value": "2021-03-02",
+									"description": "사용자가 작성한 날짜에 따른 작성한 개수들 확인하기 (없으면 모든 날짜 기준)"
+								},
+								{
+									"key": "ordering",
+									"value": "board_write",
+									"description": "사용자 닉네임 기준으로 정렬 (없으면 사용자 닉네임 기준으로 정렬)\nvalue에 들어 갈 수 있는 값\nboard_write\nreply_write\nrereply_write\ntotal"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Tue, 02 Mar 2021 06:28:13 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.7.3"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept, Origin, Cookie"
+						},
+						{
+							"key": "Allow",
+							"value": "GET, HEAD, OPTIONS"
+						},
+						{
+							"key": "Server-Timing",
+							"value": "TimerPanel_utime;dur=0;desc=\"User CPU time\", TimerPanel_stime;dur=0;desc=\"System CPU time\", TimerPanel_total;dur=0;desc=\"Total CPU time\", TimerPanel_total_time;dur=91.03536605834961;desc=\"Elapsed time\", SQLPanel_sql_time;dur=0.9999275207519531;desc=\"SQL 1 queries\", CachePanel_total_time;dur=0;desc=\"Cache 0 Calls\""
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "331"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"nickname\": \"helloworld\",\n        \"board_write\": 3,\n        \"reply_write\": 3,\n        \"rereply_write\": 4,\n        \"total\": 10\n    },\n    {\n        \"nickname\": \"hellosir\",\n        \"board_write\": 1,\n        \"reply_write\": 0,\n        \"rereply_write\": 0,\n        \"total\": 1\n    },\n    {\n        \"nickname\": \"\",\n        \"board_write\": 0,\n        \"reply_write\": 0,\n        \"rereply_write\": 0,\n        \"total\": 0\n    },\n    {\n        \"nickname\": \"hellome\",\n        \"board_write\": 0,\n        \"reply_write\": 0,\n        \"rereply_write\": 0,\n        \"total\": 0\n    }\n]"
+				},
+				{
+					"name": "이벤트 사용자가 얼마나 많은 것을 작성 했는지 개수 (성공, total 기준)",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/accounts/score?date=2021-03-02&ordering=total",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"accounts",
+								"score"
+							],
+							"query": [
+								{
+									"key": "date",
+									"value": "2021-03-02",
+									"description": "사용자가 작성한 날짜에 따른 작성한 개수들 확인하기 (없으면 모든 날짜 기준)"
+								},
+								{
+									"key": "ordering",
+									"value": "total",
+									"description": "사용자 닉네임 기준으로 정렬 (없으면 사용자 닉네임 기준으로 정렬)\nvalue에 들어 갈 수 있는 값\nboard_write\nreply_write\nrereply_write\ntotal"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Tue, 02 Mar 2021 06:28:32 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.7.3"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept, Origin, Cookie"
+						},
+						{
+							"key": "Allow",
+							"value": "GET, HEAD, OPTIONS"
+						},
+						{
+							"key": "Server-Timing",
+							"value": "TimerPanel_utime;dur=0;desc=\"User CPU time\", TimerPanel_stime;dur=0;desc=\"System CPU time\", TimerPanel_total;dur=0;desc=\"Total CPU time\", TimerPanel_total_time;dur=91.0041332244873;desc=\"Elapsed time\", SQLPanel_sql_time;dur=1.9619464874267578;desc=\"SQL 1 queries\", CachePanel_total_time;dur=0;desc=\"Cache 0 Calls\""
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "331"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"nickname\": \"helloworld\",\n        \"board_write\": 3,\n        \"reply_write\": 3,\n        \"rereply_write\": 4,\n        \"total\": 10\n    },\n    {\n        \"nickname\": \"hellosir\",\n        \"board_write\": 1,\n        \"reply_write\": 0,\n        \"rereply_write\": 0,\n        \"total\": 1\n    },\n    {\n        \"nickname\": \"\",\n        \"board_write\": 0,\n        \"reply_write\": 0,\n        \"rereply_write\": 0,\n        \"total\": 0\n    },\n    {\n        \"nickname\": \"hellome\",\n        \"board_write\": 0,\n        \"reply_write\": 0,\n        \"rereply_write\": 0,\n        \"total\": 0\n    }\n]"
+				},
+				{
+					"name": "이벤트 사용자가 얼마나 많은 것을 작성 했는지 개수 (성공, rereply_write 기준)",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/accounts/score?date=2021-03-02&ordering=rereply_write",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"accounts",
+								"score"
+							],
+							"query": [
+								{
+									"key": "date",
+									"value": "2021-03-02",
+									"description": "사용자가 작성한 날짜에 따른 작성한 개수들 확인하기 (없으면 모든 날짜 기준)"
+								},
+								{
+									"key": "ordering",
+									"value": "rereply_write",
+									"description": "사용자 닉네임 기준으로 정렬 (없으면 사용자 닉네임 기준으로 정렬)\nvalue에 들어 갈 수 있는 값\nboard_write\nreply_write\nrereply_write\ntotal"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Tue, 02 Mar 2021 06:31:45 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.7.3"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept, Origin, Cookie"
+						},
+						{
+							"key": "Allow",
+							"value": "GET, HEAD, OPTIONS"
+						},
+						{
+							"key": "Server-Timing",
+							"value": "TimerPanel_utime;dur=0;desc=\"User CPU time\", TimerPanel_stime;dur=0;desc=\"System CPU time\", TimerPanel_total;dur=0;desc=\"Total CPU time\", TimerPanel_total_time;dur=114.00008201599121;desc=\"Elapsed time\", SQLPanel_sql_time;dur=1.9664764404296875;desc=\"SQL 1 queries\", CachePanel_total_time;dur=0;desc=\"Cache 0 Calls\""
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "331"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"nickname\": \"helloworld\",\n        \"board_write\": 3,\n        \"reply_write\": 3,\n        \"rereply_write\": 4,\n        \"total\": 10\n    },\n    {\n        \"nickname\": \"hellome\",\n        \"board_write\": 0,\n        \"reply_write\": 2,\n        \"rereply_write\": 2,\n        \"total\": 4\n    },\n    {\n        \"nickname\": \"\",\n        \"board_write\": 0,\n        \"reply_write\": 0,\n        \"rereply_write\": 0,\n        \"total\": 0\n    },\n    {\n        \"nickname\": \"hellosir\",\n        \"board_write\": 1,\n        \"reply_write\": 0,\n        \"rereply_write\": 0,\n        \"total\": 1\n    }\n]"
+				}
+			]
+		},
+		{
+			"name": "회원가입 아이디 중복확인",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "username",
+							"value": "mytest",
+							"description": "아이디 중복확인을 위한 username (5글자 이상 / 20글자 이하)",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/accounts/overlap/username",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"accounts",
+						"overlap",
+						"username"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "회원가입 아이디 중복확인 (실패 : 아이디가 5글자 보다 작음)",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "username",
+									"value": "aa",
+									"description": "아이디 중복확인을 위한 username (5글자 이상 / 20글자 이하)",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/accounts/overlap/username",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"accounts",
+								"overlap",
+								"username"
+							]
+						}
+					},
+					"status": "Bad Request",
+					"code": 400,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Mon, 01 Feb 2021 06:44:54 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.7.6"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept, Origin"
+						},
+						{
+							"key": "Allow",
+							"value": "POST, OPTIONS"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "59"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"detail\": [\n        \"Ensure this field has at least 5 characters.\"\n    ]\n}"
+				},
+				{
+					"name": "회원가입 아이디 중복확인 (실패 : 아이디가 있는 경우)",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "username",
+									"value": "tester",
+									"description": "아이디 중복확인을 위한 username (5글자 이상 / 20글자 이하)",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/accounts/overlap/username",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"accounts",
+								"overlap",
+								"username"
+							]
+						}
+					},
+					"status": "Bad Request",
+					"code": 400,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Mon, 01 Feb 2021 10:39:33 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.7.6"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept, Origin"
+						},
+						{
+							"key": "Allow",
+							"value": "POST, OPTIONS"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "41"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"detail\": [\n        \"This field must be unique.\"\n    ]\n}"
+				},
+				{
+					"name": "회원가입 아이디 중복확인 (성공)",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "username",
+									"value": "mytest",
+									"description": "아이디 중복확인을 위한 username (5글자 이상 / 20글자 이하)",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/accounts/overlap/username",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"accounts",
+								"overlap",
+								"username"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Mon, 01 Feb 2021 10:38:29 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.7.6"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept, Origin"
+						},
+						{
+							"key": "Allow",
+							"value": "POST, OPTIONS"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "38"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"detail\": [\n        \"this username is unique\"\n    ]\n}"
+				},
+				{
+					"name": "회원가입 아이디 중복확인 (실패 : 빈칸으로 작성할 경우)",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "username",
+									"value": "",
+									"description": "아이디 중복확인을 위한 username (5글자 이상 / 20글자 이하)",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/accounts/overlap/username",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"accounts",
+								"overlap",
+								"username"
+							]
+						}
+					},
+					"status": "Bad Request",
+					"code": 400,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Mon, 01 Feb 2021 10:43:57 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.7.6"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept, Origin"
+						},
+						{
+							"key": "Allow",
+							"value": "POST, OPTIONS"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "43"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"detail\": [\n        \"This field may not be blank.\"\n    ]\n}"
+				},
+				{
+					"name": "회원가입 아이디 중복확인 (실패 : body에 값이 없을 경우)",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/accounts/overlap/username",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"accounts",
+								"overlap",
+								"username"
+							]
+						}
+					},
+					"status": "Bad Request",
+					"code": 400,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Mon, 01 Feb 2021 10:42:14 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.7.6"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept, Origin"
+						},
+						{
+							"key": "Allow",
+							"value": "POST, OPTIONS"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "38"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"detail\": [\n        \"This field is required.\"\n    ]\n}"
+				},
+				{
+					"name": "회원가입 아이디 중복확인 (실패 : 아이디가 중복하고, 5글자 미안인 경우)",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "username",
+									"value": "root",
+									"description": "아이디 중복확인을 위한 username (5글자 이상 / 20글자 이하)",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/accounts/overlap/username",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"accounts",
+								"overlap",
+								"username"
+							]
+						}
+					},
+					"status": "Bad Request",
+					"code": 400,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Mon, 01 Feb 2021 10:40:38 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.7.6"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept, Origin"
+						},
+						{
+							"key": "Allow",
+							"value": "POST, OPTIONS"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "88"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"detail\": [\n        \"This field must be unique.\",\n        \"Ensure this field has at least 5 characters.\"\n    ]\n}"
+				}
+			]
+		},
+		{
+			"name": "회원가입 닉네임 중복확인",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "nickname",
+							"value": "helloworld",
+							"description": "닉네임 중복확인을 위한 nickname (1글자 이상 / 20글자 이하)",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/accounts/overlap/nickname",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"accounts",
+						"overlap",
+						"nickname"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "회원가입 닉네임 중복확인 (실패 : 빈칸으로 보냈을 경우)",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "nickname",
+									"value": "",
+									"description": "닉네임 중복확인을 위한 nickname (1글자 이상 / 20글자 이하)",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/accounts/overlap/nickname",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"accounts",
+								"overlap",
+								"nickname"
+							]
+						}
+					},
+					"status": "Bad Request",
+					"code": 400,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Mon, 01 Feb 2021 10:45:14 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.7.6"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept, Origin"
+						},
+						{
+							"key": "Allow",
+							"value": "POST, OPTIONS"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "43"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"detail\": [\n        \"This field may not be blank.\"\n    ]\n}"
+				},
+				{
+					"name": "회원가입 닉네임 중복확인 (성공)",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "nickname",
+									"value": "nothello",
+									"description": "닉네임 중복확인을 위한 nickname (1글자 이상 / 20글자 이하)",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/accounts/overlap/nickname",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"accounts",
+								"overlap",
+								"nickname"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Mon, 01 Feb 2021 10:46:35 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.7.6"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept, Origin"
+						},
+						{
+							"key": "Allow",
+							"value": "POST, OPTIONS"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "38"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"detail\": [\n        \"this nickname is unique\"\n    ]\n}"
+				},
+				{
+					"name": "회원가입 닉네임 중복확인 (실패 : body에 아무것도 없을 경우)",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/accounts/overlap/nickname",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"accounts",
+								"overlap",
+								"nickname"
+							]
+						}
+					},
+					"status": "Bad Request",
+					"code": 400,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Mon, 01 Feb 2021 10:43:25 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.7.6"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept, Origin"
+						},
+						{
+							"key": "Allow",
+							"value": "POST, OPTIONS"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "38"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"detail\": [\n        \"This field is required.\"\n    ]\n}"
+				},
+				{
+					"name": "회원가입 닉네임 중복확인 (실패 : 중복한 닉네임이 존재)",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "nickname",
+									"value": "helloworld",
+									"description": "닉네임 중복확인을 위한 nickname (1글자 이상 / 20글자 이하)",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/accounts/overlap/nickname",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"accounts",
+								"overlap",
+								"nickname"
+							]
+						}
+					},
+					"status": "Bad Request",
+					"code": 400,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Mon, 01 Feb 2021 10:47:10 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.7.6"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept, Origin"
+						},
+						{
+							"key": "Allow",
+							"value": "POST, OPTIONS"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "41"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"detail\": [\n        \"This field must be unique.\"\n    ]\n}"
+				}
+			]
+		},
+		{
+			"name": "회원가입 이메일 중복확인",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "email",
+							"value": "tester@tester.com",
+							"description": "인증 이메일을 받기 위한 정보",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/accounts/overlap/email",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"accounts",
+						"overlap",
+						"email"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "회원가입 이메일 중복확인 (실패 : Email 형태가 아닌 경우 @ 혹은 뒤에 .이 안 들어가서)",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "email",
+									"value": "aaaaa",
+									"description": "인증 이메일을 받기 위한 정보",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/accounts/overlap/email",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"accounts",
+								"overlap",
+								"email"
+							]
+						}
+					},
+					"status": "Bad Request",
+					"code": 400,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Mon, 01 Feb 2021 10:58:17 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.7.6"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept, Origin"
+						},
+						{
+							"key": "Allow",
+							"value": "POST, OPTIONS"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "43"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"detail\": [\n        \"Enter a valid email address.\"\n    ]\n}"
+				},
+				{
+					"name": "회원가입 이메일 중복확인 (실패 : 중복한 이메일이 존재하는 경우)",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "email",
+									"value": "tester@tester.com",
+									"description": "인증 이메일을 받기 위한 정보",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/accounts/overlap/email",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"accounts",
+								"overlap",
+								"email"
+							]
+						}
+					},
+					"status": "Bad Request",
+					"code": 400,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Mon, 01 Feb 2021 11:01:41 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.7.6"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept, Origin"
+						},
+						{
+							"key": "Allow",
+							"value": "POST, OPTIONS"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "41"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"detail\": [\n        \"This field must be unique.\"\n    ]\n}"
+				},
+				{
+					"name": "회원가입 이메일 중복확인 (성공)",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "email",
+									"value": "aaaaa@aa.com",
+									"description": "이메일을 받기 위한 정보",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/accounts/overlap/email",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"accounts",
+								"overlap",
+								"email"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Mon, 01 Feb 2021 11:01:16 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.7.6"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept, Origin"
+						},
+						{
+							"key": "Allow",
+							"value": "POST, OPTIONS"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "35"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"detail\": [\n        \"this email is unique\"\n    ]\n}"
+				},
+				{
+					"name": "회원가입 이메일 중복확인 (실패 : 이메일을 빈칸으로 작성한 경우)",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "email",
+									"value": "",
+									"description": "이메일을 받기 위한 정보",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/accounts/overlap/email",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"accounts",
+								"overlap",
+								"email"
+							]
+						}
+					},
+					"status": "Bad Request",
+					"code": 400,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Mon, 01 Feb 2021 10:57:52 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.7.6"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept, Origin"
+						},
+						{
+							"key": "Allow",
+							"value": "POST, OPTIONS"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "43"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"detail\": [\n        \"This field may not be blank.\"\n    ]\n}"
+				},
+				{
+					"name": "회원가입 이메일 중복확인 (실패 : body에 아무것도 없을 경우)",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/accounts/overlap/email",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"accounts",
+								"overlap",
+								"email"
+							]
+						}
+					},
+					"status": "Bad Request",
+					"code": 400,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Mon, 01 Feb 2021 10:56:52 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.7.6"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept, Origin"
+						},
+						{
+							"key": "Allow",
+							"value": "POST, OPTIONS"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "38"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"detail\": [\n        \"This field is required.\"\n    ]\n}"
+				}
+			]
+		}
+	]
+}
