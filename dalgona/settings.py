@@ -257,6 +257,8 @@ CORS_ORIGIN_WHITELIST = [
     "http://dalgona.me",
     "https://dalgona3.cafe24.com",
     "https://dalgona.me",
+    "https://wonderful-northcutt-c15dd2.netlify.app",
+    "http://wonderful-northcutt-c15dd2.netlify.app",
 ]
 
 CORS_ALLOW_CREDENTIALS = True
