@@ -35,5 +35,7 @@ class BoardImage(models.Model):
                 self.image = File(output, self.image.name)
             except FileExistsError as e:
                 pass
+            except AttributeError as e:
+                pass
 
         return super(BoardImage, self).save(*args, **kwargs)
