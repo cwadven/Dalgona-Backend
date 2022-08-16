@@ -27,43 +27,52 @@ from common.iamport import get_token
 # 회원가입 하기
 class RegisterView(RegisterView):
     def create(self, request, *args, **kwargs):
-        access_token = get_token()
-        imp_uid = request.POST.get('imp_uid', False)
+        serializer = self.get_serializer(data=request.data)
+        serializer.is_valid(raise_exception=True)
+        user = self.perform_create(serializer)
+        headers = self.get_success_headers(serializer.data)
 
-        if imp_uid and access_token:
-            # 정말로 그 유저인지 판단
-            url = f'https://api.iamport.kr/certifications/{imp_uid}'
-            headers = {"Authorization": access_token}
+        return Response(self.get_response_data(user),
+                        status=status.HTTP_201_CREATED,
+                        headers=headers)
 
-            req = requests.get(url, headers=headers)
-            req.raise_for_status
-            res = req.json()
-
-            if res['response']:
-                if res['response']['certified']:
-                    cur_age_time = timezone.datetime.now() - datetime.datetime.strptime(res['response']['birthday'], '%Y-%m-%d')
-                    if cur_age_time.days//365 >= 14:
-                        # 이미 있는 유저인지 확인
-                        qs = Profile.objects.filter(unique_key=res['response']['unique_key'])
-                        if not qs.exists():
-                            serializer = self.get_serializer(data=request.data)
-                            serializer.is_valid(raise_exception=True)
-                            user = self.perform_create(serializer)
-                            headers = self.get_success_headers(serializer.data)
-
-                            return Response(self.get_response_data(user),
-                                            status=status.HTTP_201_CREATED,
-                                            headers=headers)
-                        else:
-                            return Response({"error": f"이미 {qs[0].email} 로 가입한 사용자입니다."}, status=status.HTTP_400_BAD_REQUEST)
-                    else:
-                        return Response({"error": "만 14세 미만입니다."}, status=status.HTTP_400_BAD_REQUEST)
-                else:
-                    return Response({"error": "인증되지 않은 사용자 입니다."}, status=status.HTTP_400_BAD_REQUEST)
-            else:
-                return Response({"error": "인증결과가 존재하지 않습니다."}, status=status.HTTP_400_BAD_REQUEST)
-        else:
-            return Response({"error": "처리 중 문제가 있었습니다. 다시 시도해주세요."}, status=status.HTTP_400_BAD_REQUEST)
+        # access_token = get_token()
+        # imp_uid = request.POST.get('imp_uid', False)
+        #
+        # if imp_uid and access_token:
+        #     # 정말로 그 유저인지 판단
+        #     url = f'https://api.iamport.kr/certifications/{imp_uid}'
+        #     headers = {"Authorization": access_token}
+        #
+        #     req = requests.get(url, headers=headers)
+        #     req.raise_for_status
+        #     res = req.json()
+        #
+        #     if res['response']:
+        #         if res['response']['certified']:
+        #             cur_age_time = timezone.datetime.now() - datetime.datetime.strptime(res['response']['birthday'], '%Y-%m-%d')
+        #             if cur_age_time.days//365 >= 14:
+        #                 # 이미 있는 유저인지 확인
+        #                 qs = Profile.objects.filter(unique_key=res['response']['unique_key'])
+        #                 if not qs.exists():
+        #                     serializer = self.get_serializer(data=request.data)
+        #                     serializer.is_valid(raise_exception=True)
+        #                     user = self.perform_create(serializer)
+        #                     headers = self.get_success_headers(serializer.data)
+        #
+        #                     return Response(self.get_response_data(user),
+        #                                     status=status.HTTP_201_CREATED,
+        #                                     headers=headers)
+        #                 else:
+        #                     return Response({"error": f"이미 {qs[0].email} 로 가입한 사용자입니다."}, status=status.HTTP_400_BAD_REQUEST)
+        #             else:
+        #                 return Response({"error": "만 14세 미만입니다."}, status=status.HTTP_400_BAD_REQUEST)
+        #         else:
+        #             return Response({"error": "인증되지 않은 사용자 입니다."}, status=status.HTTP_400_BAD_REQUEST)
+        #     else:
+        #         return Response({"error": "인증결과가 존재하지 않습니다."}, status=status.HTTP_400_BAD_REQUEST)
+        # else:
+        #     return Response({"error": "처리 중 문제가 있었습니다. 다시 시도해주세요."}, status=status.HTTP_400_BAD_REQUEST)
 
 
 # 휴대폰 인증 관련 (인증 정보 조회 후, 전달)
