@@ -29,14 +29,14 @@ class ProfileSerializer(RegisterSerializer):
         max_length=20,
         validators=[UniqueValidator(queryset=Profile.objects.all()), NicknameValidator()]
     )
-    introduction = serializers.CharField(max_length=300, required=False, )
-    profile_image = serializers.ImageField(required=False, )
+    introduction = serializers.CharField(max_length=300, required=False)
+    profile_image = serializers.ImageField(required=False)
     bookmark = BoardListSerializer(read_only=True, many=True)
     points = serializers.CharField(read_only=True)
     level = serializers.CharField(read_only=True)
-    unique_key = serializers.CharField(required=True, )
-    gender = serializers.CharField(required=False, )
-    birthday = serializers.CharField(required=False, )
+    unique_key = serializers.CharField(required=False)
+    gender = serializers.CharField(required=False)
+    birthday = serializers.CharField(required=False)
 
     class Meta:
         model = Profile
