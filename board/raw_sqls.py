@@ -106,7 +106,7 @@ def best_board_raw_query(minutes, division, limit=6, options="", recommend_count
     INNER JOIN board_list_board_list
     ON (board_board_post.board_url_id = board_list_board_list.id)
     WHERE
-        board_recommend.created_at >= '{time}' AND {options} board_list_board_list.division = {division}
+        {options} board_list_board_list.division = {division}
     GROUP BY board_post_id_id
     HAVING check_true >= {recommend_count}
     ORDER BY check_true DESC
