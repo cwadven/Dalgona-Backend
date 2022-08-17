@@ -33,7 +33,7 @@ class BoardImage(models.Model):
                 pil_image.save(output, format='JPEG', quality=100)
                 output.seek(0)
                 self.image = File(output, self.image.name)
-            except (FileExistsError, OSError, AttributeError):
+            except (FileExistsError, OSError, AttributeError, KeyError):
                 pass
 
         return super(BoardImage, self).save(*args, **kwargs)
